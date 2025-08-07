@@ -17,8 +17,7 @@ echo("Hello World!");
 
 // loop from 1-100 php mit "echo"!
 for ($i = 1; $i <= 100; $i++) {
-    // todo ascii tabelle
-    // output current number
+
     if ($i % 3 == 0 && $i % 5 == 0) {
         echo "FizzBuzz" . "<br>";
     } elseif ($i % 5 == 0) {
@@ -31,6 +30,8 @@ for ($i = 1; $i <= 100; $i++) {
 
 }
 
+// todo ascii tabelle
+// output current number
 // number as Fizz on 3
 
 // var_dump(5 / 3);
