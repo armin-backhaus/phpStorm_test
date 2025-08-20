@@ -5,9 +5,9 @@ for ($i = 1; $i <= 100; $i++) {
         echo("FizzBuzz");
     }
     if ($i % 3 == 0) {
-        echo("Fizz") . "<br><br>";
+        echo("Fizz <br><br>");
     } elseif ($i % 5 == 0) {
-        echo("Buzz") . "<br><br>";
+        echo("Buzz <br><br>");
     } else {
         echo("$i<br><br>");
     }
