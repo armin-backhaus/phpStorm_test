@@ -1,9 +1,13 @@
 <?php
 
-for ($i = 1; $i <= 100; $i++) {
+for ($i = 1; $i <= 100; $i++)
+{
+    // erweitern das FizzBuzz bei 3 und 5 ohne rest ausgegeben wird
+
     if ($i % 3 == 0 && $i % 5 == 0) {
         echo("FizzBuzz");
     }
+
     if ($i % 3 == 0) {
         echo("Fizz <br><br>");
     } elseif ($i % 5 == 0) {
@@ -12,5 +16,3 @@ for ($i = 1; $i <= 100; $i++) {
         echo("$i<br><br>");
     }
 }
-
-// erweitern das FizzBuzz bei 3 und 5 ohne rest ausgegeben wird
