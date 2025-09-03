@@ -8,6 +8,8 @@ for ($i = 1; $i <= 100; $i++) {
         echo("FizzBuzzZipp<br><br>");
     } elseif ($i % 5 == 0 && $i % 7 == 0) {
         echo("BuzzZipp <br><br>");
+    } elseif ($i % 3 == 0 && $i % 5 == 0) {
+        echo("FizzBuzz <br><br>");
     } elseif ($i % 3 == 0 && $i % 7 == 0) {
         echo("FizzZipp <br><br>");
     } elseif ($i % 3 == 0) {
