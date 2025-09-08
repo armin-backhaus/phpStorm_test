@@ -1,8 +1,14 @@
 <?php
 // if bedingung zu FizzBuzzZippZapp erweitern ! dont repeat yourself!
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
-
+// word dokument "was gemacht" für Arbeitszeugniss!
 for ($i = 1; $i <= 100; $i++) {
+    function myMessage()
+    {
+        echo "Hello World!";
+    }
+
+    myMessage();
 
     if ($i % 3 == 0 && $i % 5 == 0 && $i % 7 == 0) {
         echo("FizzBuzzZipp<br><br>");
