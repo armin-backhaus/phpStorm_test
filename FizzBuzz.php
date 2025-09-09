@@ -4,7 +4,7 @@
 // word dokument "was gemacht" für Arbeitszeugniss!
 function myMessage()
 {
-    echo "Borderlands 4";
+    echo "Borderlands 4 <br><br>";
 }
 
 myMessage();
