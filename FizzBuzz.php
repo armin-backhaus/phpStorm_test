@@ -4,7 +4,7 @@
 // word dokument "was gemacht" für Arbeitszeugniss!
 function myMessage()
 {
-    echo "Borderlands 4 <br><br>";
+    echo "Zipp <br><br>";
 }
 
 myMessage();
@@ -24,7 +24,8 @@ for ($i = 1; $i <= 100; $i++) {
     } elseif ($i % 5 == 0) {
         echo("Buzz <br><br>");
     } elseif ($i % 7 == 0) {
-        echo("Zipp <br><br>");
+        // echo("Zipp <br><br>");
+        myMessage();
     } else {
         echo("$i<br><br>");
     }
