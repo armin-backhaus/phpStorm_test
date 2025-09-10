@@ -7,7 +7,7 @@ function myMessage()
     echo "Zipp <br><br>";
 }
 
-myMessage();
+// myMessage();
 
 for ($i = 1; $i <= 100; $i++) {
 
