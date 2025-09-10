@@ -2,31 +2,34 @@
 // if bedingung zu FizzBuzzZippZapp erweitern ! dont repeat yourself!
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
-function myMessage()
+function outputZipp()
 {
     echo "Zipp <br><br>";
 }
 
-// myMessage();
+function outputWithLinebreak($something)
+{
+    echo "$something <br><br>";
+}
 
 for ($i = 1; $i <= 100; $i++) {
 
     if ($i % 3 == 0 && $i % 5 == 0 && $i % 7 == 0) {
-        echo("FizzBuzzZipp<br><br>");
+        outputWithLinebreak("FizzBuzzZipp");
     } elseif ($i % 5 == 0 && $i % 7 == 0) {
-        echo("BuzzZipp <br><br>");
+        outputWithLinebreak("BuzzZipp");
     } elseif ($i % 3 == 0 && $i % 5 == 0) {
-        echo("FizzBuzz <br><br>");
+        outputWithLinebreak("FizzBuzz");
     } elseif ($i % 3 == 0 && $i % 7 == 0) {
-        echo("FizzZipp <br><br>");
+        // echo("FizzZipp <br><br>");
+        outputWithLinebreak("FizzZipp");
     } elseif ($i % 3 == 0) {
-        echo("Fizz <br><br>");
+        outputWithLinebreak("Fizz");
     } elseif ($i % 5 == 0) {
-        echo("Buzz <br><br>");
+        outputWithLinebreak("Buzz");
     } elseif ($i % 7 == 0) {
-        // echo("Zipp <br><br>");
-        myMessage();
+        outputZipp();
     } else {
-        echo("$i<br><br>");
+        outputWithLinebreak("$i");
     }
 }
