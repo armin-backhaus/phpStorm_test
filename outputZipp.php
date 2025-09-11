@@ -2,7 +2,5 @@
 
 function outputZipp()
 {
-echo "Zipp <br><br>";
+    echo "Zipp <br><br>";
 }
-
-?>
