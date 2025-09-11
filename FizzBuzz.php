@@ -3,6 +3,7 @@
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
 // function outputZipp.php erstellen! tag!!!!
+
 function outputZipp()
 {
     echo "Zipp <br><br>";
