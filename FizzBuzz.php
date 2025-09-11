@@ -2,15 +2,20 @@
 // if bedingung zu FizzBuzzZippZapp erweitern ! dont repeat yourself!
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
+// function outputZipp.php erstellen! tag!!!!
 function outputZipp()
 {
     echo "Zipp <br><br>";
 }
 
+include 'function1.php';
+
 function outputWithLinebreak($something)
 {
     echo "$something <br><br>";
 }
+
+include 'function2.php';
 
 for ($i = 1; $i <= 100; $i++) {
 
