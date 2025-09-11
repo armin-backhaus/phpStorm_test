@@ -3,27 +3,35 @@
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
 // function outputZipp.php erstellen! tag!!!!
+//für alle eine funktion!
 
 include_once 'outputZipp.php';
 include_once 'outputWithLinebreak.php';
+include_once 'divisibleBySeven.php';
+include_once 'divisibleByFive.php';
+include_once 'divisibleByThree.php';
+include_once 'divisibleByThreeAndSeven.php';
+include_once 'divisibleByThreeAndFive.php';
+include_once 'divisibleByFiveAndSeven.php';
+include_once 'divisibleByThreeAndFiveAndSeven.php';
 
 
 for ($i = 1; $i <= 100; $i++) {
 
-    if ($i % 3 == 0 && $i % 5 == 0 && $i % 7 == 0) {
+    if (divisibleByThreeAndFiveAndSeven($i)) {
         outputWithLinebreak("FizzBuzzZipp");
-    } elseif ($i % 5 == 0 && $i % 7 == 0) {
+    } elseif (divisibleByFiveAndSeven($i)) {
         outputWithLinebreak("BuzzZipp");
-    } elseif ($i % 3 == 0 && $i % 5 == 0) {
+    } elseif (divisibleByThreeAndFive($i)) {
         outputWithLinebreak("FizzBuzz");
-    } elseif ($i % 3 == 0 && $i % 7 == 0) {
+    } elseif (divisibleByThreeAndSeven($i)) {
         // echo("FizzZipp <br><br>");
         outputWithLinebreak("FizzZipp");
-    } elseif ($i % 3 == 0) {
+    } elseif (divisibleByThree($i)) {
         outputWithLinebreak("Fizz");
-    } elseif ($i % 5 == 0) {
+    } elseif (divisibleByFive($i)) {
         outputWithLinebreak("Buzz");
-    } elseif ($i % 7 == 0) {
+    } elseif (divisibleBySeven($i)) {
         outputZipp();
     } else {
         outputWithLinebreak("$i");
