@@ -4,17 +4,17 @@
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
 // function outputZipp.php erstellen! tag!!!!
 
-function outputZipp()
-{
-    echo "Zipp <br><br>";
-}
+//function outputZipp()
+//{
+//    echo "Zipp <br><br>";
+//}
 
 include 'function1.php';
 
-function outputWithLinebreak($something)
-{
-    echo "$something <br><br>";
-}
+//function outputWithLinebreak($something)
+//{
+//    echo "$something <br><br>";
+//}
 
 include 'function2.php';
 
