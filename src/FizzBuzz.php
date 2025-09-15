@@ -15,8 +15,11 @@ include_once __DIR__ . '/divisibleByThreeAndFive.php';
 include_once __DIR__ . '/divisibleByFiveAndSeven.php';
 include_once __DIR__ . '/divisibleByThreeAndFiveAndSeven.php';
 include_once __DIR__ . '/Output.php';
+include_once __DIR__ . '/DivisibleBy.php';
 
 $output = new Output();
+$divisibleBy = new DivisibleBy();
+
 
 for ($i = 1; $i <= 100; $i++) {
 
