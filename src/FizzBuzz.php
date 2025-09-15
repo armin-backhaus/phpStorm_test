@@ -2,7 +2,7 @@
 // if bedingung zu FizzBuzzZippZapp erweitern ! dont repeat yourself!
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
-// class FizzBuzz -> methode run -> echo
+// class Output2 selbe ausgabe mit linenumber like ide, output 1x <br>! altes(neues) output zu nr2 umbauen, 1 nicht löschen!
 
 //include_once dirname((__DIR__)) . '/src/outputZipp.php';
 include_once __DIR__ . '/Output.php';
