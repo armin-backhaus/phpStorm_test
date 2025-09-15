@@ -33,7 +33,14 @@ echo(11);
 
     <div>
       <p>FizzBuzz</p>
-      <?php include('./src/FizzBuzz.php'); ?>
+
+      <?php
+      include('./src/FizzBuzz.php');
+      //$fizzBuzz = new FizzBuzz();
+      //$fizzBuzz->run();
+      (new FizzBuzz())->run();
+      ?>
+
       <p>FizzBuzz ende</p>
     </div>
 

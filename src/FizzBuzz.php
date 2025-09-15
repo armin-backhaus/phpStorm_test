@@ -8,27 +8,41 @@
 include_once __DIR__ . '/Output.php';
 include_once __DIR__ . '/DivisibleBy.php';
 
-$output = new Output();
-$divisibleBy = new DivisibleBy();
+class FizzBuzz
+{
+    private $output;
+    private $divisibleBy;
 
-for ($i = 1; $i <= 100; $i++) {
+    function __construct()
+    {
+        $this->output = new Output();
+        $this->divisibleBy = new DivisibleBy();
+    }
 
-    if ($divisibleBy->threeAndFiveAndSeven($i)) {
-        $output->withLinebreak("FizzBuzzZipp");
-    } elseif ($divisibleBy->fiveAndSeven($i)) {
-        $output->withLinebreak("BuzzZipp");
-    } elseif ($divisibleBy->threeAndFive($i)) {
-        $output->withLinebreak("FizzBuzz");
-    } elseif ($divisibleBy->threeAndSeven($i)) {
-        // echo("FizzZipp <br><br>");
-        $output->withLinebreak("FizzZipp");
-    } elseif ($divisibleBy->three($i)) {
-        $output->withLinebreak("Fizz");
-    } elseif ($divisibleBy->five($i)) {
-        $output->withLinebreak("Buzz");
-    } elseif ($divisibleBy->seven($i)) {
-        $output->zipp();
-    } else {
-        $output->withLinebreak("$i");
+    function run()
+    {
+        for ($i = 1; $i <= 100; $i++) {
+
+            if ($this->divisibleBy->threeAndFiveAndSeven($i)) {
+                $this->output->withLinebreak("FizzBuzzZipp");
+            } elseif ($this->divisibleBy->fiveAndSeven($i)) {
+                $this->output->withLinebreak("BuzzZipp");
+            } elseif ($this->divisibleBy->threeAndFive($i)) {
+                $this->output->withLinebreak("FizzBuzz");
+            } elseif ($this->divisibleBy->threeAndSeven($i)) {
+                // echo("FizzZipp <br><br>");
+                $this->output->withLinebreak("FizzZipp");
+            } elseif ($this->divisibleBy->three($i)) {
+                $this->output->withLinebreak("Fizz");
+            } elseif ($this->divisibleBy->five($i)) {
+                $this->output->withLinebreak("Buzz");
+            } elseif ($this->divisibleBy->seven($i)) {
+                $this->output->zipp();
+            } else {
+                $this->output->withLinebreak("$i");
+            }
+        }
     }
 }
+
+
