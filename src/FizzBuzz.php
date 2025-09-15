@@ -12,16 +12,28 @@ class FizzBuzz
 {
     private $output;
     private $divisibleBy;
+    private $upper;
+    private $lower;
 
-    function __construct()
+    function __construct($lower, $upper)
     {
         $this->output = new Output();
         $this->divisibleBy = new DivisibleBy();
+
+        $this->upper = $upper;
+        $this->lower = $lower;
     }
 
     function run()
     {
-        for ($i = 1; $i <= 100; $i++) {
+        //guard clause
+        if ($this->upper <= $this->lower) {
+            echo "nope";
+
+            return;
+        }
+
+        for ($i = $this->lower; $i <= $this->upper; $i++) {
 
             if ($this->divisibleBy->threeAndFiveAndSeven($i)) {
                 $this->output->withLinebreak("FizzBuzzZipp");

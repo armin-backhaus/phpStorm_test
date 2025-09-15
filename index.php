@@ -36,9 +36,11 @@ echo(11);
 
       <?php
       include('./src/FizzBuzz.php');
-      //$fizzBuzz = new FizzBuzz();
+      //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
-      (new FizzBuzz())->run();
+      (new FizzBuzz(1,7))->run();
+      (new FizzBuzz(3,9))->run();
+      (new FizzBuzz(9,3))->run();
       ?>
 
       <p>FizzBuzz ende</p>
