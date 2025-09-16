@@ -7,6 +7,7 @@
 //include_once dirname((__DIR__)) . '/src/outputZipp.php';
 include_once __DIR__ . '/Output.php';
 include_once __DIR__ . '/DivisibleBy.php';
+include_once __DIR__ . '/Output2.php';
 
 class FizzBuzz
 {
@@ -14,6 +15,7 @@ class FizzBuzz
     private $divisibleBy;
     private $upper;
     private $lower;
+    private $withLineNumber;
 
     function __construct($lower, $upper)
     {
