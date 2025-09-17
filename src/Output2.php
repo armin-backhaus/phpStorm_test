@@ -2,8 +2,8 @@
 
 class Output2
 {
-    public static function withLineNumber($withLineNumber)
+    public function withLineNumber($i, $something)
     {
-        return "$withLineNumber: " . __LINE__;
+        echo "$i: " . $something . "<br />";
     }
 }

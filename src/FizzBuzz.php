@@ -20,6 +20,7 @@ class FizzBuzz
     function __construct($lower, $upper)
     {
         $this->output = new Output();
+        $this->withLineNumber = new Output2();
         $this->divisibleBy = new DivisibleBy();
 
         $this->upper = $upper;
@@ -38,22 +39,30 @@ class FizzBuzz
         for ($i = $this->lower; $i <= $this->upper; $i++) {
 
             if ($this->divisibleBy->threeAndFiveAndSeven($i)) {
-                $this->output->withLinebreak("FizzBuzzZipp");
+            //    $this->output->withLinebreak("FizzBuzzZipp");
+                $this->withLineNumber->withLineNumber($i, "FizzBuzzZipp");
             } elseif ($this->divisibleBy->fiveAndSeven($i)) {
-                $this->output->withLinebreak("BuzzZipp");
+            //    $this->output->withLinebreak("BuzzZipp");
+                $this->withLineNumber->withLineNumber($i, "BuzzZipp");
             } elseif ($this->divisibleBy->threeAndFive($i)) {
-                $this->output->withLinebreak("FizzBuzz");
+            //    $this->output->withLinebreak("FizzBuzz");
+                $this->withLineNumber->withLineNumber($i, "FizzBuzz");
             } elseif ($this->divisibleBy->threeAndSeven($i)) {
-                // echo("FizzZipp <br><br>");
-                $this->output->withLinebreak("FizzZipp");
+            //     echo("FizzZipp <br><br>");
+            //    $this->output->withLinebreak("FizzZipp");
+                $this->withLineNumber->withLineNumber($i, "FizzZipp");
             } elseif ($this->divisibleBy->three($i)) {
-                $this->output->withLinebreak("Fizz");
+            //    $this->output->withLinebreak("Fizz");
+                $this->withLineNumber->withLineNumber($i, "Fizz");
             } elseif ($this->divisibleBy->five($i)) {
-                $this->output->withLinebreak("Buzz");
+            //    $this->output->withLinebreak("Buzz");
+                $this->withLineNumber->withLineNumber($i, "Buzz");
             } elseif ($this->divisibleBy->seven($i)) {
-                $this->output->zipp();
+            //    $this->output->Zipp();
+                $this->withLineNumber->withLineNumber($i, "Zipp");
             } else {
-                $this->output->withLinebreak("$i");
+            //    $this->output->withLinebreak("$i");
+                $this->withLineNumber->withLineNumber($i, $i);
             }
         }
     }
