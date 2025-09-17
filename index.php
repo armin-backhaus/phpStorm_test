@@ -40,6 +40,7 @@ echo(11);
       include('./src/OutputWithLineNumbers.php');
       include('./src/OutputWithDoubleNumbers.php');
       include('./src/OutputWithEmote.php');
+      include('./src/OutputWithColor.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
       (new FizzBuzz(1,7, new OutputWithLineNumbers()))->run();
@@ -47,6 +48,7 @@ echo(11);
       (new FizzBuzz(3,9, new OutputWithDoubleNumbers()))->run();
       (new FizzBuzz(9,3, new OutputWithLineNumbers()))->run();
       (new FizzBuzz(1,9, new OutputWithEmote()))->run();
+      (new FizzBuzz(1,9, new OutputWithColor()))->run();
       ?>
 
       <p>FizzBuzz ende</p>
