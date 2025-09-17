@@ -39,12 +39,14 @@ echo(11);
       include('./src/OutputWithLinebreak.php');
       include('./src/OutputWithLineNumbers.php');
       include('./src/OutputWithDoubleNumbers.php');
+      include('./src/OutputWithEmote.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
       (new FizzBuzz(1,7, new OutputWithLineNumbers()))->run();
       (new FizzBuzz(3,9, new OutputWithLinebreak()))->run();
       (new FizzBuzz(3,9, new OutputWithDoubleNumbers()))->run();
       (new FizzBuzz(9,3, new OutputWithLineNumbers()))->run();
+      (new FizzBuzz(1,9, new OutputWithEmote()))->run();
       ?>
 
       <p>FizzBuzz ende</p>
