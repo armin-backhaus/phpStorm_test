@@ -36,11 +36,15 @@ echo(11);
 
       <?php
       include('./src/FizzBuzz.php');
+      include('./src/OutputWithLinebreak.php');
+      include('./src/OutputWithLineNumbers.php');
+      include('./src/OutputWithDoubleNumbers.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
-      (new FizzBuzz(1,7))->run();
-      (new FizzBuzz(3,9))->run();
-      (new FizzBuzz(9,3))->run();
+      (new FizzBuzz(1,7, new OutputWithLineNumbers()))->run();
+      (new FizzBuzz(3,9, new OutputWithLinebreak()))->run();
+      (new FizzBuzz(3,9, new OutputWithDoubleNumbers()))->run();
+      (new FizzBuzz(9,3, new OutputWithLineNumbers()))->run();
       ?>
 
       <p>FizzBuzz ende</p>
