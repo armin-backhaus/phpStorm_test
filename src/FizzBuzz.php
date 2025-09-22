@@ -33,8 +33,8 @@ class FizzBuzz
             return;
         }
 
-        for ($i = $this->lower; $i <= $this->upper; $i++) {
-
+        for ($i = $this->lower; $i <= $this->upper; $i++)
+        {
             if ($this->divisibleBy->threeAndFiveAndSeven($i)) {
                 $this->outputStrategy->output("FizzBuzzZipp", $i);
             } elseif ($this->divisibleBy->fiveAndSeven($i)) {

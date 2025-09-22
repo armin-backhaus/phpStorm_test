@@ -35,6 +35,9 @@ echo(11);
       <p>FizzBuzz</p>
 
       <?php
+      include('./src/DoubleLoop.php');
+      (new DoubleLoop())->run();
+
       include('./src/FizzBuzz.php');
       include('./src/OutputWithLinebreak.php');
       include('./src/OutputWithLineNumbers.php');
