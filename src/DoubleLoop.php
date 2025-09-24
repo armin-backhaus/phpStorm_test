@@ -15,12 +15,16 @@ class DoubleLoop
 {
     function run()
     {
-        for ($i = 1; $i <= 3; $i++) {
-        }
-
+        $this->bothLoops();
         echo "<br />";
     }
 
+    private function bothLoops()
+    {
+        for ($i = 1; $i <= 3; $i++) {
+            $this->innerLoop($i);
+        }
+    }
     private function innerLoop($i)
     {
         for ($j = 1; $j <= 3; $j++) {
