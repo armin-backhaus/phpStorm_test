@@ -13,10 +13,11 @@
  */
 class DoubleLoop
 {
-    function run()
+    public function run()
     {
         $this->bothLoops();
         echo "<br />";
+        //19 in eig. methode
     }
 
     private function bothLoops()
