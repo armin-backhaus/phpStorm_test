@@ -16,11 +16,19 @@ class DoubleLoop
     function run()
     {
         for ($i = 1; $i <= 3; $i++) {
-            for ($j = 1; $j <= 3; $j++) {
-                echo $i . "-" . $j . "<br />";
-            }
         }
 
-        echo "<br>";
+        echo "<br />";
+    }
+
+    private function innerLoop($i)
+    {
+        for ($j = 1; $j <= 3; $j++) {
+            $this->output($i, $j);
+        }
+    }
+    private function output($i, $j)
+    {
+        echo $i . "-" . $j . "<br />";
     }
 }
