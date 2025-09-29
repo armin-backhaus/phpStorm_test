@@ -6,6 +6,6 @@ class OutputWithBothLoops implements OutputInterface
 {
     function output($something, $i = 0)
     {
-        echo $something . "<br />";
+        echo $something, $i . "<br />";
     }
 }
