@@ -64,7 +64,7 @@ echo(11);
     </div>
 
     <div>
-      <?php echo "XAMPP -> Apache server -> verzeichnis in htdocs -> index.php -> vs code html -> bowser tadaa!"; ?>
+      <?php echo "XAMPP -> Apache server -> verzeichnis in htdocs -> index.php -> phpStorm .html -> bowser tadaa!"; ?>
     </div>
   </body>
 </html>
