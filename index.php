@@ -37,6 +37,7 @@ echo(11);
       <?php
       include('./src/DoubleLoop.php');
       (new DoubleLoop())->run();
+      include('./src/OutputWithBothLoops.php');
 
       include('./src/FizzBuzz.php');
       include('./src/OutputWithLinebreak.php');
@@ -52,6 +53,7 @@ echo(11);
       (new FizzBuzz(9,3, new OutputWithLineNumbers()))->run();
       (new FizzBuzz(1,9, new OutputWithEmote()))->run();
       (new FizzBuzz(1,9, new OutputWithColor()))->run();
+      (new FizzBuzz(1,9, new OutputWithBothLoops()))->run();
       ?>
 
       <p>FizzBuzz ende</p>
