@@ -17,6 +17,11 @@ class DoubleLoop
     public function run()
     {
         $this->bothLoops();
+        $this->lineBreak();
+    }
+
+    private function lineBreak()
+    {
         echo "<br />";
     }
 
@@ -28,7 +33,7 @@ class DoubleLoop
     }
     private function innerLoop($i)
     {
-        for ($j = 1; $j <= 3; $j++) {
+        for ($j = 3; $j >= 1; $j--) {
             $this->output($i, $j);
         }
     }
