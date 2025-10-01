@@ -5,6 +5,7 @@
 // class Output2 selbe ausgabe mit linenumber like ide, output 1x <br>! altes(neues) output zu nr2 umbauen, 1 nicht löschen!
 // X classes mit anderen strategien für die ausgabe .👾👾👾 in index.php integrieren
 //include_once dirname((__DIR__)) . '/src/outputZipp.php';
+//1 methode "genericLoop($start, $end, $step)"public & index
 include_once __DIR__ . '/DivisibleBy.php';
 
 class FizzBuzz

@@ -54,6 +54,7 @@ echo(11);
       (new FizzBuzz(1,9, new OutputWithEmote()))->run();
       (new FizzBuzz(1,9, new OutputWithColor()))->run();
       (new FizzBuzz(1,9, new OutputWithBothLoops()))->run();
+      //(new FizzBuzz(1,9, new OutputWithDoubleNumbers()))->genericLoop();
       ?>
 
       <p>FizzBuzz ende</p>

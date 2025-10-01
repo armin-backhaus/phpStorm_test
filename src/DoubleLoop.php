@@ -27,13 +27,13 @@ class DoubleLoop
 
     private function bothLoops()
     {
-        for ($i = 1; $i <= 3; $i++) {
+        for ($i = 5555; $i >= 1111; $i = $i - 1111) {
             $this->innerLoop($i);
         }
     }
     private function innerLoop($i)
     {
-        for ($j = 3; $j >= 1; $j--) {
+        for ($j = 333; $j >= 111; $j = $j - 111) {
             $this->output($i, $j);
         }
     }
