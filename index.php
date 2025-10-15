@@ -98,6 +98,13 @@ echo(11);
       $fizzBuzz8 = new FizzBuzz(1,9, $outputObject);
       $fizzBuzz8->run();
 
+      (new FizzBuzz(1,9, new OutputWithProgress()))->run();
+
+      $outputObject = new OutputWithProgress();
+      #000a53 = new OutputWithProgress();
+      $fizzBuzz9 = new FizzBuzz(1,9, $outputObject);
+      $fizzBuzz9->run();
+
       //(new FizzBuzz(1,9, new OutputWithDoubleNumbers()))->genericLoop();
       ?>
 
