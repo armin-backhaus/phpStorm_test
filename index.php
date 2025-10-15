@@ -46,6 +46,7 @@ echo(11);
       include('./src/OutputWithEmote.php');
       include('./src/OutputWithColor.php');
       include('./src/OutputWithBeep.php');
+      include('./src/OutputWithProgress.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
 
