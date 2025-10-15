@@ -45,6 +45,7 @@ echo(11);
       include('./src/OutputWithDoubleNumbers.php');
       include('./src/OutputWithEmote.php');
       include('./src/OutputWithColor.php');
+      include('./src/OutputWithBeep.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
 
@@ -89,6 +90,12 @@ echo(11);
       $outputObject = new OutputWithBothLoops();
       $fizzBuzz7 = new FizzBuzz(1,9, $outputObject);
       $fizzBuzz7->run();
+
+      (new FizzBuzz(1,9, new OutputWithBeep()))->run();
+
+      $outputObject = new OutputWithBeep();
+      $fizzBuzz8 = new FizzBuzz(1,9, $outputObject);
+      $fizzBuzz8->run();
 
       //(new FizzBuzz(1,9, new OutputWithDoubleNumbers()))->genericLoop();
       ?>
