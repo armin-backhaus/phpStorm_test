@@ -7,6 +7,10 @@
 //include_once dirname((__DIR__)) . '/src/outputZipp.php';
 //1 methode "genericLoop($start, $end, $step)"public & index
 include_once __DIR__ . '/DivisibleBy.php';
+include_once __DIR__ . '/DivisibleCheck/CheckThree.php';
+include_once __DIR__ . '/DivisibleCheck/CheckFive.php';
+include_once __DIR__ . '/DivisibleCheck/CheckSeven.php';
+include_once __DIR__ . '/DivisibleCheck/CheckEleven.php';
 
 class FizzBuzz
 {
@@ -14,6 +18,12 @@ class FizzBuzz
     private $upper;
     private $lower;
     private $outputStrategy;
+
+    private $checkThree;
+    private $checkFive;
+    private $checkSeven;
+
+    private array $checker;
 
     function __construct($lower, $upper, OutputInterface $outputStrategy)
     {
@@ -23,6 +33,18 @@ class FizzBuzz
 
         $this->upper = $upper;
         $this->lower = $lower;
+
+        $this->checkThree = new CheckThree();
+        $this->checkFive = new CheckFive();
+        $this->checkSeven = new CheckSeven();
+
+//        $this->checker = [];
+        $this->checker[] = new CheckThree();
+        $this->checker[] = new CheckFive();
+        $this->checker[] = new CheckSeven();
+        $this->checker[] = new CheckEleven();
+
+
     }
 
     function run()
@@ -37,6 +59,23 @@ class FizzBuzz
 
         for ($i = $this->lower; $i <= $this->upper; $i++) {
 
+            // => class FizzBuzzArray
+            $o = '';
+            foreach ($this->checker as $checkObject) {
+                if ($checkObject->check($i)) { $o = $o . $checkObject->getString(); }
+            }
+            if (empty($o)) { $o = $i; }
+            $this->outputStrategy->output($o, $i);
+
+            // => class FizzBuzzNew2
+            $out = '';
+            if ($this->checkThree->check($i)) { $out = $out . "Fizz"; }
+            if ($this->checkFive->check($i)) { $out = $out . "Buzz"; }
+            if ($this->checkSeven->check($i)) { $out = $out . "Zipp"; }
+            if (empty($out)) { $out = $i; }
+            $this->outputStrategy->output($out, $i);
+
+            // => class FizzBuzzNew1
             $output = "";
             if ($i % 3 == 0) {$output = $output . "Fizz";}
             if ($i % 5 == 0) {$output = $output . "Buzz";}
@@ -46,6 +85,7 @@ class FizzBuzz
             if (empty($output)) {$output = $i;}
             $this->outputStrategy->output($output , $i);
 
+            // => class FizzBuzzOld
             if ($this->divisibleBy->threeAndFiveAndSeven($i)) {
                 $this->outputStrategy->output("FizzBuzzZipp", $i);
             } elseif ($this->divisibleBy->fiveAndSeven($i)) {
@@ -67,5 +107,3 @@ class FizzBuzz
         }
     }
 }
-
-
