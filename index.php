@@ -47,8 +47,23 @@ echo(11);
       include('./src/OutputWithColor.php');
       include('./src/OutputWithBeep.php');
       include('./src/OutputWithProgress.php');
+      include('./src/DivisibleChecker.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
+
+    function outputName($name)
+    {
+        echo "hello $name <br />";
+    }
+
+    outputName("Hannes");
+    outputName("Armin");
+    $divisibleChecker = new DivisibleChecker();
+    $divisibleChecker->test("dub");
+    echo $divisibleChecker->checkThree(9);
+    echo "<br /><br />";
+    echo $divisibleChecker->checkFive(10);
+    echo $divisibleChecker->checkSeven(14);
 
       (new FizzBuzz(1,7, new OutputWithLineNumbers()))->run();
 
