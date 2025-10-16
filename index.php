@@ -60,12 +60,9 @@ echo(11);
     outputName("Armin");
     $divisibleChecker = new DivisibleChecker();
     $divisibleChecker->test("dub");
-    echo $divisibleChecker->checkThree(9);
     echo "<br /><br />";
-    echo $divisibleChecker->checkFive(10);
-    echo $divisibleChecker->checkSeven(14);
 
-      (new FizzBuzz(1,7, new OutputWithLineNumbers()))->run();
+      (new FizzBuzz(1,150, new OutputWithLineNumbers()))->run();
 
       $outputObject = new OutputWithLinenumbers();
       $fizzBuzz1 = new FizzBuzz(1,7, $outputObject);

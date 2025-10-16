@@ -4,7 +4,7 @@ class DivisibleChecker
 {
     function test($test)
     {
-      echo "hello from DivisibleChecker $test <br />";
+        echo "hello from DivisibleChecker $test <br />";
     }
 
     function checkThree(int $number): bool
