@@ -11,11 +11,8 @@ include_once __DIR__ . '/DivisibleCheck/CheckThree.php';
 include_once __DIR__ . '/DivisibleCheck/CheckFive.php';
 include_once __DIR__ . '/DivisibleCheck/CheckSeven.php';
 include_once __DIR__ . '/DivisibleCheck/CheckEleven.php';
-include_once __DIR__ . '/FizzBuzzOld.php';
-include_once __DIR__ . '/FizzBuzzNew1.php';
-include_once __DIR__ . '/FizzBuzzNew2.php';
-include_once __DIR__ . '/FizzBuzzArray.php';
-class FizzBuzz
+include_once __DIR__ . '/FizzBuzzInterface.php';
+class FizzBuzz implements FizzBuzzInterface
 {
     private $divisibleBy;
     private $upper;
@@ -30,7 +27,7 @@ class FizzBuzz
 
     function __construct($lower, $upper, OutputInterface $outputStrategy)
     {
-        $this->divisibleBy = new DivisibleBy();
+        $this->divisibleBy = (new DivisibleBy());
 
         $this->outputStrategy = $outputStrategy;
 

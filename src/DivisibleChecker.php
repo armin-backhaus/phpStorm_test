@@ -17,7 +17,7 @@ class DivisibleChecker
         return $number % 5 == 0;
     }
 
-    function checkSeven($number): bool
+    function checkSeven(int $number): bool
     {
         return $number % 7 == 0;
     }
