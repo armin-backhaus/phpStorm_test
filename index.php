@@ -1,5 +1,5 @@
-<?php 
-declare(strict_types = 1); 
+<?php
+declare(strict_types = 1);
 echo(11);
 ?>
 
@@ -48,6 +48,10 @@ echo(11);
       include('./src/OutputWithBeep.php');
       include('./src/OutputWithProgress.php');
       include('./src/DivisibleChecker.php');
+      include('./src/FizzBuzzOld.php');
+      include('./src/FizzBuzzNew1.php');
+      include('./src/FizzBuzzNew2.php');
+      include('./src/FizzBuzzArray.php');
       //$fizzBuzz = new FizzBuzz(13);
       //$fizzBuzz->run();
 
