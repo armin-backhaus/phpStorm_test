@@ -66,10 +66,11 @@ echo(11);
     $divisibleChecker->test("dub");
     echo "<br /><br />";
 
-    (new FizzBuzz(1, 7, new OutputWithLineNumbers()))->run();
+    $fizzBuzzNew1 = new FizzBuzzNew1(1, 7, $output);
+    //(new FizzBuzz(1, 7, new OutputWithLineNumbers()))->run();
 
-    $outputObject = new OutputWithLinenumbers();
-    $fizzBuzz1 = new FizzBuzzOld(1, 7, $outputObject);
+    //$outputObject = new OutputWithLinenumbers();
+    //$fizzBuzz1 = new FizzBuzzOld(1, 7, $outputObject);
     //FizzBuzzNew1
     //FizzBuzzNew2
     //FizzBuzzArray

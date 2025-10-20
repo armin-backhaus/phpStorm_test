@@ -1,7 +1,7 @@
 <?php
 
 include_once __DIR__ . '/FizzBuzzInterface.php';
-
+include_once __DIR__ . '/outputStrategy';
 
 class FizzBuzzNew1 implements FizzBuzzInterface
 {
