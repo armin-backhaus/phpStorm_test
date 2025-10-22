@@ -60,46 +60,15 @@ echo(11);
 
     (new DoubleLoop())->run();
 
-    echo "Animal <br /><br />";
-
-
-    class Animal{
-        function walk(){
-            echo "Walking";
-        }
-    }
-
-    class Cat extends Animal{
-        function meow(){
-            echo "Meow";
-        }
-    }
-    $miku = new Cat();
-    $miku->walk();
-    $miku->meow();
-
-    class Dog extends Animal{
-        function bark(){
-            echo "Bark";
-        }
-    }
-
-    $epi = new Dog();
-    $epi->walk();
-    $epi->bark();
-
-
-
-
-    echo "<br /><br />";
-
     outputName("Hannes");
     outputName("Armin");
     $divisibleChecker = new DivisibleChecker();
     $divisibleChecker->test("dub");
     echo "<br /><br />";
 
-    $fizzBuzzNew1 = new FizzBuzzNew1(1, 7, $output);
+    $fizzBuzzNew1 = new FizzBuzzNew1(1, 7, new OutputWithColor());
+    $fizzBuzzNew1->run();
+    echo "end";
     //(new FizzBuzz(1, 7, new OutputWithLineNumbers()))->run();
 
     //$outputObject = new OutputWithLinenumbers();
@@ -107,7 +76,7 @@ echo(11);
     //FizzBuzzNew1
     //FizzBuzzNew2
     //FizzBuzzArray
-    $fizzBuzz1->run();
+    //$fizzBuzz1->run();
 
     (new FizzBuzz(3, 9, new OutputWithLinebreak()))->run();
 
