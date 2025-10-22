@@ -60,6 +60,39 @@ echo(11);
 
     (new DoubleLoop())->run();
 
+    echo "Animal <br /><br />";
+
+
+    class Animal{
+        function walk(){
+            echo "Walking";
+        }
+    }
+
+    class Cat extends Animal{
+        function meow(){
+            echo "Meow";
+        }
+    }
+    $miku = new Cat();
+    $miku->walk();
+    $miku->meow();
+
+    class Dog extends Animal{
+        function bark(){
+            echo "Bark";
+        }
+    }
+
+    $epi = new Dog();
+    $epi->walk();
+    $epi->bark();
+
+
+
+
+    echo "<br /><br />";
+
     outputName("Hannes");
     outputName("Armin");
     $divisibleChecker = new DivisibleChecker();
