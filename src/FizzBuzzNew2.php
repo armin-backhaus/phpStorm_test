@@ -9,15 +9,18 @@ class FizzBuzzNew2 implements FizzBuzzInterface
     private OutputInterface $outputStrategy;
     private int $upper;
     private int $lower;
-    private int $checkThree;
-    private int $checkFive;
-    private int $checkSeven;
+    private $checkThree;
+    private $checkFive;
+    private $checkSeven;
 
     function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
     {
         $this->outputStrategy = $outputStrategy;
         $this->upper = $upper;
         $this->lower = $lower;
+        $this->checkThree = new CheckThree();
+        $this->checkFive = new CheckFive();
+        $this->checkSeven = new CheckSeven();
     }
     function run()
     {

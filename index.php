@@ -68,6 +68,8 @@ echo(11);
 
     $fizzBuzzNew1 = new FizzBuzzNew1(1, 7, new OutputWithColor());
     $fizzBuzzNew1->run();
+    $fizzBuzzNew2 = new FizzBuzzNew2(1, 7, new OutputWithEmote());
+    $fizzBuzzNew2->run();
     echo "end";
     //(new FizzBuzz(1, 7, new OutputWithLineNumbers()))->run();
 
