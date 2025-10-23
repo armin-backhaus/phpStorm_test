@@ -4,6 +4,7 @@ namespace FizzBuzz;
 
 //use Divisible\DivisibleBy;
 use Divisible\DivisibleBy;
+use Error;
 
 class FizzBuzzOld implements FizzBuzzInterface
 {
@@ -22,8 +23,19 @@ class FizzBuzzOld implements FizzBuzzInterface
         $this->outputStrategy = $outputStrategy;
     }
 
+    function assertLoopDirection(int $lower, int $upper)
+    {
+        if ($upper <= $lower) {
+
+            throw new Error("Invalid Loop Direction");
+        }
+    }
+
     function run()
     {
+        //guard clause
+        $this->assertLoopDirection($this->lower, $this->upper);
+
         for ($i = $this->lower; $i <= $this->upper; $i++) {
 
             if ($this->divisibleBy->threeAndFiveAndSeven($i)) {

@@ -13,6 +13,7 @@ use DivisibleCheck\CheckEleven;
 use DivisibleCheck\CheckFive;
 use DivisibleCheck\CheckSeven;
 use DivisibleCheck\CheckThree;
+use Error;
 use Output\OutputInterface;
 
 
@@ -51,14 +52,17 @@ class FizzBuzz implements FizzBuzzInterface
 
     }
 
-    function run()
+    function assertLoopDirection(int $lower, int $upper)
+    {
+        if ($upper <= $lower) {
+
+            throw new Error("Invalid Loop Direction");
+        }
+    }
+    function run(): void
     {
         //guard clause
-        if ($this->upper <= $this->lower) {
-            echo "nope";
-
-            return;
-        }
+        $this->assertLoopDirection($this->lower, $this->upper);
 
 
         for ($i = $this->lower; $i <= $this->upper; $i++) {

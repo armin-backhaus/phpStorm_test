@@ -52,23 +52,14 @@ echo(11);
     <p>FizzBuzz</p>
 
     <?php
-    //include_once('./src/DoubleLoop.php');
-    //include_once('./src/OutputWithBothLoops.php');
-    //include_once('./src/FizzBuzz/FizzBuzz.php');
-    //include_once('./src/OutputWithLinebreak.php');
-    //include_once('./src/OutputWithLineNumbers.php');
-    //include_once('./src/OutputWithDoubleNumbers.php');
-    //include_once('./src/OutputWithEmote.php');
-    //include_once('./src/OutputWithColor.php');
-    //include_once('./src/OutputWithBeep.php');
-    //include_once('./src/OutputWithProgress.php');
-    //include_once('./src/Divisible/DivisibleChecker.php');
-    //include_once('./src/FizzBuzz/FizzBuzzOld.php');
-    //include_once('./src/FizzBuzz/FizzBuzzNew1.php');
-    //include_once('./src/FizzBuzz/FizzBuzzNew2.php');
-    //include_once('./src/FizzBuzz/FizzBuzzArray.php');
-    //$fizzBuzz = new FizzBuzz(13);
-    //$fizzBuzz->run();
+
+    try {
+        $fizzBuzz = new FizzBuzz(10, 5, new OutputWithEmote());
+        $fizzBuzz->run();
+    } catch(Error $exception) {
+        echo "Error occurred: " . $exception->getMessage();
+    }
+
     $fizzBuzzArray = new FizzBuzzArray(1, 7, new OutputWithColor());
     $fizzBuzzArray->run();
 
@@ -114,7 +105,11 @@ echo(11);
     $fizzBuzz3 = new FizzBuzz(3, 9, $outputObject);
     $fizzBuzz3->run();
 
-    (new FizzBuzz(9, 3, new OutputWithLineNumbers()))->run();
+    try {
+        (new FizzBuzz(9, 3, new OutputWithLineNumbers()))->run();
+    } catch(Error $exception) {
+        //nop - code smell!
+    }
 
     $outputObject = new OutputWithLinenumbers();
     $fizzBuzz4 = new FizzBuzz(3, 9, $outputObject);

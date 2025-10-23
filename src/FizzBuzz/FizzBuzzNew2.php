@@ -5,6 +5,7 @@ namespace FizzBuzz;
 use DivisibleCheck\CheckFive;
 use DivisibleCheck\CheckSeven;
 use DivisibleCheck\CheckThree;
+use Error;
 use Output\OutputInterface;
 
 class FizzBuzzNew2 implements FizzBuzzInterface
@@ -26,8 +27,19 @@ class FizzBuzzNew2 implements FizzBuzzInterface
         $this->checkSeven = new CheckSeven();
     }
 
+    function assertLoopDirection(int $lower, int $upper)
+    {
+        if ($upper <= $lower) {
+
+            throw new Error("Invalid Loop Direction");
+        }
+    }
+
     function run(): void
     {
+        //guard clause
+        $this->assertLoopDirection($this->lower, $this->upper);
+
         for ($i = $this->lower; $i <= $this->upper; $i++) {
             $out = '';
             if ($this->checkThree->check($i)) {

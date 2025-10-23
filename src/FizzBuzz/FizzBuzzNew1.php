@@ -1,6 +1,7 @@
 <?php
 
 namespace FizzBuzz;
+use Error;
 use Output\OutputInterface;
 
 class FizzBuzzNew1 implements FizzBuzzInterface
@@ -17,8 +18,19 @@ class FizzBuzzNew1 implements FizzBuzzInterface
         $this->outputStrategy = $outputStrategy;
     }
 
+    function assertLoopDirection(int $lower, int $upper)
+    {
+        if ($upper <= $lower) {
+
+            throw new Error("Invalid Loop Direction");
+        }
+    }
+
     function run(): void
     {
+        //guard clause
+        $this->assertLoopDirection($this->lower, $this->upper);
+
         for ($i = $this->lower; $i <= $this->upper; $i++) {
             $output = "";
             if ($i % 3 == 0) {
