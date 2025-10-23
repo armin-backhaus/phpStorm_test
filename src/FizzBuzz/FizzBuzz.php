@@ -1,17 +1,21 @@
 <?php
+
+namespace FizzBuzz;
+
 // if bedingung zu FizzBuzzZippZapp erweitern ! dont repeat yourself!
 // wie kann ich bei Zipp einen 9 anstelle der 11 fehlerfrei nutzen?
 // word dokument "was gemacht" für Arbeitszeugniss!!!!!
 // class Output2 selbe ausgabe mit linenumber like ide, output 1x <br>! altes(neues) output zu nr2 umbauen, 1 nicht löschen!
 // X classes mit anderen strategien für die ausgabe .👾👾👾 in index.php integrieren
-//include_once dirname((__DIR__)) . '/src/outputZipp.php';
 //1 methode "genericLoop($start, $end, $step)"public & index
-include_once __DIR__ . '/DivisibleBy.php';
-include_once __DIR__ . '/DivisibleCheck/CheckThree.php';
-include_once __DIR__ . '/DivisibleCheck/CheckFive.php';
-include_once __DIR__ . '/DivisibleCheck/CheckSeven.php';
-include_once __DIR__ . '/DivisibleCheck/CheckEleven.php';
-include_once __DIR__ . '/FizzBuzzInterface.php';
+use Divisible\DivisibleBy;
+use DivisibleCheck\CheckEleven;
+use DivisibleCheck\CheckFive;
+use DivisibleCheck\CheckSeven;
+use DivisibleCheck\CheckThree;
+use Output\OutputInterface;
+
+
 class FizzBuzz implements FizzBuzzInterface
 {
     private $divisibleBy;

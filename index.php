@@ -1,5 +1,22 @@
 <?php
 declare(strict_types=1);
+
+require_once 'vendor/autoload.php';
+
+use Divisible\DivisibleChecker;
+use FizzBuzz\FizzBuzz;
+use FizzBuzz\FizzBuzzArray;
+use FizzBuzz\FizzBuzzNew1;
+use FizzBuzz\FizzBuzzNew2;
+use Output\OutputWithBeep;
+use Output\OutputWithBothLoops;
+use Output\OutputWithColor;
+use Output\OutputWithDoubleNumbers;
+use Output\OutputWithEmote;
+use Output\OutputWithLinebreak;
+use Output\OutputWithLineNumbers;
+use Output\OutputWithProgress;
+
 echo(11);
 ?>
 
@@ -35,23 +52,25 @@ echo(11);
     <p>FizzBuzz</p>
 
     <?php
-    include_once('./src/DoubleLoop.php');
-    include_once('./src/OutputWithBothLoops.php');
-    include_once('./src/FizzBuzz.php');
-    include_once('./src/OutputWithLinebreak.php');
-    include_once('./src/OutputWithLineNumbers.php');
-    include_once('./src/OutputWithDoubleNumbers.php');
-    include_once('./src/OutputWithEmote.php');
-    include_once('./src/OutputWithColor.php');
-    include_once('./src/OutputWithBeep.php');
-    include_once('./src/OutputWithProgress.php');
-    include_once('./src/DivisibleChecker.php');
-    include_once('./src/FizzBuzzOld.php');
-    include_once('./src/FizzBuzzNew1.php');
-    include_once('./src/FizzBuzzNew2.php');
-    include_once('./src/FizzBuzzArray.php');
+    //include_once('./src/DoubleLoop.php');
+    //include_once('./src/OutputWithBothLoops.php');
+    //include_once('./src/FizzBuzz/FizzBuzz.php');
+    //include_once('./src/OutputWithLinebreak.php');
+    //include_once('./src/OutputWithLineNumbers.php');
+    //include_once('./src/OutputWithDoubleNumbers.php');
+    //include_once('./src/OutputWithEmote.php');
+    //include_once('./src/OutputWithColor.php');
+    //include_once('./src/OutputWithBeep.php');
+    //include_once('./src/OutputWithProgress.php');
+    //include_once('./src/Divisible/DivisibleChecker.php');
+    //include_once('./src/FizzBuzz/FizzBuzzOld.php');
+    //include_once('./src/FizzBuzz/FizzBuzzNew1.php');
+    //include_once('./src/FizzBuzz/FizzBuzzNew2.php');
+    //include_once('./src/FizzBuzz/FizzBuzzArray.php');
     //$fizzBuzz = new FizzBuzz(13);
     //$fizzBuzz->run();
+    $fizzBuzzArray = new FizzBuzzArray(1, 7, new OutputWithColor());
+    $fizzBuzzArray->run();
 
     function outputName($name)
     {
@@ -66,10 +85,13 @@ echo(11);
     $divisibleChecker->test("dub");
     echo "<br /><br />";
 
+
     $fizzBuzzNew1 = new FizzBuzzNew1(1, 7, new OutputWithColor());
     $fizzBuzzNew1->run();
+
     $fizzBuzzNew2 = new FizzBuzzNew2(1, 7, new OutputWithEmote());
     $fizzBuzzNew2->run();
+
     echo "end";
     //(new FizzBuzz(1, 7, new OutputWithLineNumbers()))->run();
 

@@ -1,5 +1,6 @@
 <?php
 
+namespace Divisible;
 class DivisibleChecker
 {
     function test($test)

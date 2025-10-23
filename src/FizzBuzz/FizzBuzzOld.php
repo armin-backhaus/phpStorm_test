@@ -1,7 +1,9 @@
 <?php
 
-include_once __DIR__ . '/FizzBuzzInterface.php';
-include_once __DIR__ . '/DivisibleBy.php';
+namespace FizzBuzz;
+
+//use Divisible\DivisibleBy;
+use Divisible\DivisibleBy;
 
 class FizzBuzzOld implements FizzBuzzInterface
 {

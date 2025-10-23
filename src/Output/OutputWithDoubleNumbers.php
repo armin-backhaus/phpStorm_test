@@ -1,6 +1,7 @@
 <?php
 
-include_once __DIR__ . '/OutputInterface.php';
+namespace Output;
+
 
 class OutputWithDoubleNumbers implements OutputInterface
 {

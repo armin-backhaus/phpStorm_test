@@ -1,5 +1,6 @@
 <?php
 
+namespace Output;
 class Output
 {
     function zipp()

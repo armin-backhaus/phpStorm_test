@@ -1,5 +1,7 @@
 <?php
 
+namespace Divisible;
+
 class DivisibleBy
 {
     private $divisibleChecker;
@@ -16,8 +18,8 @@ class DivisibleBy
             $this->divisibleChecker->checkThree($i) &&
             //$i % 5 == 0 &&
             $this->divisibleChecker->checkFive($i);
-            //$i % 7 == 0
-            $this->divisibleChecker->checkSeven($i);
+        //$i % 7 == 0
+        $this->divisibleChecker->checkSeven($i);
     }
 
     function fiveAndSeven($i)
@@ -25,8 +27,8 @@ class DivisibleBy
         return
             //$i % 5 == 0 &&
             $this->divisibleChecker->checkFive($i);
-            //$i % 7 == 0
-            $this->divisibleChecker->checkSeven($i);
+        //$i % 7 == 0
+        $this->divisibleChecker->checkSeven($i);
     }
 
     function threeAndFive($i)

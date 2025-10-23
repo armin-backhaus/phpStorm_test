@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/CheckInterface.php';
+namespace DivisibleCheck;
 
 class CheckEleven implements CheckInterface
 {

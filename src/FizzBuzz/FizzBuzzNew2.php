@@ -1,8 +1,11 @@
 <?php
 
-include_once __DIR__ . '/FizzBuzzInterface.php';
-include_once __DIR__ . '/OutputWithColor.php';
+namespace FizzBuzz;
 
+use DivisibleCheck\CheckFive;
+use DivisibleCheck\CheckSeven;
+use DivisibleCheck\CheckThree;
+use Output\OutputInterface;
 
 class FizzBuzzNew2 implements FizzBuzzInterface
 {
@@ -15,18 +18,17 @@ class FizzBuzzNew2 implements FizzBuzzInterface
 
     function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
     {
-        $this->outputStrategy = $outputStrategy;
-        $this->upper = $upper;
         $this->lower = $lower;
+        $this->upper = $upper;
+        $this->outputStrategy = $outputStrategy;
         $this->checkThree = new CheckThree();
         $this->checkFive = new CheckFive();
         $this->checkSeven = new CheckSeven();
     }
-    function run()
+
+    function run(): void
     {
         for ($i = $this->lower; $i <= $this->upper; $i++) {
-
-
             $out = '';
             if ($this->checkThree->check($i)) {
                 $out = $out . "Fizz";

@@ -11,6 +11,9 @@
  * ...
  * 3 - 3
  */
+
+
+
 class DoubleLoop
 {
     //19 in eig. methode
@@ -31,12 +34,14 @@ class DoubleLoop
             $this->innerLoop($i);
         }
     }
+
     private function innerLoop($i)
     {
         for ($j = 333; $j >= 111; $j = $j - 111) {
             $this->output($i, $j);
         }
     }
+
     private function output($i, $j)
     {
         echo $i . "-" . $j . "<br />";

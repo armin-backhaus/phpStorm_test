@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/OutputInterface.php';
+namespace Output;
 
 class OutputWithBothLoops implements OutputInterface
 {
