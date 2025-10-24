@@ -17,7 +17,7 @@ use Error;
 use Output\OutputInterface;
 
 
-class FizzBuzz implements FizzBuzzInterface
+class FizzBuzz extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private $divisibleBy;
     private $upper;
@@ -52,13 +52,7 @@ class FizzBuzz implements FizzBuzzInterface
 
     }
 
-    function assertLoopDirection(int $lower, int $upper)
-    {
-        if ($upper <= $lower) {
 
-            throw new Error("Invalid Loop Direction");
-        }
-    }
     function run(): void
     {
         //guard clause

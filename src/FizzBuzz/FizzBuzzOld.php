@@ -6,7 +6,7 @@ namespace FizzBuzz;
 use Divisible\DivisibleBy;
 use Error;
 
-class FizzBuzzOld implements FizzBuzzInterface
+class FizzBuzzOld extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private $divisibleBy;
     private $lower;
@@ -21,14 +21,6 @@ class FizzBuzzOld implements FizzBuzzInterface
         $this->lower = $lower;
         $this->upper = $upper;
         $this->outputStrategy = $outputStrategy;
-    }
-
-    function assertLoopDirection(int $lower, int $upper)
-    {
-        if ($upper <= $lower) {
-
-            throw new Error("Invalid Loop Direction");
-        }
     }
 
     function run()

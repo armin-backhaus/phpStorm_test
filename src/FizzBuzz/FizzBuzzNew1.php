@@ -4,7 +4,7 @@ namespace FizzBuzz;
 use Error;
 use Output\OutputInterface;
 
-class FizzBuzzNew1 implements FizzBuzzInterface
+class FizzBuzzNew1 extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private OutputInterface $outputStrategy;
     private int $upper;
@@ -16,14 +16,6 @@ class FizzBuzzNew1 implements FizzBuzzInterface
         $this->lower = $lower;
         $this->upper = $upper;
         $this->outputStrategy = $outputStrategy;
-    }
-
-    function assertLoopDirection(int $lower, int $upper)
-    {
-        if ($upper <= $lower) {
-
-            throw new Error("Invalid Loop Direction");
-        }
     }
 
     function run(): void

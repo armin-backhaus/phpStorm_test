@@ -9,7 +9,7 @@ use DivisibleCheck\CheckEleven;
 use Error;
 use Output\OutputInterface;
 
-class FizzBuzzArray implements FizzBuzzInterface
+class FizzBuzzArray extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private OutputInterface $outputStrategy;
     private int $upper;
@@ -28,13 +28,6 @@ class FizzBuzzArray implements FizzBuzzInterface
         $this->checker[] = new CheckEleven();
     }
 
-    function assertLoopDirection(int $lower, int $upper)
-    {
-        if ($upper <= $lower) {
-
-            throw new Error("Invalid Loop Direction");
-        }
-    }
 
     function run(): void
     {

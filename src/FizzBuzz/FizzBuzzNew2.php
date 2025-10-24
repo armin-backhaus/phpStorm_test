@@ -8,7 +8,7 @@ use DivisibleCheck\CheckThree;
 use Error;
 use Output\OutputInterface;
 
-class FizzBuzzNew2 implements FizzBuzzInterface
+class FizzBuzzNew2 extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private OutputInterface $outputStrategy;
     private int $upper;
@@ -25,14 +25,6 @@ class FizzBuzzNew2 implements FizzBuzzInterface
         $this->checkThree = new CheckThree();
         $this->checkFive = new CheckFive();
         $this->checkSeven = new CheckSeven();
-    }
-
-    function assertLoopDirection(int $lower, int $upper)
-    {
-        if ($upper <= $lower) {
-
-            throw new Error("Invalid Loop Direction");
-        }
     }
 
     function run(): void
