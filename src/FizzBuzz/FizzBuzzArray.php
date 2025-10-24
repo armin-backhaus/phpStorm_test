@@ -2,25 +2,20 @@
 
 namespace FizzBuzz;
 
-use DivisibleCheck\CheckThree;
+use DivisibleCheck\CheckEleven;
 use DivisibleCheck\CheckFive;
 use DivisibleCheck\CheckSeven;
-use DivisibleCheck\CheckEleven;
-use Error;
+use DivisibleCheck\CheckThree;
 use Output\OutputInterface;
 
 class FizzBuzzArray extends AbstractFizzBuzz implements FizzBuzzInterface
 {
-    private OutputInterface $outputStrategy;
-    private int $upper;
-    private int $lower;
     private array $checker;
 
     function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
     {
-        $this->lower = $lower;
-        $this->upper = $upper;
-        $this->outputStrategy = $outputStrategy;
+        parent::__construct($lower, $upper, $outputStrategy);
+
         $this->checker = [];
         $this->checker[] = new CheckThree();
         $this->checker[] = new CheckFive();

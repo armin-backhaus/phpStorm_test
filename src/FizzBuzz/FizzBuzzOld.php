@@ -2,28 +2,21 @@
 
 namespace FizzBuzz;
 
-//use Divisible\DivisibleBy;
 use Divisible\DivisibleBy;
-use Error;
+use Output\OutputInterface;
 
 class FizzBuzzOld extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private $divisibleBy;
-    private $lower;
-    private $upper;
-    private $outputStrategy;
 
     public function __construct($lower, $upper, OutputInterface $outputStrategy)
     {
+        parent::__construct($lower, $upper, $outputStrategy);
+
         $this->divisibleBy = new DivisibleBy();
-
-
-        $this->lower = $lower;
-        $this->upper = $upper;
-        $this->outputStrategy = $outputStrategy;
     }
 
-    function run()
+    function run(): void
     {
         //guard clause
         $this->assertLoopDirection($this->lower, $this->upper);

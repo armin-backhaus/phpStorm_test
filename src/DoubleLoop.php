@@ -17,7 +17,7 @@
 class DoubleLoop
 {
     //19 in eig. methode
-    public function run()
+    public function run(): void
     {
         $this->bothLoops();
         $this->lineBreak();

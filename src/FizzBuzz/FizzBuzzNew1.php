@@ -1,22 +1,10 @@
 <?php
 
 namespace FizzBuzz;
-use Error;
-use Output\OutputInterface;
 
 class FizzBuzzNew1 extends AbstractFizzBuzz implements FizzBuzzInterface
 {
-    private OutputInterface $outputStrategy;
-    private int $upper;
-    private int $lower;
-
-
-    function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
-    {
-        $this->lower = $lower;
-        $this->upper = $upper;
-        $this->outputStrategy = $outputStrategy;
-    }
+    // no for individual constructor because parent constructor is called anyway...
 
     function run(): void
     {

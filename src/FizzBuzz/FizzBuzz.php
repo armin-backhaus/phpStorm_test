@@ -13,17 +13,12 @@ use DivisibleCheck\CheckEleven;
 use DivisibleCheck\CheckFive;
 use DivisibleCheck\CheckSeven;
 use DivisibleCheck\CheckThree;
-use Error;
 use Output\OutputInterface;
 
 
 class FizzBuzz extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private $divisibleBy;
-    private $upper;
-    private $lower;
-    private $outputStrategy;
-
     private $checkThree;
     private $checkFive;
     private $checkSeven;
@@ -32,12 +27,9 @@ class FizzBuzz extends AbstractFizzBuzz implements FizzBuzzInterface
 
     function __construct($lower, $upper, OutputInterface $outputStrategy)
     {
+        parent::__construct($lower, $upper, $outputStrategy);
+
         $this->divisibleBy = (new DivisibleBy());
-
-        $this->outputStrategy = $outputStrategy;
-
-        $this->upper = $upper;
-        $this->lower = $lower;
 
         $this->checkThree = new CheckThree();
         $this->checkFive = new CheckFive();
