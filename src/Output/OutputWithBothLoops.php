@@ -4,7 +4,7 @@ namespace Output;
 
 class OutputWithBothLoops implements OutputInterface
 {
-    function output($something, $i = 0)
+    function output($something, $i = 0): void
     {
         echo $something . ' - ', $i . "<br />";
     }

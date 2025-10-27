@@ -3,12 +3,12 @@
 namespace Output;
 class Output
 {
-    function zipp()
+    function zipp(): void
     {
         echo "Zipp <br><br>";
     }
 
-    function withLinebreak($something)
+    function withLinebreak($something): void
     {
         echo "$something <br><br>";
     }

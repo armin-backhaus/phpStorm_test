@@ -4,7 +4,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use Divisible\DivisibleChecker;
-use FizzBuzz\FizzBuzz;
+use FizzBuzz\FizzBuzzOld;
 use FizzBuzz\FizzBuzzArray;
 use FizzBuzz\FizzBuzzNew1;
 use FizzBuzz\FizzBuzzNew2;
@@ -54,7 +54,7 @@ echo(11);
     <?php
 
     try {
-        $fizzBuzz = new FizzBuzz(10, 5, new OutputWithEmote());
+        $fizzBuzz = new FizzBuzzOld(10, 5, new OutputWithEmote());
         $fizzBuzz->run();
     } catch(Error $exception) {
         echo "Error occurred: " . $exception->getMessage();
@@ -84,7 +84,7 @@ echo(11);
     $fizzBuzzNew2->run();
 
     echo "end";
-    //(new FizzBuzz(1, 7, new OutputWithLineNumbers()))->run();
+    //(new FizzBuzzOld(1, 7, new OutputWithLineNumbers()))->run();
 
     //$outputObject = new OutputWithLinenumbers();
     //$fizzBuzz1 = new FizzBuzzOld(1, 7, $outputObject);
@@ -93,60 +93,60 @@ echo(11);
     //FizzBuzzArray
     //$fizzBuzz1->run();
 
-    (new FizzBuzz(3, 9, new OutputWithLinebreak()))->run();
+    (new FizzBuzzOld(3, 9, new OutputWithLinebreak()))->run();
 
     $outputObject = new OutputWithLinebreak();
-    $fizzBuzz2 = new FizzBuzz(3, 9, $outputObject);
+    $fizzBuzz2 = new FizzBuzzOld(3, 9, $outputObject);
     $fizzBuzz2->run();
 
-    (new FizzBuzz(3, 9, new OutputWithDoubleNumbers()))->run();
+    (new FizzBuzzOld(3, 9, new OutputWithDoubleNumbers()))->run();
 
     $outputObject = new OutputWithDoubleNumbers();
-    $fizzBuzz3 = new FizzBuzz(3, 9, $outputObject);
+    $fizzBuzz3 = new FizzBuzzOld(3, 9, $outputObject);
     $fizzBuzz3->run();
 
     try {
-        (new FizzBuzz(9, 3, new OutputWithLineNumbers()))->run();
+        (new FizzBuzzOld(9, 3, new OutputWithLineNumbers()))->run();
     } catch(Error $exception) {
         //nop - code smell!
     }
 
     $outputObject = new OutputWithLinenumbers();
-    $fizzBuzz4 = new FizzBuzz(3, 9, $outputObject);
+    $fizzBuzz4 = new FizzBuzzOld(3, 9, $outputObject);
     $fizzBuzz4->run();
 
-    (new FizzBuzz(1, 9, new OutputWithEmote()))->run();
+    (new FizzBuzzOld(1, 9, new OutputWithEmote()))->run();
 
     $outputObject = new OutputWithEmote();
-    $fizzBuzz5 = new FizzBuzz(1, 9, $outputObject);
+    $fizzBuzz5 = new FizzBuzzOld(1, 9, $outputObject);
     $fizzBuzz5->run();
 
-    (new FizzBuzz(1, 9, new OutputWithColor()))->run();
+    (new FizzBuzzOld(1, 9, new OutputWithColor()))->run();
 
     $outputObject = new OutputWithEmote();
-    $fizzBuzz6 = new FizzBuzz(1, 9, $outputObject);
+    $fizzBuzz6 = new FizzBuzzOld(1, 9, $outputObject);
     $fizzBuzz6->run();
 
-    (new FizzBuzz(1, 9, new OutputWithBothLoops()))->run();
+    (new FizzBuzzOld(1, 9, new OutputWithBothLoops()))->run();
 
     $outputObject = new OutputWithBothLoops();
-    $fizzBuzz7 = new FizzBuzz(1, 9, $outputObject);
+    $fizzBuzz7 = new FizzBuzzOld(1, 9, $outputObject);
     $fizzBuzz7->run();
 
-    (new FizzBuzz(1, 9, new OutputWithBeep()))->run();
+    (new FizzBuzzOld(1, 9, new OutputWithBeep()))->run();
 
     $outputObject = new OutputWithBeep();
-    $fizzBuzz8 = new FizzBuzz(1, 9, $outputObject);
+    $fizzBuzz8 = new FizzBuzzOld(1, 9, $outputObject);
     $fizzBuzz8->run();
 
-    (new FizzBuzz(1, 9, new OutputWithProgress()))->run();
+    (new FizzBuzzOld(1, 9, new OutputWithProgress()))->run();
 
     $outputObject = new OutputWithProgress();
     #000a53 = new OutputWithProgress();
-    $fizzBuzz9 = new FizzBuzz(1, 9, $outputObject);
+    $fizzBuzz9 = new FizzBuzzOld(1, 9, $outputObject);
     $fizzBuzz9->run();
 
-    //(new FizzBuzz(1,9, new OutputWithDoubleNumbers()))->genericLoop();
+    //(new FizzBuzzOld(1,9, new OutputWithDoubleNumbers()))->genericLoop();
     ?>
 
     <p>FizzBuzz ende</p>

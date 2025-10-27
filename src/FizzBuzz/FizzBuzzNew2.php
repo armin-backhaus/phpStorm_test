@@ -3,15 +3,16 @@
 namespace FizzBuzz;
 
 use DivisibleCheck\CheckFive;
+use DivisibleCheck\CheckInterface;
 use DivisibleCheck\CheckSeven;
 use DivisibleCheck\CheckThree;
 use Output\OutputInterface;
 
 class FizzBuzzNew2 extends AbstractFizzBuzz implements FizzBuzzInterface
 {
-    private $checkThree;
-    private $checkFive;
-    private $checkSeven;
+    private CheckInterface $checkThree;
+    private CheckInterface $checkFive;
+    private CheckInterface $checkSeven;
 
     function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
     {

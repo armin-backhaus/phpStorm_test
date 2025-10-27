@@ -3,7 +3,7 @@
 namespace Divisible;
 class DivisibleChecker
 {
-    function test($test)
+    function test($test): void
     {
         echo "hello from CheckThree $test <br />";
     }

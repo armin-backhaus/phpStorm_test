@@ -26,7 +26,7 @@ class FizzBuzzNew1 extends AbstractFizzBuzz implements FizzBuzzInterface
                 $output = $output . "Elv";
             }
             if ($i % 13 == 0) {
-                $output = $output . "Thir";
+                $output = $output . "Thr";
             }
             if (empty($output)) {
                 $output = $i;

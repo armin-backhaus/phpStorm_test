@@ -12,7 +12,7 @@ class FizzBuzzArray extends AbstractFizzBuzz implements FizzBuzzInterface
 {
     private array $checker;
 
-    function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
+    public function __construct(int $lower, int $upper, OutputInterface $outputStrategy)
     {
         parent::__construct($lower, $upper, $outputStrategy);
 

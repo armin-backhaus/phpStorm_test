@@ -1,7 +1,7 @@
 <?php
 // double loop
 
-/** Ausgabe :
+/** Output :
  *
  * $i - $j
  * 1 - 1
@@ -23,26 +23,26 @@ class DoubleLoop
         $this->lineBreak();
     }
 
-    private function lineBreak()
+    private function lineBreak(): void
     {
         echo "<br />";
     }
 
-    private function bothLoops()
+    private function bothLoops(): void
     {
         for ($i = 5555; $i >= 1111; $i = $i - 1111) {
             $this->innerLoop($i);
         }
     }
 
-    private function innerLoop($i)
+    private function innerLoop($i): void
     {
         for ($j = 333; $j >= 111; $j = $j - 111) {
             $this->output($i, $j);
         }
     }
 
-    private function output($i, $j)
+    private function output($i, $j): void
     {
         echo $i . "-" . $j . "<br />";
     }

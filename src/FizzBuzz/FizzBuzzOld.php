@@ -7,7 +7,7 @@ use Output\OutputInterface;
 
 class FizzBuzzOld extends AbstractFizzBuzz implements FizzBuzzInterface
 {
-    private $divisibleBy;
+    private DivisibleBy $divisibleBy;
 
     public function __construct($lower, $upper, OutputInterface $outputStrategy)
     {

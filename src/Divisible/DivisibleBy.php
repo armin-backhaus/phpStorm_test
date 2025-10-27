@@ -4,7 +4,7 @@ namespace Divisible;
 
 class DivisibleBy
 {
-    private $divisibleChecker;
+    private DivisibleChecker $divisibleChecker;
 
     function __construct()
     {
@@ -22,7 +22,7 @@ class DivisibleBy
         $this->divisibleChecker->checkSeven($i);
     }
 
-    function fiveAndSeven($i)
+    function fiveAndSeven($i): bool
     {
         return
             //$i % 5 == 0 &&
@@ -31,7 +31,7 @@ class DivisibleBy
         $this->divisibleChecker->checkSeven($i);
     }
 
-    function threeAndFive($i)
+    function threeAndFive($i): bool
     {
         return
             //$i % 3 == 0 &&
@@ -40,7 +40,7 @@ class DivisibleBy
             $this->divisibleChecker->checkFive($i);
     }
 
-    function threeAndSeven($i)
+    function threeAndSeven($i): bool
     {
         return
             $this->divisibleChecker->checkThree($i) &&
@@ -48,20 +48,20 @@ class DivisibleBy
             $this->divisibleChecker->checkSeven($i);
     }
 
-    function three($i)
+    function three($i): bool
     {
         //return $i % 3 == 0;
         return $this->divisibleChecker->checkThree($i);
     }
 
-    function five($i)
+    function five($i): bool
     {
         return
             //$i % 5 == 0
             $this->divisibleChecker->checkFive($i);
     }
 
-    function seven($i)
+    function seven($i): bool
     {
         return
             //$i % 7 == 0

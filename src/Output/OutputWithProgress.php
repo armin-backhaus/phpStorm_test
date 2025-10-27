@@ -4,7 +4,7 @@ namespace Output;
 
 class OutputWithProgress implements OutputInterface
 {
-    function output($something, $i = 0)
+    function output($something, $i = 0): void
     {
         //TODO make number of steps available for calculation of real %
         $percent = $i * 10;
