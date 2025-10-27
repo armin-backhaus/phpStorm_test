@@ -6,13 +6,13 @@ use PHPUnit\Framework\TestCase;
 use function SebastianBergmann\Type\TestFixture\voidReturnType;
 
 
-class CheckThreeTest extends TestCase
+class CheckElevenTest extends TestCase
 {
-    private $dut;
+    private $checkEleven;
 
     public function setUp(): void
     {
-        $this->dut = new CheckThree();
+        $this->dut = new CheckEleven();
     }
 
     protected function tearDown(): void
@@ -20,23 +20,23 @@ class CheckThreeTest extends TestCase
         //clean up
     }
 
-    final public function testIsBool(): void
+    final public function testBool(): void
     {
-        $result = $this->dut->check(9);
+        $result = $this->dut->check(11);
 
-        $this->assertIsBool($result);
+        $this->assertTrue($result);
     }
 
     final public function testIsDivisible(): void
     {
-        $result = $this->dut->check(3);
+        $result = $this->dut->check(33);
 
         $this->assertTrue($result);
     }
 
     final public function testIsNotDivisible(): void
     {
-        $result = $this->dut->check(4);
+        $result = $this->dut->check(10);
 
         $this->assertFalse($result);
     }

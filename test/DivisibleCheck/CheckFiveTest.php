@@ -5,14 +5,13 @@ namespace DivisibleCheck;
 use PHPUnit\Framework\TestCase;
 use function SebastianBergmann\Type\TestFixture\voidReturnType;
 
-
-class CheckThreeTest extends TestCase
+class CheckFiveTest extends TestCase
 {
     private $dut;
 
     public function setUp(): void
     {
-        $this->dut = new CheckThree();
+        $this->dut = new CheckFive();
     }
 
     protected function tearDown(): void
@@ -20,18 +19,19 @@ class CheckThreeTest extends TestCase
         //clean up
     }
 
-    final public function testIsBool(): void
+    final public function testBool(): void
     {
-        $result = $this->dut->check(9);
+        $result = $this->dut->check(15);
+        voidReturnType();
 
-        $this->assertIsBool($result);
+        $this->assertTrue($result);
     }
 
     final public function testIsDivisible(): void
     {
-        $result = $this->dut->check(3);
+        $result = $this->dut->check(5);
 
-        $this->assertTrue($result);
+        $this->assertFalse($result);
     }
 
     final public function testIsNotDivisible(): void
