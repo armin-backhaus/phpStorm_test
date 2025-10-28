@@ -3,8 +3,6 @@
 namespace DivisibleCheck;
 
 use PHPUnit\Framework\TestCase;
-use function SebastianBergmann\Type\TestFixture\voidReturnType;
-
 
 class CheckElevenTest extends TestCase
 {

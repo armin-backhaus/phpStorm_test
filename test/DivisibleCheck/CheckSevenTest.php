@@ -3,10 +3,9 @@
 namespace DivisibleCheck;
 
 use PHPUnit\Framework\TestCase;
-use function SebastianBergmann\Type\TestFixture\voidReturnType;
 
 
-class CheckSeven extends TestCase
+class CheckSevenTest extends TestCase
 {
     private $dut;
 

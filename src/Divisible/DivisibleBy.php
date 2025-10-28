@@ -14,21 +14,22 @@ class DivisibleBy
     public function threeAndFiveAndSeven($i): bool
     {
         //return $i % 3 == 0 && $i % 5 == 0 && $i % 7 == 0;
-        return
+        return (
             $this->divisibleChecker->checkThree($i) &&
             //$i % 5 == 0 &&
-            $this->divisibleChecker->checkFive($i);
-        //$i % 7 == 0
-        $this->divisibleChecker->checkSeven($i);
+            $this->divisibleChecker->checkFive($i) &&
+            //$i % 7 == 0
+            $this->divisibleChecker->checkSeven($i)
+        );
     }
 
     function fiveAndSeven($i): bool
     {
         return
             //$i % 5 == 0 &&
-            $this->divisibleChecker->checkFive($i);
-        //$i % 7 == 0
-        $this->divisibleChecker->checkSeven($i);
+            $this->divisibleChecker->checkFive($i) &&
+            //$i % 7 == 0
+            $this->divisibleChecker->checkSeven($i);
     }
 
     function threeAndFive($i): bool

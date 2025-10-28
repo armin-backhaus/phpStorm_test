@@ -3,28 +3,38 @@
 namespace DivisibleCheck;
 
 use PHPUnit\Framework\TestCase;
-use function SebastianBergmann\Type\TestFixture\voidReturnType;
+use TypeError;
 
 
 class CheckThreeTest extends TestCase
 {
     private $dut;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->dut = new CheckThree();
     }
 
     protected function tearDown(): void
     {
-        //clean up
+        // clean up
+    }
+
+    final public function testOnFloatCastToInt(): void
+    {
+        $this->assertIsBool($this->dut->check(3.5));
+        $this->assertTrue($this->dut->check(3.5));
+    }
+
+    final public function testOnStringCastToInt(): void
+    {
+        $this->assertTrue($this->dut->check("0003"));
     }
 
     final public function testIsBool(): void
     {
-        $result = $this->dut->check(9);
-
-        $this->assertIsBool($result);
+        // oneliner version better!?
+        $this->assertIsBool($this->dut->check(9));
     }
 
     final public function testIsDivisible(): void
