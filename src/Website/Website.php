@@ -8,29 +8,45 @@ class Website
     {
         echo $this->docType();
 
-        echo $this->htmlTags(
-            $this->simpleHeader("My Title"),
-            $this->simpleBody("Hello Website")
+        $output = $this->htmlTags(
+            $this->headTags(
+                $this->titleTags("Wonderful Title")
+            ),
+            $this->bodyTags(
+                $this->h1Tags("Hello Website")
+            )
         );
+
+        echo $output . PHP_EOL . PHP_EOL;
     }
 
     private function docType(): string
     {
-        return '<!DOCTYPE html>';
+        return '<!DOCTYPE html>' . PHP_EOL;
     }
 
     private function htmlTags(string $head, string $body): string
     {
-        return "<html lang='en'>$head$body</html>";
+        return "<html lang='en'>$head$body</html>" . PHP_EOL;
     }
 
-    private function simpleHeader(string $headText): string
+    private function headTags(string $titleTags): string
     {
-        return "<head><title>$headText</title></head>";
+        return "<head>$titleTags</head>" . PHP_EOL;
     }
 
-    private function simpleBody(string $bodyText): string
+    private function titleTags(string $title): string
     {
-        return "<body><h1>$bodyText</h1></body>";
+        return "<title>$title</title>" . PHP_EOL;
+    }
+
+    private function bodyTags(string $content): string
+    {
+        return "<body>$content</body>" . PHP_EOL;
+    }
+
+    private function h1Tags(string $heading): string
+    {
+        return "<h1>$heading</h1>" . PHP_EOL;
     }
 }
