@@ -8,8 +8,8 @@ class Website
     {
         echo $this->docType();
         echo $this->htmlOpener();
-        echo $this->simpleHeader();
-        echo $this->simpleBody();
+        echo $this->simpleHeader("My Title");
+        echo $this->simpleBody("Hello Website");
         echo $this->htmlCloser();
     }
 
@@ -28,13 +28,13 @@ class Website
         return '</html>';
     }
 
-    private function simpleHeader(): string
+    private function simpleHeader(string $headText): string
     {
-        return "<head><title>Hello Title</title></head>";
+        return "<head><title>$headText</title></head>";
     }
 
-    private function simpleBody(): string
+    private function simpleBody(string $bodyText): string
     {
-        return "<body><h1>Hello Website</h1></body>";
+        return "<body><h1>$bodyText</h1></body>";
     }
 }
