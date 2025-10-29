@@ -40,7 +40,7 @@ class DivisibleByTest extends TestCase
         $this->assertFalse($dut->threeAndFive(5));
     }
 
-    final  public function threeAndSeven(): void
+    final public function testThreeAndSeven(): void
     {
         $dut = new DivisibleBy();
 

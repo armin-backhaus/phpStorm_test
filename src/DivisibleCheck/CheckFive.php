@@ -12,5 +12,4 @@ class CheckFive implements CheckInterface
     {
         return "Buzz";
     }
-
 }

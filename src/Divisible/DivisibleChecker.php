@@ -3,11 +3,6 @@
 namespace Divisible;
 class DivisibleChecker
 {
-    function test($test): void
-    {
-        echo "hello from CheckThree $test <br />";
-    }
-
     function checkThree(int $number): bool
     {
         return $number % 3 == 0;

@@ -38,4 +38,11 @@ class CheckElevenTest extends TestCase
 
         $this->assertFalse($result);
     }
+
+    final public function testGetString(): void
+    {
+        $result = $this->dut->getString();
+
+        $this->assertEquals("Elv", $result);
+    }
 }

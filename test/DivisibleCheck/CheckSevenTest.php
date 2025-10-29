@@ -39,4 +39,10 @@ class CheckSevenTest extends TestCase
 
         $this->assertFalse($result);
     }
+    final public function testGetString(): void
+    {
+        $result = $this->dut->getString();
+
+        $this->assertEquals("Zipp", $result);
+    }
 }
