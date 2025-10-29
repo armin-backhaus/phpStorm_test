@@ -11,6 +11,7 @@ class Website
         echo $this->simpleHeader("My Title");
         echo $this->simpleBody("Hello Website");
         echo $this->htmlCloser();
+        echo $this->htmlTags("h", "b");
     }
 
     private function docType(): string
@@ -26,6 +27,11 @@ class Website
     private function htmlCloser(): string
     {
         return '</html>';
+    }
+
+    private function htmlTags(string $head, string $body): string
+    {
+        return "<html lang='en'>$head$body</html>";
     }
 
     private function simpleHeader(string $headText): string
