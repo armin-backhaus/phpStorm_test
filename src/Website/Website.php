@@ -7,26 +7,16 @@ class Website
     public function run(): void
     {
         echo $this->docType();
-        echo $this->htmlOpener();
-        echo $this->simpleHeader("My Title");
-        echo $this->simpleBody("Hello Website");
-        echo $this->htmlCloser();
-        echo $this->htmlTags("h", "b");
+
+        echo $this->htmlTags(
+            $this->simpleHeader("My Title"),
+            $this->simpleBody("Hello Website")
+        );
     }
 
     private function docType(): string
     {
         return '<!DOCTYPE html>';
-    }
-
-    private function htmlOpener(): string
-    {
-        return '<html lang="en">';
-    }
-
-    private function htmlCloser(): string
-    {
-        return '</html>';
     }
 
     private function htmlTags(string $head, string $body): string
