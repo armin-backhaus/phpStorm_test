@@ -13,7 +13,8 @@ class Website
                 $this->titleTags("Wonderful Title")
             ),
             $this->bodyTags(
-                $this->h1Tags("Hello Website")
+                $this->h1Tags("Hello Website") .
+                 $this->contentParagraph("Paragraph")
             )
         );
 
@@ -48,5 +49,10 @@ class Website
     private function h1Tags(string $heading): string
     {
         return "<h1>$heading</h1>" . PHP_EOL;
+    }
+
+    private function contentParagraph(string $paragraph): string
+    {
+        return "<p>$paragraph</p>" . PHP_EOL;
     }
 }
