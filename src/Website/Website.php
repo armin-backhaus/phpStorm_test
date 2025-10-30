@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Website;
 
 class Website
@@ -12,13 +14,30 @@ class Website
             $this->headTags(
                 $this->titleTags("Wonderful Title")
             ),
-            $this->bodyTags(
-                $this->h1Tags("Hello Website") .
-                 $this->contentParagraph("Paragraph")
-            )
+            $this->bodyTags([
+                $this->h1Tags("Hello Website"),
+                $this->contentParagraph("Paragraph"),
+                $this->contentParagraph("Paragraph"),
+                $this->contentParagraph("Paragraph"),
+                $this->contentParagraph("Paragraph"),
+                $this->contentParagraph("Paragraph"),
+                $this->contentParagraph("Paragraph"),
+                $this->contentParagraph("Paragraph"),
+            ])
         );
 
         echo $output . PHP_EOL . PHP_EOL;
+    }
+
+    private function bodyTags(array $contentArray): string
+    {
+        $output = "";
+
+        foreach($contentArray as $content) {
+            $output = $output . $content;
+        }
+
+        return "<body>$output</body>" . PHP_EOL;
     }
 
     private function docType(): string
@@ -39,11 +58,6 @@ class Website
     private function titleTags(string $title): string
     {
         return "<title>$title</title>" . PHP_EOL;
-    }
-
-    private function bodyTags(string $content): string
-    {
-        return "<body>$content</body>" . PHP_EOL;
     }
 
     private function h1Tags(string $heading): string
