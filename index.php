@@ -10,6 +10,7 @@ use wow\Ork;
 use wow\Human;
 use wow\DarkIronDwarf;
 use wow\Forsaken;
+use wow\DungenMaster;
 
 
 $myWebsite = new Website();
@@ -19,6 +20,7 @@ $anduin = new Human("Anduin");
 $dagran = new DarkIronDwarf("Dagran");
 $thrall = new Ork("Thrall");
 $lostWeeper = new Forsaken("Lostweeper");
+$dub = new DungenMaster("Dub");
 
 echo $myWebsite->docType();
 
@@ -59,6 +61,11 @@ $output = $myWebsite->htmlTags(
         $myWebsite->pTags(
             $lostWeeper->saySsh(),
             $lostWeeper->sayMyBreed(),
+        ),
+
+        $myWebsite->pTags(
+            $dub->sayYeah(),
+            $dub->sayMyBreed(),
         ),
 
         $myWebsite->hrTag(),
