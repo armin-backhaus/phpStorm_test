@@ -50,8 +50,19 @@ class Website
         return "<h1>$heading</h1>" . PHP_EOL;
     }
 
-    public function contentParagraph(string $paragraph): string
+    public function h3Tags(string $heading): string
     {
-        return "<p>$paragraph</p>" . PHP_EOL;
+        return "<h3>$heading</h3>" . PHP_EOL;
+    }
+
+    public function pTags(string ... $sentences): string
+    {
+        $output = "";
+
+        foreach($sentences as $sentence) {
+            $output = $output . $sentence;
+        }
+
+        return "<p>$output</p>" . PHP_EOL;
     }
 }
