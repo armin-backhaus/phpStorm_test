@@ -7,13 +7,18 @@ use Output\OutputWithColor;
 use Website\Website;
 use wow\Elf;
 use wow\Ork;
+use wow\Human;
+use wow\DarkIronDwarf;
+use wow\Forsaken;
 
 
 $myWebsite = new Website();
 $tyrande = new Elf("Tyrande");
 $caledra = new Elf("Caledra");
-
+$anduin = new Human("Anduin");
+$dagran = new DarkIronDwarf("Dagran");
 $thrall = new Ork("Thrall");
+$lostWeeper = new Forsaken("Lostweeper");
 
 echo $myWebsite->docType();
 
@@ -39,6 +44,21 @@ $output = $myWebsite->htmlTags(
         $myWebsite->pTags(
             $thrall->sayHi(),
             $thrall->sayMyBreed(),
+        ),
+
+        $myWebsite->pTags(
+            $anduin->sayYo(),
+            $anduin->sayMyBreed(),
+        ),
+
+        $myWebsite->pTags(
+            $dagran->sayGrr(),
+            $dagran->sayMyBreed(),
+        ),
+
+        $myWebsite->pTags(
+            $lostWeeper->saySsh(),
+            $lostWeeper->sayMyBreed(),
         ),
 
         $myWebsite->hrTag(),
