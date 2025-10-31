@@ -4,32 +4,17 @@ declare(strict_types=1);
 
 namespace Website;
 
+use FizzBuzz\FizzBuzzOld;
+use Output\OutputWithColor;
+
 class Website
 {
-    public function run(): void
+    public function hrTag(): string
     {
-        echo $this->docType();
-
-        $output = $this->htmlTags(
-            $this->headTags(
-                $this->titleTags("Wonderful Title")
-            ),
-            $this->bodyTags([
-                $this->h1Tags("Hello Website"),
-                $this->contentParagraph("Paragraph"),
-                $this->contentParagraph("Paragraph"),
-                $this->contentParagraph("Paragraph"),
-                $this->contentParagraph("Paragraph"),
-                $this->contentParagraph("Paragraph"),
-                $this->contentParagraph("Paragraph"),
-                $this->contentParagraph("Paragraph"),
-            ])
-        );
-
-        echo $output . PHP_EOL . PHP_EOL;
+        return "<hr/>";
     }
 
-    private function bodyTags(array $contentArray): string
+    public function bodyTags(string ... $contentArray): string
     {
         $output = "";
 
@@ -40,32 +25,32 @@ class Website
         return "<body>$output</body>" . PHP_EOL;
     }
 
-    private function docType(): string
+    public function docType(): string
     {
         return '<!DOCTYPE html>' . PHP_EOL;
     }
 
-    private function htmlTags(string $head, string $body): string
+    public function htmlTags(string $head, string $body): string
     {
         return "<html lang='en'>$head$body</html>" . PHP_EOL;
     }
 
-    private function headTags(string $titleTags): string
+    public function headTags(string $titleTags): string
     {
         return "<head>$titleTags</head>" . PHP_EOL;
     }
 
-    private function titleTags(string $title): string
+    public function titleTags(string $title): string
     {
         return "<title>$title</title>" . PHP_EOL;
     }
 
-    private function h1Tags(string $heading): string
+    public function h1Tags(string $heading): string
     {
         return "<h1>$heading</h1>" . PHP_EOL;
     }
 
-    private function contentParagraph(string $paragraph): string
+    public function contentParagraph(string $paragraph): string
     {
         return "<p>$paragraph</p>" . PHP_EOL;
     }
