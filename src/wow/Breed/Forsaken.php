@@ -1,8 +1,8 @@
 <?php
 
-namespace wow;
+namespace wow\Breed;
 
-class DungenMaster
+class Forsaken
 {
     private string $name;
 
@@ -11,13 +11,13 @@ class DungenMaster
         $this->name = $name;
     }
 
-    public function sayYeah(): string
+    public function saySsh(): string
     {
-        return "Yeah, my name is $this->name! ";
+        return "Ssh, my name is $this->name! ";
     }
 
     public function sayMyBreed(): string
     {
-        return "I'm the " .  basename(self::class) . "! ";
+        return "I'm an " .  basename(self::class) . "! ";
     }
 }

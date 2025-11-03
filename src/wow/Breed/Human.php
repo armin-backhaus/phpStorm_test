@@ -1,8 +1,8 @@
 <?php
 
-namespace wow;
+namespace wow\Breed;
 
-class Ork
+class Human
 {
     private string $name;
 
@@ -11,9 +11,9 @@ class Ork
         $this->name = $name;
     }
 
-    public function sayHi(): string
+    public function sayYo(): string
     {
-        return "Hi, my name is $this->name! ";
+        return "Yo, my name is $this->name! ";
     }
 
     public function sayMyBreed(): string

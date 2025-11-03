@@ -1,8 +1,8 @@
 <?php
 
-namespace wow;
+namespace wow\Breed;
 
-class Forsaken
+class Elf
 {
     private string $name;
 
@@ -11,16 +11,13 @@ class Forsaken
         $this->name = $name;
     }
 
-    public function saySsh(): string
+    public function sayHello(): string
     {
-        return "Ssh, my name is $this->name! ";
+        return "Hello, my name is $this->name! ";
     }
 
     public function sayMyBreed(): string
     {
         return "I'm an " .  basename(self::class) . "! ";
     }
-
-    // saySsh into whisperSsh
-
 }

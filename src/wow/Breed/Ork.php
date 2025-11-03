@@ -1,8 +1,8 @@
 <?php
 
-namespace wow;
+namespace wow\Breed;
 
-class Elf
+class Ork
 {
     private string $name;
 
@@ -11,13 +11,13 @@ class Elf
         $this->name = $name;
     }
 
-    public function sayHello(): string
+    public function sayHi(): string
     {
-        return "Hello, my name is $this->name! ";
+        return "Hi, my name is $this->name! ";
     }
 
     public function sayMyBreed(): string
     {
-        return "I'm an " .  basename(self::class) . "! ";
+        return "I'm an " . basename(self::class) . "! ";
     }
 }

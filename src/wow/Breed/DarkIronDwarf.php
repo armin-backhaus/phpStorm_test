@@ -1,6 +1,6 @@
 <?php
 
-namespace wow;
+namespace wow\Breed;
 
 class DarkIronDwarf
 {

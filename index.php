@@ -5,12 +5,13 @@ require_once 'vendor/autoload.php';
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
 use Website\Website;
-use wow\Elf;
-use wow\Ork;
-use wow\Human;
-use wow\DarkIronDwarf;
-use wow\Forsaken;
-use wow\DungenMaster;
+use wow\Battle\Battle;
+use wow\Breed\DarkIronDwarf;
+use wow\Breed\DungeonMaster;
+use wow\Breed\Elf;
+use wow\Breed\Forsaken;
+use wow\Breed\Human;
+use wow\Breed\Ork;
 
 
 $myWebsite = new Website();
@@ -20,7 +21,7 @@ $anduin = new Human("Anduin");
 $dagran = new DarkIronDwarf("Dagran");
 $thrall = new Ork("Thrall");
 $lostWeeper = new Forsaken("Lostweeper");
-$dub = new DungenMaster("Dub");
+$dub = new DungeonMaster("Dub");
 
 echo $myWebsite->docType();
 
@@ -66,6 +67,14 @@ $output = $myWebsite->htmlTags(
         $myWebsite->pTags(
             $dub->sayYeah(),
             $dub->sayMyBreed(),
+        ),
+
+        $myWebsite->h3Tags("Battle"),
+        $myWebsite->pTags(
+            (new Battle())->battleTwoGroups(
+                [$dub, $thrall, $dagran],
+                [$caledra, $anduin, $lostWeeper]
+            )
         ),
 
         $myWebsite->hrTag(),
