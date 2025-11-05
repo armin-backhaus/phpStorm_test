@@ -18,6 +18,7 @@ class DungeonMaster
 
     public function sayMyBreed(): string
     {
-        return "I'm the " .  basename(self::class) . "! ";
+        $breed = preg_replace('/(?<!^)([A-Z])/', ' $1', basename(self::class));
+        return "I'm an $breed! ";
     }
 }
