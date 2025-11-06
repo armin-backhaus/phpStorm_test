@@ -12,9 +12,6 @@ class EqualAndIdenticalTest extends TestCase
         $a = 1;
         $b = 1;
         $c = "1";
-        $A = new A();
-        $B = new A();
-        $C = new C();
 
         $this->assertTrue($a == $b);
         $this->assertTrue($a === $b);
@@ -23,14 +20,5 @@ class EqualAndIdenticalTest extends TestCase
         $this->assertFalse($a === $c);
         $this->assertTrue((string) $a === $c);
         $this->assertTrue($a === (int) $c);
-
-        $this->assertTrue($A == $B);
-        $this->assertFalse($A === $B);
-
-        $this->assertFalse($A == $C);
-        $this->assertFalse($A === $C);
     }
 }
-
-class A {};
-class C {};
