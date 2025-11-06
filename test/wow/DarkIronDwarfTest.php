@@ -3,6 +3,7 @@
 namespace wow;
 
 use PHPUnit\Framework\TestCase;
+use Learning\EqualAndIdentical\Fixtures\Tools;
 
 class DarkIronDwarfTest extends TestCase
 {

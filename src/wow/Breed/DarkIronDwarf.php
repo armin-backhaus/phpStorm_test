@@ -21,7 +21,4 @@ class DarkIronDwarf
         $breed = preg_replace('/(?<!^)([A-Z])/', ' $1', basename(self::class));
         return "I'm an $breed! ";
     }
-
-    // DarkIronDwarf into Dark Iron Dwarf
-
 }

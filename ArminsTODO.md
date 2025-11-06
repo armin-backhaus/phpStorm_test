@@ -1,6 +1,6 @@
 
 - SpaceSeparatedTest with Dark Iron Dwarf and Dungeon Master ✔️
-- individual class for seperated space and turn DarkIronDwarfTest into class of separated spaces 🔧🔧🔧
+- individual class for seperated space and turn DarkIronDwarfTest into class of separated spaces 🔧🔧🔧 in witch Directory?
 - 
 - find user stories for battle concept
 - cant find any user story so far...wip...
