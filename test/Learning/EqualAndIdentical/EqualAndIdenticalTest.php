@@ -3,6 +3,7 @@
 namespace Learning\EqualAndIdentical;
 
 use Learning\EqualAndIdentical\Fixtures\A;
+use Learning\EqualAndIdentical\Fixtures\C;
 use PHPUnit\Framework\TestCase;
 
 class EqualAndIdenticalTest extends TestCase
@@ -27,9 +28,12 @@ class EqualAndIdenticalTest extends TestCase
         $array = [1, 2, 3];
 
         $this->assertTrue($array === [1, 2, 3]);
+        $this->assertTrue($array == [1, 2, 3]);
+
         $this->assertFalse($array === [3, 2, 1]);
+
         $this->assertFalse($array === [(float)1, (float)2, (float)3]);
-        $this->assertTrue($array === [(integer)1, (integer)2, (integer)3]);
+        $this->assertTrue($array == [(float)1, (float)2, (float)3]);
     }
 
     final public function testForClasses(): void

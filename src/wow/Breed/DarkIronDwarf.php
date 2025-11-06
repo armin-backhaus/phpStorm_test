@@ -2,6 +2,8 @@
 
 namespace wow\Breed;
 
+use Tools\StringTools;
+
 class DarkIronDwarf
 {
     private string $name;
@@ -18,7 +20,9 @@ class DarkIronDwarf
 
     public function sayMyBreed(): string
     {
-        $breed = preg_replace('/(?<!^)([A-Z])/', ' $1', basename(self::class));
+        $stringTools = new StringTools();
+        $breed = $stringTools->spaceSeparatedClassNames(basename(self::class));
+
         return "I'm an $breed! ";
     }
 }
