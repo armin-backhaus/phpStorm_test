@@ -17,6 +17,7 @@ class DarkIronDwarfTest extends TestCase
 
     public function getClassNameWithSpaces($className): string
     {
-        return $className . " TODO for Armin";
+        $breed = preg_replace('/(?<!^)([A-Z])/', ' $1', basename(self::class));
+        return $breed;
     }
 }
