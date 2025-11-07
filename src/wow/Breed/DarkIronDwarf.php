@@ -20,8 +20,9 @@ class DarkIronDwarf
 
     public function sayMyBreed(): string
     {
-        $stringTools = new StringTools();
-        $breed = $stringTools->spaceSeparatedClassNames(basename(self::class));
+        //$stringTools = new StringTools();
+        //$breed = $stringTools->spaceSeparatedClassNames(basename(self::class));
+        $breed = StringTools::spaceSeparatedClassNames(basename(self::class));
 
         return "I'm an $breed! ";
     }

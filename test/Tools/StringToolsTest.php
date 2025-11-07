@@ -9,11 +9,9 @@ class StringToolsTest extends TestCase
 {
     final public function testSpaceSeparatedClassNames(): void
     {
-        $stringTools = new StringTools();
-
         $expected = "String Tools Test";
         $currentClassName = basename(self::class);
-        $actual = $stringTools->spaceSeparatedClassNames($currentClassName);
+        $actual = StringTools::spaceSeparatedClassNames($currentClassName);
 
         $this->assertEquals($expected, $actual);
     }

@@ -13,7 +13,6 @@ use wow\Breed\Forsaken;
 use wow\Breed\Human;
 use wow\Breed\Ork;
 
-
 $myWebsite = new Website();
 $tyrande = new Elf("Tyrande");
 $caledra = new Elf("Caledra");

@@ -11,9 +11,9 @@ class Battle
         if ($groupCount1 == $groupCount2) {
             return "It's a draw!";
         } else if ($groupCount1 > $groupCount2) {
-            return "Group 1 wins!";
+            return "Group1 1 wins!";
         } else {
-            return "Group 2 wins!";
+            return "Group1 2 wins!";
         }
     }
 }

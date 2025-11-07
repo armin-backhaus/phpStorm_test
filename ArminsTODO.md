@@ -1,11 +1,11 @@
 
-- SpaceSeparatedTest with Dark Iron Dwarf and Dungeon Master ✔️
+### SpaceSeparatedTest with Dark Iron Dwarf and Dungeon Master ✔️
 - individual class for seperated space and turn DarkIronDwarfTest into class of separated spaces 🔧🔧🔧 in witch Directory? ✔️
 - 
-- find user stories for battle concept ❌
+### find user stories for battle concept ❌
 - cant find any user story so far...wip...
 - 
-- create learning test for == and ===
+### create learning test for == and === ✔️
 - https://www.php.net/manual/en/language.operators.comparison.php
 - create learning test for arrays
 - make it cleaner (RFC test and structure)
