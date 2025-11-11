@@ -37,7 +37,7 @@ echo(11);
     <button onclick="alert('DevsGoSlowBecomeFast!')">Klick mich!</button>
 </div>
 <script>
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 100; i++)
         // todo ascii tabelle
         console.log("test" + i)
     }
