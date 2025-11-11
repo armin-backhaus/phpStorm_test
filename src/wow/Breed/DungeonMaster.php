@@ -2,14 +2,9 @@
 
 namespace wow\Breed;
 
-class DungeonMaster
+class DungeonMaster extends AbstractBreed
 {
-    private string $name;
 
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
 
     public function sayYeah(): string
     {

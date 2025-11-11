@@ -2,14 +2,8 @@
 
 namespace wow\Breed;
 
-class Ork
+class Ork extends AbstractBreed
 {
-    private string $name;
-
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
 
     public function sayHi(): string
     {

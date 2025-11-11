@@ -2,14 +2,9 @@
 
 namespace wow\Breed;
 
-class Elf
+class Elf extends AbstractBreed
 {
-    private string $name;
 
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
 
     public function sayHello(): string
     {

@@ -9,4 +9,7 @@
 - https://www.php.net/manual/en/language.operators.comparison.php
 - create learning test for arrays
 - make it cleaner (RFC test and structure)
-- 
+
+### group class 
+- name for greeting method and put it in abstract class and interface
+- cleanup/refactoring for method getMemberByName and fix test 

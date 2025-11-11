@@ -4,14 +4,9 @@ namespace wow\Breed;
 
 use Tools\StringTools;
 
-class DarkIronDwarf
+class DarkIronDwarf extends AbstractBreed
 {
-    private string $name;
 
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
 
     public function sayGrr(): string
     {
