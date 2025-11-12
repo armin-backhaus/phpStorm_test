@@ -42,4 +42,13 @@ class GroupTest extends TestCase
 
         $this->assertSame($armin, $result);
     }
+
+    final public function testAddNonBreedThrowsTypeError()
+    {
+        $group = new Group();
+
+        $this->expectException(\TypeError::class);
+
+        $group->addMember("Ich bin kein Breed");
+    }
 }

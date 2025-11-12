@@ -15,4 +15,4 @@
 ### group class 
 - name for greeting method and put it in abstract class and interface
 - cleanup/refactoring for method getMemberByName and fix test
-- test for add members in group when none breed added 
+- test for add members in group when none breed added
