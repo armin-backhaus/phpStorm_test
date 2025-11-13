@@ -11,12 +11,13 @@ class Group
      */
     private array $members = [];
 
-    public function addMember(BreedInterface ... $members): self
+    public function addMember(BreedInterface ...$members): self
     {
-        //foreach ($members as $member) {
-        //$this->members[] = $member;
-        //}
-        $this->members = array_merge($this->members, $members);
+        foreach ($members as $member) {
+            if (!in_array($member, $this->members, true)) {
+                $this->members[] = $member;
+            }
+        }
 
         return $this;
     }
