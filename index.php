@@ -35,11 +35,11 @@ $output = $myWebsite->htmlTags(
         (new FizzBuzzOld(1, 3, new OutputWithColor()))->run2(),
         $myWebsite->h3Tags("World of Warcraft"),
         $myWebsite->pTags(
-            $tyrande->sayHello(),
+            $tyrande->sayHi(),
             $tyrande->sayMyBreed(),
         ),
         $myWebsite->pTags(
-            $caledra->sayHello(),
+            $caledra->sayHi(),
             $caledra->sayMyBreed(),
         ),
 
@@ -49,22 +49,22 @@ $output = $myWebsite->htmlTags(
         ),
 
         $myWebsite->pTags(
-            $anduin->sayYo(),
+            $anduin->sayHi(),
             $anduin->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $dagran->sayGrr(),
+            $dagran->sayHi(),
             $dagran->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $lostWeeper->saySsh(),
+            $lostWeeper->sayHi(),
             $lostWeeper->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $dub->sayYeah(),
+            $dub->sayHi(),
             $dub->sayMyBreed(),
         ),
 

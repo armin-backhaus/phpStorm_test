@@ -6,7 +6,7 @@ class Forsaken extends AbstractBreed
 {
 
 
-    public function saySsh(): string
+    public function sayHi(): string
     {
         return "Ssh, my name is $this->name! ";
     }

@@ -6,7 +6,7 @@ class Human extends AbstractBreed
 {
 
 
-    public function sayYo(): string
+    public function sayHi(): string
     {
         return "Yo, my name is $this->name! ";
     }

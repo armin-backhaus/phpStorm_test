@@ -6,7 +6,7 @@ class Elf extends AbstractBreed
 {
 
 
-    public function sayHello(): string
+    public function sayHi(): string
     {
         return "Hello, my name is $this->name! ";
     }

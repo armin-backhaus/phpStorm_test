@@ -19,12 +19,12 @@ of separated spaces 🔧🔧🔧 in witch Directory?
 - name for greeting method and put it in abstract class and interface
 - cleanup/refactoring for method getMemberByName and fix test
 - test for add members in group when none breed added
-- 🚧 enhance addMemmber() to avoid multiple times add to group
+- ✔️ enhance addMemmber() to avoid multiple times add to group 
 
 ### breed class
 - ✔️ change sayHi() into common method
 for individual greeting for Breeds (in AbstractBreed.php)
-- 🚧 remove old greeting methods (sayXXX) from index.php and from classes
+- ✔️ remove old greeting methods (sayXXX) from index.php and from classes 
 
 ### database 
 - make mySQL running

@@ -6,7 +6,7 @@ class DungeonMaster extends AbstractBreed
 {
 
 
-    public function sayYeah(): string
+    public function sayHi(): string
     {
         return "Yeah, my name is $this->name! ";
     }

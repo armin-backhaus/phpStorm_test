@@ -13,7 +13,7 @@ class DarkIronDwarf extends AbstractBreed
         return "Grr, my name is $this->name! ";
     }
 
-    public function sayMyBreed(): string
+    public function sayHi(): string
     {
         //$stringTools = new StringTools();
         //$breed = $stringTools->spaceSeparatedClassNames(basename(self::class));
