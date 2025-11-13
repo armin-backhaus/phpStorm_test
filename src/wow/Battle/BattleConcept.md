@@ -8,3 +8,9 @@
 ### all Breeds allowed in all Groups?
 - new class Group to add/remove member
 ### catch different types of input
+
+### user story
+- want possibility to add Breeds into groups
+- possibility to put them in battle
+- let them fight with healt, strength and defense values
+- 
