@@ -12,5 +12,5 @@
 ### user story
 - want possibility to add Breeds into groups
 - possibility to put them in battle
-- let them fight with healt, strength and defense values
+- let them fight with health, strength and defense values
 - 
