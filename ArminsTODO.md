@@ -7,7 +7,7 @@ of separated spaces 🔧🔧🔧 in witch Directory?
 
 ### find user stories for battle concept 
 - cant find any user story so far...wip...
-- 🚧  make own user stories!!!!
+- ⏰  make own user stories!!!!
 - 🚧 use groups in battle setup instead of arrays
 
 ### ✔️ create learning test for == and === 
@@ -19,10 +19,14 @@ of separated spaces 🔧🔧🔧 in witch Directory?
 - name for greeting method and put it in abstract class and interface
 - cleanup/refactoring for method getMemberByName and fix test
 - test for add members in group when none breed added
-- ✔️ enhance addMemmber() to avoid multiple times add to group 
+- ✔️ enhance addMember() to avoid multiple times add to group
+- write test for addMember() to avoid multiple times add to group
+- write test for sayMyBreed() 
+- write test for sayHi() 
 
 ### breed class
-- ✔️ change sayHi() into common method
+- find path of name
+- ⏰ change sayHi() into common method
 for individual greeting for Breeds (in AbstractBreed.php)
 - ✔️ remove old greeting methods (sayXXX) from index.php and from classes 
 

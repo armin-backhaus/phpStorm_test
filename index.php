@@ -64,7 +64,7 @@ $output = $myWebsite->htmlTags(
         ),
 
         $myWebsite->pTags(
-            $dub->sayHi(),
+            $dub->sayGreeting(),
             $dub->sayMyBreed(),
         ),
 

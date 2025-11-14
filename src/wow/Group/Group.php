@@ -14,7 +14,7 @@ class Group
     public function addMember(BreedInterface ...$members): self
     {
         foreach ($members as $member) {
-            if (!in_array($member, $this->members, true)) {
+            if (! in_array($member, $this->members, true)) {
                 $this->members[] = $member;
             }
         }

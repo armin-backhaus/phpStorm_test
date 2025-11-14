@@ -10,9 +10,4 @@ class Forsaken extends AbstractBreed
     {
         return "Ssh, my name is $this->name! ";
     }
-
-    public function sayMyBreed(): string
-    {
-        return "I'm an " .  basename(self::class) . "! ";
-    }
 }
