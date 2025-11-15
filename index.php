@@ -21,6 +21,8 @@ $dagran = new DarkIronDwarf("Dagran");
 $thrall = new Ork("Thrall");
 $lostWeeper = new Forsaken("Lostweeper");
 $dub = new DungeonMaster("Dub");
+$group = new wow\Group\Group();
+$group->addMember($tyrande, $dub, $thrall);
 
 echo $myWebsite->docType();
 
@@ -35,36 +37,36 @@ $output = $myWebsite->htmlTags(
         (new FizzBuzzOld(1, 3, new OutputWithColor()))->run2(),
         $myWebsite->h3Tags("World of Warcraft"),
         $myWebsite->pTags(
-            $tyrande->sayHi(),
+            $tyrande->sayGreeting("Hello"),
             $tyrande->sayMyBreed(),
         ),
         $myWebsite->pTags(
-            $caledra->sayHi(),
+            $caledra->sayGreeting("Hello"),
             $caledra->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $thrall->sayHi(),
+            $thrall->sayGreeting("Hi"),
             $thrall->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $anduin->sayHi(),
+            $anduin->sayGreeting("Yo"),
             $anduin->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $dagran->sayHi(),
+            $dagran->sayGreeting("Grr"),
             $dagran->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $lostWeeper->sayHi(),
+            $lostWeeper->sayGreeting("Ssh"),
             $lostWeeper->sayMyBreed(),
         ),
 
         $myWebsite->pTags(
-            $dub->sayGreeting(),
+            $dub->sayGreeting("Yeah"),
             $dub->sayMyBreed(),
         ),
 
@@ -74,6 +76,10 @@ $output = $myWebsite->htmlTags(
                 [$dub, $thrall, $dagran],
                 [$caledra, $anduin, $lostWeeper]
             )
+        ),
+
+        $myWebsite->pTags(
+            $group->everybodyGreets(),
         ),
 
         $myWebsite->hrTag(),

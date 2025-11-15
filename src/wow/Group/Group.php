@@ -22,6 +22,18 @@ class Group
         return $this;
     }
 
+    public function everybodyGreets(): string
+    {
+        $result = "";
+
+        foreach ($this->members as $member) {
+            //$result = $result . $member->sayGreeting("Hello from us all");
+            $result .= $member->sayGreeting("Hello from us all") . "<br />";
+        }
+
+        return $result;
+    }
+
     public function getMembers(): array
     {
         return $this->members;

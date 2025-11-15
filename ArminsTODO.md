@@ -23,12 +23,16 @@ of separated spaces 🔧🔧🔧 in witch Directory?
 - write test for addMember() to avoid multiple times add to group
 - write test for sayMyBreed() 
 - write test for sayHi() 
+- ✔️ create a method  ( group->everybodyGreet() / Group::everybodyGreet() )
+so that every member greets
 
 ### breed class
 - find path of name
-- ⏰ change sayHi() into common method
+- ✔️ change sayHi() into common method
 for individual greeting for Breeds (in AbstractBreed.php)
-- ✔️ remove old greeting methods (sayXXX) from index.php and from classes 
+- ✔️ remove old greeting methods (sayXXX) from index.php and from classes
+- ⏰ standard greeting text as property in Breed.php, to be filled in constructor 
+and used in Breed::sayGreeting
 
 ### database 
 - make mySQL running
