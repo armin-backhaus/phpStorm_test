@@ -9,5 +9,6 @@ class Forsaken extends AbstractBreed
         parent::__construct($name, $health);
 
         $this->health = MAX_HEALTH_FORSAKEN;
+        $this->courage = COURAGE_FORSAKEN;
     }
 }

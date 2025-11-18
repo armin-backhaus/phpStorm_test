@@ -11,4 +11,6 @@ interface BreedInterface
     public function sayMyBreed(): string;
 
     public function getHealth(): int;
+
+    public function getCourage(): int;
 }

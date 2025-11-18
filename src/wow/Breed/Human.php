@@ -9,5 +9,6 @@ class Human extends AbstractBreed
         parent:: __construct($name, $health);
 
         $this->health = MAX_HEALTH_HUMAN;
+        $this->courage = COURAGE_HUMAN;
     }
 }

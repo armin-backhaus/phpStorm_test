@@ -9,6 +9,6 @@ class DungeonMaster extends AbstractBreed
         parent::__construct($name, $health);
 
         $this->health = MAX_HEALTH_DUNGEON_MASTER;
-
+        $this->courage = COURAGE_DUNGEON_MASTER;
     }
 }

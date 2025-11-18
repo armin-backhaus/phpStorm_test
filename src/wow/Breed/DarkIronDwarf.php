@@ -11,5 +11,6 @@ class DarkIronDwarf extends AbstractBreed
         parent:: __construct($name, $health);
 
         $this->health = MAX_HEALTH_DARK_IRON_DWARF;
+        $this->courage = COURAGE_DARK_IRON_DWARF;
     }
 }

@@ -9,6 +9,6 @@ class Ork extends AbstractBreed
         parent::__construct($name, $health);
 
         $this->health = MAX_HEALTH_ORK;
-
+        $this->courage = COURAGE_ORK;
     }
 }

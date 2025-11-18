@@ -9,5 +9,6 @@ class Elf extends AbstractBreed
         parent::__construct($name, $health);
 
         $this->health = MAX_HEALTH_ELF;
+        $this->courage = COURAGE_ELF;
     }
 }
