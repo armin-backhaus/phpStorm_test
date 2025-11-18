@@ -2,6 +2,8 @@
 
 require_once 'vendor/autoload.php';
 
+require_once './src/wow/const.php';
+
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
 use Website\Website;
@@ -14,15 +16,22 @@ use wow\Breed\Human;
 use wow\Breed\Ork;
 
 $myWebsite = new Website();
-$tyrande = new Elf("Tyrande");
-$caledra = new Elf("Caledra");
-$anduin = new Human("Anduin");
-$dagran = new DarkIronDwarf("Dagran");
-$thrall = new Ork("Thrall");
-$lostWeeper = new Forsaken("Lostweeper");
-$dub = new DungeonMaster("Dub");
+$tyrande = new Elf("Tyrande", 0, 100);
+$caledra = new Elf("Caledra", 0, 100);
+$anduin = new Human("Anduin", 0, 100);
+$dagran = new DarkIronDwarf("Dagran", 0, 100);
+$thrall = new Ork("Thrall", 0, 100);
+$lostWeeper = new Forsaken("Lostweeper", 0, 100);
+$dub = new DungeonMaster("Dub", 0, 100);
 $group = new wow\Group\Group();
 $group->addMember($tyrande, $dub, $thrall);
+
+function test()
+{
+    echo "hello world!";
+}
+
+test();
 
 echo $myWebsite->docType();
 

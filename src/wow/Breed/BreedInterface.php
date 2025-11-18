@@ -9,4 +9,6 @@ interface BreedInterface
     public function sayGreeting(string $greeting): string;
 
     public function sayMyBreed(): string;
+
+    public function getHealth(): int;
 }

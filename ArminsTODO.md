@@ -31,7 +31,7 @@ so that every member greets
 - ✔️ change sayHi() into common method
 for individual greeting for Breeds (in AbstractBreed.php)
 - ✔️ remove old greeting methods (sayXXX) from index.php and from classes
-- ⏰ standard greeting text as property in Breed.php, to be filled in constructor 
+- ⏰ standard greeting text as property in Breed, to be filled in constructor 
 and used in Breed::sayGreeting
 - 
 ### database 
@@ -49,3 +49,6 @@ and used in Breed::sayGreeting
 
 ## infinite whiteboard 
 - make one in the next 5 years...
+
+### website
+- create css-file and integrate it on website for background (link tag) 
