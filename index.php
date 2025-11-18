@@ -26,12 +26,6 @@ $dub = new DungeonMaster("Dub", 0, 100);
 $group = new wow\Group\Group();
 $group->addMember($tyrande, $dub, $thrall);
 
-function test()
-{
-    echo "hello world!";
-}
-
-test();
 
 echo $myWebsite->docType();
 

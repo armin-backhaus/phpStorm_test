@@ -28,7 +28,7 @@ class AbstractBreed implements BreedInterface
 
     public function sayGreeting(string $greeting): string
     {
-        return "$greeting, my name is $this->name! My Health is $this->health! ";
+        return "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage! ";
     }
 
     public function sayMyBreed(): string
