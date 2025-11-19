@@ -35,3 +35,5 @@ const WEAPON_DARK_IRON_DWARF = "Axe";
 const WEAPON_ELF = "Bow";
 const WEAPON_FORSAKEN = "Bone";
 const WEAPON_ORK = "Mace";
+
+const WEAPON_SWORD = "Power";
