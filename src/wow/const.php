@@ -30,8 +30,8 @@ const INTELLIGENCE_FORSAKEN = 11;
 const INTELLIGENCE_ORK = 18;
 
 const WEAPON_HUMAN = "Sword";
-const WEAPON_DUNGEON_MASTER = "True Power";
+const WEAPON_DUNGEON_MASTER = "True Power Spell";
 const WEAPON_DARK_IRON_DWARF = "Axe";
 const WEAPON_ELF = "Bow";
-const WEAPON_FORSAKEN = "Bones";
+const WEAPON_FORSAKEN = "Bone";
 const WEAPON_ORK = "Mace";
