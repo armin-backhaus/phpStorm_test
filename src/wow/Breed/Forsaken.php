@@ -10,5 +10,6 @@ class Forsaken extends AbstractBreed
 
         $this->health = MAX_HEALTH_FORSAKEN;
         $this->courage = COURAGE_FORSAKEN;
+        $this->strength = STRENGTH_FORSAKEN;
     }
 }

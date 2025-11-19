@@ -10,5 +10,6 @@ class DungeonMaster extends AbstractBreed
 
         $this->health = MAX_HEALTH_DUNGEON_MASTER;
         $this->courage = COURAGE_DUNGEON_MASTER;
+        $this->strength = STRENGTH_DUNGEON_MASTER;
     }
 }

@@ -13,4 +13,5 @@ interface BreedInterface
     public function getHealth(): int;
 
     public function getCourage(): int;
+    public function getStrength(): int;
 }

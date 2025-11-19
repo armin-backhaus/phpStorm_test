@@ -10,5 +10,6 @@ class Human extends AbstractBreed
 
         $this->health = MAX_HEALTH_HUMAN;
         $this->courage = COURAGE_HUMAN;
+        $this->strength = STRENGTH_HUMAN;
     }
 }
