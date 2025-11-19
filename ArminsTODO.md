@@ -52,3 +52,9 @@ and used in Breed::sayGreeting
 
 ### website
 - create css-file and integrate it on website for background (link tag) 
+
+### weapon
+- weaponInterface
+- AbstractWeapon
+- Bow, Sword...
+- $dub->getWeapon()->useON($caledra); <- in index.php and meke it run
