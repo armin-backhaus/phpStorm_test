@@ -11,5 +11,6 @@ class Ork extends AbstractBreed
         $this->health = MAX_HEALTH_ORK;
         $this->courage = COURAGE_ORK;
         $this->strength = STRENGTH_ORK;
+        $this->intelligence = INTELLIGENCE_ORK;
     }
 }

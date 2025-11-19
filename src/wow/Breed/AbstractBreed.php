@@ -10,6 +10,7 @@ class AbstractBreed implements BreedInterface
     protected int $health;
     protected int $courage;
     protected int $strength;
+    protected int $intelligence;
 
     public function __construct(string $name, int $health /* declaration of parameter */ )
     {
@@ -21,6 +22,7 @@ class AbstractBreed implements BreedInterface
             $this->health = $health;
             $this->courage = 0;
             $this->strength = 0;
+            $this->intelligence = 0;
     }
 
     public function getName(): string
@@ -30,7 +32,7 @@ class AbstractBreed implements BreedInterface
 
     public function sayGreeting(string $greeting): string
     {
-        return "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage! My Strength is $this->strength! ";
+        return "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage! My Strength is $this->strength! My Intelligence is $this->intelligence!";
     }
 
     public function sayMyBreed(): string
@@ -52,5 +54,10 @@ class AbstractBreed implements BreedInterface
     public function getStrength(): int
     {
         return $this->strength;
+    }
+
+    public function getIntelligence(): int
+    {
+        return $this->intelligence;
     }
 }
