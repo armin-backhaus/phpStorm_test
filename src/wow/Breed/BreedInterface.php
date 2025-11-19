@@ -15,4 +15,5 @@ interface BreedInterface
     public function getCourage(): int;
     public function getStrength(): int;
     public function getIntelligence(): int;
+    public function getWeapon(): string;
 }

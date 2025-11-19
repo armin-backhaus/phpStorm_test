@@ -12,5 +12,6 @@ class Human extends AbstractBreed
         $this->courage = COURAGE_HUMAN;
         $this->strength = STRENGTH_HUMAN;
         $this->intelligence = INTELLIGENCE_HUMAN;
+        $this->weapon = WEAPON_HUMAN;
     }
 }

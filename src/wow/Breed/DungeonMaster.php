@@ -12,5 +12,6 @@ class DungeonMaster extends AbstractBreed
         $this->courage = COURAGE_DUNGEON_MASTER;
         $this->strength = STRENGTH_DUNGEON_MASTER;
         $this->intelligence = INTELLIGENCE_DUNGEON_MASTER;
+        $this->weapon = WEAPON_DUNGEON_MASTER;
     }
 }

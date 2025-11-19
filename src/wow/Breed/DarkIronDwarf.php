@@ -14,5 +14,6 @@ class DarkIronDwarf extends AbstractBreed
         $this->courage = COURAGE_DARK_IRON_DWARF;
         $this->strength = STRENGTH_DARK_IRON_DWARF;
         $this->intelligence = INTELLIGENCE_DARK_IRON_DWARF;
+        $this->weapon = WEAPON_DARK_IRON_DWARF;
     }
 }

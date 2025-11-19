@@ -12,5 +12,6 @@ class Elf extends AbstractBreed
         $this->courage = COURAGE_ELF;
         $this->strength = STRENGTH_ELF;
         $this->intelligence = INTELLIGENCE_ELF;
+        $this->weapon = WEAPON_ELF;
     }
 }

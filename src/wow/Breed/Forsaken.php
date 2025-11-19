@@ -12,5 +12,6 @@ class Forsaken extends AbstractBreed
         $this->courage = COURAGE_FORSAKEN;
         $this->strength = STRENGTH_FORSAKEN;
         $this->intelligence = INTELLIGENCE_FORSAKEN;
+        $this->weapon = WEAPON_FORSAKEN;
     }
 }
