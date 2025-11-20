@@ -61,7 +61,8 @@ and used in Breed::sayGreeting
 - Add a dodge stat to characters
 - Introduce an attack speed stat, causing heavier/bigger weapons to have slower attacks
 - Add a miss chance to weapons
-- Add Armor, like the weapons
-- Add Spells like: $dub->getWeapon($magicRod)->useOn($--x------ durch $magicRod)->spell($x)->useOn($mana(-))->castOn($caledra)
+- Add Armor, like the $weapon for Defensive stats on charakter
+- Add Spells like: $dub->getWeapon($magicRod)->useOn($--x------ from $magicRod)->spell($x)->useOn($mana(-))->castOn($caledra)
 - Add a Battle Counter in seconds to make fights more dynamic
+- Add the Reaper as .hidden Class and if charakter comes to Death, the Reaper say $something
 - ✔️ $dub->getWeapon()->useON($caledra); <- in index.php and meke it run

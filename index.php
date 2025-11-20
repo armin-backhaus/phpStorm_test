@@ -78,8 +78,6 @@ $caledra->getWeapon()->useOn($thrall);
 echo $thrall->getHealth();
 
 
-
-
 echo $myWebsite->docType();
 
 $output = $myWebsite->htmlTags(
