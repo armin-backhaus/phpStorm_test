@@ -54,8 +54,14 @@ and used in Breed::sayGreeting
 - create css-file and integrate it on website for background (link tag) 
 
 ### weapon
-- weaponInterface
-- AbstractWeapon
-- Bow, Sword...
-- ADD Mana
-- $dub->getWeapon()->useON($caledra); <- in index.php and meke it run
+- ✔️ weaponInterface
+- ✔️ AbstractWeapon
+- ✔️ Bow, Sword...
+- Include a mana stat in addition to the health stat
+- Add a dodge stat to characters
+- Introduce an attack speed stat, causing heavier/bigger weapons to have slower attacks
+- Add a miss chance to weapons
+- Add Armor, like the weapons
+- Add Spells like: $dub->getWeapon($magicRod)->useOn($--x------ durch $magicRod)->spell($x)->useOn($mana(-))->castOn($caledra)
+- Add a Battle Counter in seconds to make fights more dynamic
+- ✔️ $dub->getWeapon()->useON($caledra); <- in index.php and meke it run
