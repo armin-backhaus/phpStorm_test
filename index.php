@@ -14,6 +14,7 @@ use wow\Breed\Elf;
 use wow\Breed\Forsaken;
 use wow\Breed\Human;
 use wow\Breed\Ork;
+use wow\Weapon\Sword;
 
 $myWebsite = new Website();
 $tyrande = new Elf("Tyrande", 0, 100);
@@ -22,10 +23,12 @@ $anduin = new Human("Anduin", 0, 100);
 $dagran = new DarkIronDwarf("Dagran", 0, 100);
 $thrall = new Ork("Thrall", 0, 100);
 $lostWeeper = new Forsaken("Lostweeper", 0, 100);
-$dub = new DungeonMaster("Dub", 0, 100);
+$sword = new Sword(WEAPON_POWER);
+$dub = new DungeonMaster("Dub", 0, 100, $sword);
 $group = new wow\Group\Group();
 $group->addMember($tyrande, $dub, $thrall);
 
+echo $dub->getWeapon()->useOn($caledra);
 
 echo $myWebsite->docType();
 

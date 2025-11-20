@@ -6,7 +6,7 @@ class AbstractWeapon implements WeaponInterface
 {
     protected int $power;
 
-    public function __construct(int $power)
+    public function __construct(int $power, WeaponInterface $sword)
     {
         $this->power = $power;
     }
