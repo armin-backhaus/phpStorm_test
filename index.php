@@ -72,6 +72,11 @@ $caledra->getWeapon()->useOn($thrall);
 $caledra->getWeapon()->useOn($thrall);
 $caledra->getWeapon()->useOn($thrall);
 echo $thrall->getHealth();
+$caledra->getWeapon()->useOn($thrall);
+$caledra->getWeapon()->useOn($thrall);
+$caledra->getWeapon()->useOn($thrall);
+echo $thrall->getHealth();
+
 
 
 
