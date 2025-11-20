@@ -2,6 +2,8 @@
 
 namespace wow\Breed;
 
+use wow\Weapon\WeaponInterface;
+
 interface BreedInterface
 {
     public function getName(): string;
@@ -11,5 +13,7 @@ interface BreedInterface
     public function getCourage(): int;
     public function getStrength(): int;
     public function getIntelligence(): int;
-    public function getWeapon(): string;
+    public function getWeapon(): WeaponInterface;
+
+    public function setHealth(int $health): void;
 }

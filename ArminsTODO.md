@@ -57,4 +57,5 @@ and used in Breed::sayGreeting
 - weaponInterface
 - AbstractWeapon
 - Bow, Sword...
+- ADD Mana
 - $dub->getWeapon()->useON($caledra); <- in index.php and meke it run

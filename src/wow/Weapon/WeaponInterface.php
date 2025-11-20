@@ -2,8 +2,10 @@
 
 namespace wow\Weapon;
 
+use wow\Breed\BreedInterface;
+
 interface WeaponInterface
 {
-    public function getWeapon(int $power): int;
-    public function useOn(string $member): string;
+    public function getPower(): int;
+    public function useOn(BreedInterface $character): void;
 }

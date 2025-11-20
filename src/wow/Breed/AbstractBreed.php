@@ -3,6 +3,7 @@
 namespace wow\Breed;
 
 use Tools\StringTools;
+use wow\Weapon\WeaponInterface;
 
 class AbstractBreed implements BreedInterface
 {
@@ -12,9 +13,9 @@ class AbstractBreed implements BreedInterface
     protected int $courage;
     protected int $strength;
     protected int $intelligence;
-    protected string $weapon;
+    protected WeaponInterface $weapon;
 
-    public function __construct(string $name, int $health /* declaration of parameter */)
+    public function __construct(string $name, int $health, WeaponInterface $weapon /* declaration of parameter */)
     {
         # $this /* pointer to current object in use */
         # ->name /* pointer from object start in memory to property */
@@ -25,7 +26,7 @@ class AbstractBreed implements BreedInterface
         $this->courage = 0;
         $this->strength = 0;
         $this->intelligence = 0;
-        $this->weapon = "";
+        $this->weapon = $weapon;
     }
 
     public function getName(): string
@@ -37,7 +38,7 @@ class AbstractBreed implements BreedInterface
     {
         return (
             "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage!"  .
-            " My Strength is $this->strength! My Intelligence is $this->intelligence! My Weapon is an $this->weapon "
+            " My Strength is $this->strength! My Intelligence is $this->intelligence! My Weapon is an " . basename($this->weapon::class) . "! "
         );
     }
 
@@ -46,6 +47,11 @@ class AbstractBreed implements BreedInterface
         $breed = StringTools::spaceSeparatedClassNames(basename(get_class($this)));
 
         return "I'm an $breed! ";
+    }
+
+    public function setHealth(int $health): void
+    {
+        $this->health = $health;
     }
 
     public function getHealth(): int
@@ -68,7 +74,7 @@ class AbstractBreed implements BreedInterface
         return $this->intelligence;
     }
 
-    public function getWeapon(): string
+    public function getWeapon(): WeaponInterface
     {
         return $this->weapon;
     }
