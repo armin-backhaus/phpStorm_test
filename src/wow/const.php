@@ -36,4 +36,4 @@ const WEAPON_ELF = "Bow";
 const WEAPON_FORSAKEN = "Bone";
 const WEAPON_ORK = "Mace";
 
-const WEAPON_SWORD = "Power";
+const WEAPON_POWER = "Power";
