@@ -30,8 +30,13 @@ $group->addMember($tyrande, $dub, $thrall);
 
 echo $caledra->getHealth();
 $dub->getWeapon()->useOn($caledra);
-$caledra->getWeapon()->useOn($thrall);
 echo $caledra->getHealth();
+
+echo $thrall->getHealth();
+$caledra->getWeapon()->useOn($thrall);
+echo $thrall->getHealth();
+$caledra->getWeapon()->useOn($thrall);
+echo $thrall->getHealth();
 
 
 echo $myWebsite->docType();
