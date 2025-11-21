@@ -38,7 +38,7 @@ class AbstractBreed implements BreedInterface
     public function sayGreeting(string $greeting): string
     {
         return (
-            "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage!"  .
+            "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage!" .
             " My Strength is $this->strength! My Intelligence is $this->intelligence! My Weapon is an " . basename($this->weapon::class) . "! "
         );
     }
@@ -52,16 +52,22 @@ class AbstractBreed implements BreedInterface
 
     public function sayOuch(): void
     {
-        echo "Ouch, now my Health is " . $this->health . " !<br />";
+        if ($this->health <= 0) {
+            echo "I'm Dead ☠ !<br />";
+        } else {
+            echo "Ouch, now my Health is $this->health!<br />";
+        }
+
+        //echo "Ouch, now my Health is " . $this->health . " !<br />";
     }
 
     public function setHealth(int $health): void
     {
         $this->health = $health;
 
-        if ($this->health <= 0) {
-            echo "I'm Dead ☠ !<br />";
-        }
+        //if ($this->health <= 0) {
+        //echo "I'm Dead ☠ !<br />";
+        //}
     }
 
     public function getHealth(): int
