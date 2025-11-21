@@ -31,8 +31,6 @@ $group->addMember($tyrande, $dub, $thrall);
 
 $caledra->getWeapon()->useOn($thrall);
 $caledra->getWeapon()->useOn($thrall);
-$caledra->getWeapon()->useOn($thrall);
-$caledra->getWeapon()->useOn($thrall);
 
 
 echo $myWebsite->docType();

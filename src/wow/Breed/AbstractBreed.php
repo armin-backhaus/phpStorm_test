@@ -57,17 +57,11 @@ class AbstractBreed implements BreedInterface
         } else {
             echo "Ouch, now my Health is $this->health!<br />";
         }
-
-        //echo "Ouch, now my Health is " . $this->health . " !<br />";
     }
 
     public function setHealth(int $health): void
     {
         $this->health = $health;
-
-        //if ($this->health <= 0) {
-        //echo "I'm Dead ☠ !<br />";
-        //}
     }
 
     public function getHealth(): int

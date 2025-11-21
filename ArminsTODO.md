@@ -67,5 +67,5 @@ and used in Breed::sayGreeting
 - Add the Reaper as .hidden Class and if charakter comes to Death, the Reaper say $something
 - ✔️ $dub->getWeapon()->useON($caledra); <- in index.php and meke it run
 - ✔️ build something for every time when someone was hit to say ouch and health
-- when health is below 0 character says im dead
+- ✔️ when health is below 0 character says im dead
 - 
