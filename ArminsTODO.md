@@ -56,7 +56,7 @@ and used in Breed::sayGreeting
 ### weapon
 - ✔️ weaponInterface
 - ✔️ AbstractWeapon
-- ✔️ Bow, Sword...
+- Bow, Sword...
 - Include a mana stat in addition to the health stat
 - Add a dodge stat to characters
 - Introduce an attack speed stat, causing heavier/bigger weapons to have slower attacks
@@ -66,3 +66,5 @@ and used in Breed::sayGreeting
 - Add a Battle Counter in seconds to make fights more dynamic
 - Add the Reaper as .hidden Class and if charakter comes to Death, the Reaper say $something
 - ✔️ $dub->getWeapon()->useON($caledra); <- in index.php and meke it run
+- ✔️ build something for every time when someone was hit to say ouch and health
+- when health is below 0 character says im dead 

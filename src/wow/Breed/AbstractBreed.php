@@ -13,9 +13,10 @@ class AbstractBreed implements BreedInterface
     protected int $courage;
     protected int $strength;
     protected int $intelligence;
+
     protected WeaponInterface $weapon;
 
-    public function __construct(string $name, int $health, WeaponInterface $weapon /* declaration of parameter */)
+    public function __construct(string $name, int $health, WeaponInterface $weapon)
     {
         # $this /* pointer to current object in use */
         # ->name /* pointer from object start in memory to property */
@@ -47,6 +48,11 @@ class AbstractBreed implements BreedInterface
         $breed = StringTools::spaceSeparatedClassNames(basename(get_class($this)));
 
         return "I'm an $breed! ";
+    }
+
+    public function sayOuch(): void
+    {
+        echo "Ouch, now my Health is " . $this->health . " !<br />";
     }
 
     public function setHealth(int $health): void

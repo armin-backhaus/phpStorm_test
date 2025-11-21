@@ -4,10 +4,8 @@ namespace wow\Weapon;
 
 class Sword extends AbstractWeapon
 {
-    public function __construct($power)
+    public function __construct()
     {
-        parent::__construct($power);
-
-            $this->power = WEAPON_POWER;
+        parent::__construct(WEAPON_POWER_SWORD);
     }
 }

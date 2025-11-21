@@ -9,6 +9,7 @@ interface BreedInterface
     public function getName(): string;
     public function sayGreeting(string $greeting): string;
     public function sayMyBreed(): string;
+    public function sayOuch(): void;
     public function getHealth(): int;
     public function getCourage(): int;
     public function getStrength(): int;
