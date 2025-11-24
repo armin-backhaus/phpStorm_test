@@ -67,7 +67,7 @@ class AbstractBreed implements BreedInterface
     }
     public function setMana(int $mana): void
     {
-        $this->health = $mana;
+        $this->mana = $mana;
     }
 
     public function getHealth(): int
