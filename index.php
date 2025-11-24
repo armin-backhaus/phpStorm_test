@@ -18,13 +18,13 @@ use wow\Weapon\Sword;
 
 $myWebsite = new Website();
 $sword = new Sword();
-$tyrande = new Elf("Tyrande", 0, $sword);
-$caledra = new Elf("Caledra", 0, $sword);
-$anduin = new Human("Anduin", 0, $sword);
-$dagran = new DarkIronDwarf("Dagran", 0, $sword);
-$thrall = new Ork("Thrall", 0, $sword);
-$lostWeeper = new Forsaken("Lostweeper", 0, $sword);
-$dub = new DungeonMaster("Dub", 0, $sword);
+$tyrande = new Elf("Tyrande", 0,  0, $sword,);
+$caledra = new Elf("Caledra", 0, 0, $sword);
+$anduin = new Human("Anduin", 0, 0, $sword);
+$dagran = new DarkIronDwarf("Dagran", 0, 0, $sword);
+$thrall = new Ork("Thrall", 0, 0, $sword);
+$lostWeeper = new Forsaken("Lostweeper", 0, 0, $sword);
+$dub = new DungeonMaster("Dub", 0, 0, $sword);
 $group = new wow\Group\Group();
 $group->addMember($tyrande, $dub, $thrall);
 

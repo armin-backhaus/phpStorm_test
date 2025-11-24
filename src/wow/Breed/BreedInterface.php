@@ -14,7 +14,9 @@ interface BreedInterface
     public function getCourage(): int;
     public function getStrength(): int;
     public function getIntelligence(): int;
+    public function getMana(): int;
     public function getWeapon(): WeaponInterface;
 
     public function setHealth(int $health): void;
+    public function setMana(int $mana): void;
 }

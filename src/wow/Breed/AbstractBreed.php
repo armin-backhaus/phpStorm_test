@@ -13,10 +13,11 @@ class AbstractBreed implements BreedInterface
     protected int $courage;
     protected int $strength;
     protected int $intelligence;
+    protected int $mana;
 
     protected WeaponInterface $weapon;
 
-    public function __construct(string $name, int $health, WeaponInterface $weapon)
+    public function __construct(string $name, int $health, int $mana, WeaponInterface $weapon)
     {
         # $this /* pointer to current object in use */
         # ->name /* pointer from object start in memory to property */
@@ -28,6 +29,7 @@ class AbstractBreed implements BreedInterface
         $this->strength = 0;
         $this->intelligence = 0;
         $this->weapon = $weapon;
+        $this->mana = $mana;
     }
 
     public function getName(): string
@@ -38,7 +40,7 @@ class AbstractBreed implements BreedInterface
     public function sayGreeting(string $greeting): string
     {
         return (
-            "$greeting, my name is $this->name! My Health is $this->health! And my Courage is $this->courage!" .
+            "$greeting, my name is $this->name! My Health is $this->health! My Mana is $this->mana! And my Courage is $this->courage!" .
             " My Strength is $this->strength! My Intelligence is $this->intelligence! My Weapon is an " . basename($this->weapon::class) . "! "
         );
     }
@@ -63,10 +65,18 @@ class AbstractBreed implements BreedInterface
     {
         $this->health = $health;
     }
+    public function setMana(int $mana): void
+    {
+        $this->health = $mana;
+    }
 
     public function getHealth(): int
     {
         return $this->health;
+    }
+    public function getMana(): int
+    {
+        return $this->mana;
     }
 
     public function getCourage(): int
