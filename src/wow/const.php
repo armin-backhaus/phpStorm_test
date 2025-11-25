@@ -1,6 +1,11 @@
 
 <?php
 
+const DB_NAME = "Wow";
+const DB_HOST = "localhost";
+const DB_USER = "root";
+const DB_PASSWORD = "Password";
+
 const MAX_HEALTH_HUMAN = 100;
 const MAX_HEALTH_DUNGEON_MASTER = 999;
 const MAX_HEALTH_DARK_IRON_DWARF = 120;
