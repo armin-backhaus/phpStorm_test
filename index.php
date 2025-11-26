@@ -18,28 +18,19 @@ use wow\Weapon\Sword;
 
 
 $myWebsite = new Website();
-$sword = new Sword();
-$tyrande = new Elf("Tyrande", 0, 0, $sword,);
-$caledra = new Elf("Caledra", 0, 0, $sword);
-$anduin = new Human("Anduin", 0, 0, $sword);
-$dagran = new DarkIronDwarf("Dagran", 0, 0, $sword);
-$thrall = new Ork("Thrall", 0, 0, $sword);
-$lostWeeper = new Forsaken("Lostweeper", 0, 0, $sword);
-$dub = new DungeonMaster("Dub", 0, 0, $sword);
-$group = new wow\Group\Group();
-$group->addMember($tyrande, $dub, $thrall);
-
 
 $fizzBuzzBlock = include './src/Website/blocks/fizzBuzzBlock.php';
 $wowBlock = include './src/Website/blocks/wowBlock.php';
+$battleBlock = include './src/Website/blocks/battleBlock.php';
+
+
 
 $allBlocks = [
     ... $fizzBuzzBlock,
     ... $wowBlock,
+    ... $battleBlock,
 ];
 
-$caledra->getWeapon()->useOn($thrall);
-$caledra->getWeapon()->useOn($thrall);
 
 
 echo $myWebsite->docType();
@@ -49,15 +40,11 @@ $output = $myWebsite->htmlTags(
         $myWebsite->titleTags("even better title")
     ),
     $myWebsite->bodyTags(
-//        $myWebsite->h1Tags("Hello Website"),
-//        $myWebsite->hrTag(),
-
+        $myWebsite->h1Tags("Hello Website"),
+        $myWebsite->hrTag(),
         ... $allBlocks,
 //
-//        $myWebsite->pTags(
-//            $tyrande->sayGreeting("Hello"),
-//            $tyrande->sayMyBreed(),
-//        ),
+
 //        $myWebsite->pTags(
 //            $caledra->sayGreeting("Hello"),
 //            $caledra->sayMyBreed(),
