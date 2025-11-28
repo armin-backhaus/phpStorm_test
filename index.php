@@ -22,15 +22,15 @@ $myWebsite = new Website();
 $fizzBuzzBlock = include './src/Website/blocks/fizzBuzzBlock.php';
 $wowBlock = include './src/Website/blocks/wowBlock.php';
 $battleBlock = include './src/Website/blocks/battleBlock.php';
-
+$greetingBlock = include './src/Website/blocks/greetingBlock.php';
 
 
 $allBlocks = [
     ... $fizzBuzzBlock,
     ... $wowBlock,
     ... $battleBlock,
+    ... $greetingBlock,
 ];
-
 
 
 echo $myWebsite->docType();
@@ -45,44 +45,6 @@ $output = $myWebsite->htmlTags(
         ... $allBlocks,
 //
 
-//        $myWebsite->pTags(
-//            $caledra->sayGreeting("Hello"),
-//            $caledra->sayMyBreed(),
-//        ),
-//
-//        $myWebsite->pTags(
-//            $thrall->sayGreeting("Hi"),
-//            $thrall->sayMyBreed(),
-//        ),
-//
-//        $myWebsite->pTags(
-//            $anduin->sayGreeting("Yo"),
-//            $anduin->sayMyBreed(),
-//        ),
-//
-//        $myWebsite->pTags(
-//            $dagran->sayGreeting("Grr"),
-//            $dagran->sayMyBreed(),
-//        ),
-//
-//        $myWebsite->pTags(
-//            $lostWeeper->sayGreeting("Ssh"),
-//            $lostWeeper->sayMyBreed(),
-//        ),
-//
-//        $myWebsite->pTags(
-//            $dub->sayGreeting("Yeah"),
-//            $dub->sayMyBreed(),
-//        ),
-//
-
-//
-//        $myWebsite->pTags(
-//            $group->everybodyGreets(),
-//        ),
-//
-//        $myWebsite->hrTag(),
-//        $myWebsite->hrTag(),
     )
 );
 
