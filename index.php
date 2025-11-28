@@ -43,8 +43,6 @@ $output = $myWebsite->htmlTags(
         $myWebsite->h1Tags("Hello Website"),
         $myWebsite->hrTag(),
         ... $allBlocks,
-//
-
     )
 );
 
