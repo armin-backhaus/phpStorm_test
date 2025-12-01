@@ -23,13 +23,14 @@ $fizzBuzzBlock = include './src/Website/blocks/fizzBuzzBlock.php';
 $wowBlock = include './src/Website/blocks/wowBlock.php';
 $battleBlock = include './src/Website/blocks/battleBlock.php';
 $greetingBlock = include './src/Website/blocks/greetingBlock.php';
-
+$dbBlock = include './src/Website/blocks/dbBlock.php';
 
 $allBlocks = [
     ... $fizzBuzzBlock,
     ... $wowBlock,
     ... $battleBlock,
     ... $greetingBlock,
+    ... $dbBlock,
 ];
 
 
