@@ -7,7 +7,9 @@ $mysqli = new mysqli("localhost", "root", "Password", "wow");
 if ($mysqli->connect_error) {
     die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
 }
-$name = "Hannes";
+
+//XXX
+$name = "Hannes" . rand(1, 10);
 
 $stmt = $mysqli->prepare("INSERT INTO wow_test (name) VALUES (?)");
 $stmt->bind_param("s", $name);
@@ -17,6 +19,7 @@ if ($stmt->execute()) {
 } else {
     echo "Fehler beim Hinzufügen des Eintrags: " . $stmt->error;
 }
+$stmt->close();
 
 $sql = "SELECT * FROM wow_test";
 $result = $mysqli->query($sql);
@@ -28,6 +31,5 @@ while ($row = $result->fetch_assoc()) {
 }
 
 $mysqli->close();
-$stmt->close();
 
 return ["dbBlock"];

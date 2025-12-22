@@ -7,8 +7,7 @@ use wow\Weapon\WeaponInterface;
 
 class AbstractBreed implements BreedInterface
 {
-    protected string $name /* declaration of property */
-    ;
+    protected string $name /* declaration of property */;
     protected int $health;
     protected int $courage;
     protected int $strength;
