@@ -1,17 +1,15 @@
 <?php
 
-$count = 0;
-
 // https://de.wikipedia.org/wiki/SQL example to build
 
 try {
     $mysqli = new mysqli("localhost", "root", "Password", "wow");
 } catch (Exception $e) {
-    die("Verbindung fehlgeschlagen: " . $e);
+    die("Connection failed: " . $e);
 }
 
-$name = "Hannes" . rand(1, 10);
-
+$count = 0;
+$name = generateRandomName();
 $count = lookForName($name, $mysqli);
 
 if ($count > 0) {
@@ -21,6 +19,15 @@ if ($count > 0) {
     getAndShowAllNamesFromDb($mysqli);
 }
 
+function generateRandomName(): string
+{
+    try {
+        $name = "Hannes" . random_int(1, 10);
+    } catch (Exception $e) {
+        die("Rand int failed: " . $e);
+    }
+    return $name;
+}
 function lookForName($name, $mysqli, $countFromDb = 0)
 {
     $stmt = $mysqli->prepare("SELECT COUNT(*) FROM wow_test WHERE name = ?");
@@ -33,21 +40,21 @@ function lookForName($name, $mysqli, $countFromDb = 0)
     return $countFromDb;
 }
 
-function insertNewNameIntoDb($name, $mysqli)
+function insertNewNameIntoDb($name, $mysqli): void
 {
     $stmt = $mysqli->prepare("INSERT INTO wow_test (name) VALUES (?)");
     $stmt->bind_param("s", $name);
 
     if ($stmt->execute()) {
-        echo "Eintrag erfolgreich hinzugefügt!";
+        echo "Added DB entry successfully !";
     } else {
-        echo "Fehler beim Hinzufügen des Eintrags: " . $stmt->error;
+        echo "Error while adding : " . $stmt->error;
     }
     $stmt->close();
 
 }
 
-function getAndShowAllNamesFromDb($mysqli)
+function getAndShowAllNamesFromDb($mysqli): void
 {
     $sql = "SELECT * FROM wow_test";
     $result = $mysqli->query($sql);
@@ -60,14 +67,15 @@ function getAndShowAllNamesFromDb($mysqli)
         }
 
     } else {
-        echo "Fehler beim Abrufen der Daten: " . $mysqli->error . "<br>";
+        echo "Error while fetching data: " . $mysqli->error . "<br>";
     }
 }
 
-function showErrorFeedback()
+function showErrorFeedback(): void
 {
-    echo "Dieser Name existiert bereits!";
+    echo "Name already exists!<br>!";
 }
+
 $mysqli->close();
 
 return ["dbBlock"];
