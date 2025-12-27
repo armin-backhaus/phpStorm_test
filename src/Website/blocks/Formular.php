@@ -6,7 +6,7 @@ function formular()
     <form action="" method="POST">
         <input type="text" name="mein_text" placeholder="Schreib etwas..." required>
 <button type="submit" name"absenden">Anzeigen</button>
-<form>
+</form>
 }
 
 function sendungsPrüfung()
