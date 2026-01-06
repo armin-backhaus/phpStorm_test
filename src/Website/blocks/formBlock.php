@@ -5,25 +5,27 @@ function form()
 {
     echo '
         <form action="" method="POST">
-            <input type="text" name="mein_text" placeholder="Schreib etwas..." required>
-            <button type="submit" name="""absenden">Anzeigen</button>
+            <input type="text" name="my_text" placeholder="type something..." required>
+            <button type="submit" name="send_data" value="12345" >display</button>
         </form>
     ';
 }
 
-function sendungsPrüfung()
+function validateShipment()
 {
-    if (isset($_POST['absenden'])) {
-        $eingabe = htmlspecialchars($_POST['mein_text']);
+    echo "<h3>your input:</h3>";
+    if (isset($_POST['send_data'])) {
+        $input = ($_POST['my_text']);
 
-        echo "<h3>Deine Eingabe:</h3>";
-        echo "<p>" . $eingabe . "</p>";
+        var_dump($_POST);
+
+        echo "<p>" . $input . "</p>";
     }
 }
 //</body>
 //</html>
 
 form();
-sendungsPrüfung();
+validateShipment();
 
 return ["formBlock"];
