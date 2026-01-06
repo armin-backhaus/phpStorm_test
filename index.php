@@ -19,6 +19,7 @@ use wow\Weapon\Sword;
 
 $myWebsite = new Website();
 
+$formBlock = include './src/Website/blocks/formBlock.php';
 $fizzBuzzBlock = include './src/Website/blocks/fizzBuzzBlock.php';
 $wowBlock = include './src/Website/blocks/wowBlock.php';
 $battleBlock = include './src/Website/blocks/battleBlock.php';
@@ -27,6 +28,7 @@ $dbBlock = include './src/Website/blocks/dbBlock.php';
 
 $allBlocks = [
     ... $fizzBuzzBlock,
+    ... $formBlock,
     ... $wowBlock,
     ... $battleBlock,
     ... $greetingBlock,
