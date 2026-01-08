@@ -6,6 +6,7 @@ require_once './src/wow/const.php';
 
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
+use Website\blocks\Database;
 use Website\Website;
 use wow\Battle\Battle;
 use wow\Breed\DarkIronDwarf;
@@ -18,13 +19,15 @@ use wow\Weapon\Sword;
 
 
 $myWebsite = new Website();
+$database = new Database();
 
 $formBlock = include './src/Website/blocks/formBlock.php';
 $fizzBuzzBlock = include './src/Website/blocks/fizzBuzzBlock.php';
 $wowBlock = include './src/Website/blocks/wowBlock.php';
 $battleBlock = include './src/Website/blocks/battleBlock.php';
 $greetingBlock = include './src/Website/blocks/greetingBlock.php';
-$dbBlock = include './src/Website/blocks/dbBlock.php';
+//$dbBlock = include './src/Website/blocks/Database.php';
+$dbBlock = $database->testDb();
 
 $allBlocks = [
     ... $fizzBuzzBlock,

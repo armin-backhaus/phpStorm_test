@@ -1,5 +1,10 @@
 <?php
 
+use Website\blocks;
+
+//$dbBlock = include './src/Website/blocks/Database.php';
+
+
 //<body>
 function form()
 {
