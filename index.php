@@ -27,12 +27,12 @@ $fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
 
 $formBlock = include './src/Website/blocks/formBlock.php';
 //$fizzBuzzBlock = include './src/Website/blocks/FizzBuzzOneToThreeBuilder.php';
+$fizzBuzzBlock = $fizzBuzzOneToThreeBuilder->fizzBuzzOneToThree();
 $wowBlock = include './src/Website/blocks/wowBlock.php';
 //$battleBlock = include './src/Website/blocks/BattleBuilder.php';
 $battleBlock = $battleBuilder->battleTwoGroups();
 $greetingBlock = include './src/Website/blocks/greetingBlock.php';
 //$dbBlock = include './src/Website/blocks/Database.php';
-$fizzBuzzBlock = $fizzBuzzOneToThreeBuilder->fizzBuzzOneToThree();
 $dbBlock = $database->testDb();
 
 $allBlocks = [
