@@ -6,6 +6,8 @@ require_once './src/wow/const.php';
 
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
+use Website\blocks\FizzBuzzOneToThreeBuilder;
+use Website\blocks\BattleBuilder;
 use Website\blocks\Database;
 use Website\Website;
 use wow\Battle\Battle;
@@ -20,13 +22,17 @@ use wow\Weapon\Sword;
 
 $myWebsite = new Website();
 $database = new Database();
+$battleBuilder = new BattleBuilder();
+$fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
 
 $formBlock = include './src/Website/blocks/formBlock.php';
-$fizzBuzzBlock = include './src/Website/blocks/fizzBuzzBlock.php';
+//$fizzBuzzBlock = include './src/Website/blocks/FizzBuzzOneToThreeBuilder.php';
 $wowBlock = include './src/Website/blocks/wowBlock.php';
-$battleBlock = include './src/Website/blocks/battleBlock.php';
+//$battleBlock = include './src/Website/blocks/BattleBuilder.php';
+$battleBlock = $battleBuilder->battleTwoGroups();
 $greetingBlock = include './src/Website/blocks/greetingBlock.php';
 //$dbBlock = include './src/Website/blocks/Database.php';
+$fizzBuzzBlock = $fizzBuzzOneToThreeBuilder->fizzBuzzOneToThree();
 $dbBlock = $database->testDb();
 
 $allBlocks = [
