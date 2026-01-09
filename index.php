@@ -9,6 +9,7 @@ use Output\OutputWithColor;
 use Website\blocks\FizzBuzzOneToThreeBuilder;
 use Website\blocks\BattleBuilder;
 use Website\blocks\Database;
+use Website\blocks\Form;
 use Website\Website;
 use wow\Battle\Battle;
 use wow\Breed\DarkIronDwarf;
@@ -24,8 +25,11 @@ $myWebsite = new Website();
 $database = new Database();
 $battleBuilder = new BattleBuilder();
 $fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
+$form = new Form();
 
-$formBlock = include './src/Website/blocks/formBlock.php';
+
+//$formBlock = include './src/Website/blocks/Form.php';
+$formBlock = $form->createInputForm();
 //$fizzBuzzBlock = include './src/Website/blocks/FizzBuzzOneToThreeBuilder.php';
 $fizzBuzzBlock = $fizzBuzzOneToThreeBuilder->fizzBuzzOneToThree();
 $wowBlock = include './src/Website/blocks/wowBlock.php';
