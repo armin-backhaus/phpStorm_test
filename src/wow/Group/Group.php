@@ -4,7 +4,7 @@ namespace wow\Group;
 
 use wow\Breed\BreedInterface;
 
-class Group
+class Group implements GroupInterface
 {
     /**
      * @var BreedInterface[] $members
@@ -53,8 +53,10 @@ class Group
         return false;
     }
 
-    public function getMember(): object
+    public function getMember(): void
     {
+        //TODO
+
         //$found_key = array_search('Dub', $this->members ($, ''));
 
         //array_find(array $array, callable $callback): mixed

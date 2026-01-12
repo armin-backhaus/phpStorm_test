@@ -10,6 +10,8 @@ use Website\blocks\FizzBuzzOneToThreeBuilder;
 use Website\blocks\BattleBuilder;
 use Website\blocks\Database;
 use Website\blocks\Form;
+use Website\blocks\GreetingBuilder;
+use Website\blocks\WowBuilder;
 use Website\Website;
 use wow\Battle\Battle;
 use wow\Breed\DarkIronDwarf;
@@ -26,16 +28,21 @@ $database = new Database();
 $battleBuilder = new BattleBuilder();
 $fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
 $form = new Form();
+$greetingBuilder = new GreetingBuilder();
+$wowBuilder = new WowBuilder();
 
 
 //$formBlock = include './src/Website/blocks/Form.php';
 $formBlock = $form->createInputForm();
 //$fizzBuzzBlock = include './src/Website/blocks/FizzBuzzOneToThreeBuilder.php';
 $fizzBuzzBlock = $fizzBuzzOneToThreeBuilder->fizzBuzzOneToThree();
-$wowBlock = include './src/Website/blocks/wowBlock.php';
+//$wowBlock = include './src/Website/blocks/WowBuilder.php';
+$wowBlock = $wowBuilder->headline();
 //$battleBlock = include './src/Website/blocks/BattleBuilder.php';
 $battleBlock = $battleBuilder->battleTwoGroups();
-$greetingBlock = include './src/Website/blocks/greetingBlock.php';
+//$greetingBlock = include './src/Website/blocks/GreetingBuilder.php';
+$greetingBlock = $greetingBuilder->speach();
+
 //$dbBlock = include './src/Website/blocks/Database.php';
 $dbBlock = $database->testDb();
 
