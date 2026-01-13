@@ -41,7 +41,7 @@ $wowBlock = $wowBuilder->headline();
 //$battleBlock = include './src/Website/blocks/BattleBuilder.php';
 $battleBlock = $battleBuilder->battleTwoGroups();
 //$greetingBlock = include './src/Website/blocks/GreetingBuilder.php';
-$greetingBlock = $greetingBuilder->speach();
+$greetingBlock = $greetingBuilder->speak();
 
 //$dbBlock = include './src/Website/blocks/Database.php';
 $dbBlock = $database->testDb();

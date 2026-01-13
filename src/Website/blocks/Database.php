@@ -7,7 +7,7 @@ use mysqli;
 
 class Database
 {
-    private $mysqli;
+    private mysqli $mysqli;
 
     public function __construct()
     {
@@ -23,13 +23,14 @@ class Database
         $this->mysqli->close();
     }
 
-    public function testDb()
+    public function testDb(): array
     {
         ob_start();
 
         $count = 0;
         $name = $this->generateRandomName();
         $count = $this->lookForName($name, $this->mysqli);
+
 
         if ($count > 0) {
             $this->showErrorFeedback();

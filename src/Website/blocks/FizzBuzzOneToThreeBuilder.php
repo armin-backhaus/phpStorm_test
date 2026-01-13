@@ -8,13 +8,13 @@ use Website\Website;
 
 class FizzBuzzOneToThreeBuilder
 {
-    private $website1;
+    private Website $website1;
 
     public function __construct()
     {
         $this->website1 = new Website();
     }
-    public function fizzBuzzOneToThree()
+    public function fizzBuzzOneToThree(): array
     {
         return [
             $this->website1->h3Tags("FizzBuzz from one to three"),
