@@ -10,6 +10,9 @@ use Website\blocks;
 class Form
 {
     private $input;
+    private $input2;
+    private $pdo;
+    private $stmt;
 
     public function createInputForm(): array
     {
@@ -36,6 +39,21 @@ class Form
 
             echo "<p>" . $this->input . "</p>";
         }
+    }
+
+    //go on
+
+    private function insertNewNameIntoDb($name, $mysqli): void
+    {
+        $stmt = $mysqli->prepare("INSERT INTO wow_test (name) VALUES (?)");
+        $stmt->bind_param("s", $name);
+
+        if ($stmt->execute()) {
+            echo "Added DB entry successfully !";
+        } else {
+            echo "Error while adding : " . $stmt->error;
+        }
+        $stmt->close();
     }
 }
 
