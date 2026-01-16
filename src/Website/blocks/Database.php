@@ -35,7 +35,7 @@ class Database
         if ($count > 0) {
             $this->showErrorFeedback();
         } else {
-            $this->insertNewNameIntoDb($name, $this->mysqli);
+            $this->insertNewNameIntoDb($name);
             $this->getAndShowAllNamesFromDb($this->mysqli);
         }
 
@@ -66,9 +66,9 @@ class Database
         return $countFromDb;
     }
 
-    private function insertNewNameIntoDb($name, $mysqli): void
+    public function insertNewNameIntoDb($name): void
     {
-        $stmt = $mysqli->prepare("INSERT INTO wow_test (name) VALUES (?)");
+        $stmt = $this->mysqli->prepare("INSERT INTO wow_test (name) VALUES (?)");
         $stmt->bind_param("s", $name);
 
         if ($stmt->execute()) {

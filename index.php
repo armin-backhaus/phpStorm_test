@@ -27,7 +27,7 @@ $myWebsite = new Website();
 $database = new Database();
 $battleBuilder = new BattleBuilder();
 $fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
-$form = new Form();
+$form = new Form($database); // this is Dependency Injection....strong!
 $greetingBuilder = new GreetingBuilder();
 $wowBuilder = new WowBuilder();
 

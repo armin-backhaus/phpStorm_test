@@ -2,6 +2,7 @@
 
 namespace Website\blocks;
 
+use mysqli;
 use Website\blocks;
 
 //$dbBlock = include './src/Website/blocks/Database.php';
@@ -13,13 +14,17 @@ class Form
     private $input2;
     private $pdo;
     private $stmt;
-
+    private Database $database;
+    public function __construct(Database $database)
+    {
+        $this->database = $database;
+    }
     public function createInputForm(): array
     {
         ob_start();
         echo '
         <form action="" method="POST">
-            <input type="text" name="my_text" placeholder="type something..." required>
+            <input type="text" name="my_text" placeholder="type something..." />
             <button type="submit" name="send_data" value="12345" >display</button>
         </form>
     ';
@@ -32,10 +37,12 @@ class Form
     private function showReceivedData(): void
     {
         echo "<h3>your input:</h3>";
+
         if (isset($_POST['send_data'])) {
             $this->input = ($_POST['my_text']);
 
             var_dump($_POST);
+            $this->database->insertNewNameIntoDb($this->input);
 
             echo "<p>" . $this->input . "</p>";
         }
