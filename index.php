@@ -65,6 +65,7 @@ $output = $myWebsite->htmlTags(
     $myWebsite->bodyTags(
         $myWebsite->h1Tags("Hello Website"),
         $myWebsite->hrTag(),
+        $myWebsite->scriptSrcTags("js/main.js"),
         ... $allBlocks,
     )
 );

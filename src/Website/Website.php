@@ -65,4 +65,9 @@ class Website
 
         return "<p>$output</p>" . PHP_EOL;
     }
+
+    public function scriptSrcTags(string $url): string
+    {
+        return "<script src='$url'></script>" . PHP_EOL;
+    }
 }
