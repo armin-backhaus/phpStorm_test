@@ -36,7 +36,7 @@ class Database
             $this->showErrorFeedback();
         } else {
             $this->insertNewNameIntoDb($name);
-            $this->getAndShowAllNamesFromDb($this->mysqli);
+            $this->getAndShowAllNamesFromDb();
         }
 
         $output = ob_get_clean();
@@ -54,9 +54,9 @@ class Database
         return $name;
     }
 
-    private function lookForName($name, $mysqli, $countFromDb = 0)
+    private function lookForName($name, $countFromDb)
     {
-        $stmt = $mysqli->prepare("SELECT COUNT(*) FROM wow_test WHERE name = ?");
+        $stmt = $this->mysqli->prepare("SELECT COUNT(*) FROM wow_test WHERE name = ?");
         $stmt->bind_param("s", $name);
         $stmt->execute();
         $stmt->bind_result($countFromDb);
@@ -79,10 +79,10 @@ class Database
         $stmt->close();
     }
 
-    private function getAndShowAllNamesFromDb($mysqli): void
+    private function getAndShowAllNamesFromDb(): void
     {
         $sql = "SELECT * FROM wow_test";
-        $result = $mysqli->query($sql);
+        $result = $this->mysqli->query($sql);
         var_dump($result);
 
         if ($result) {
@@ -92,7 +92,7 @@ class Database
             }
 
         } else {
-            echo "Error while fetching data: " . $mysqli->error . "<br>";
+            echo "Error while fetching data: " . $this->mysqli->error . "<br>";
         }
     }
 
