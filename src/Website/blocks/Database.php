@@ -29,7 +29,7 @@ class Database
 
         $count = 0;
         $name = $this->generateRandomName();
-        $count = $this->lookForName($name, $this->mysqli);
+        $count = $this->lookForName($name);
 
 
         if ($count > 0) {
@@ -54,7 +54,7 @@ class Database
         return $name;
     }
 
-    private function lookForName($name, $countFromDb)
+    private function lookForName(string $name, int $countFromDb = 0): int
     {
         $stmt = $this->mysqli->prepare("SELECT COUNT(*) FROM wow_test WHERE name = ?");
         $stmt->bind_param("s", $name);

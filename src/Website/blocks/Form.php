@@ -24,7 +24,7 @@ class Form
         ob_start();
         echo '
         <form action="" method="POST">
-            <input type="text" name="my_text" placeholder="type something..." />
+            <input type="text" id="my_text" name="my_text" onchange=clickHandler() placeholder="type something..." />
             <button type="submit" name="send_data" value="12345" >display</button>
         </form>
     ';
@@ -47,8 +47,6 @@ class Form
             echo "<p>" . $this->input . "</p>";
         }
     }
-
-    //go on
 
     private function insertNewNameIntoDb($name, $mysqli): void
     {

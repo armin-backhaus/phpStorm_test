@@ -65,11 +65,11 @@ $output = $myWebsite->htmlTags(
     $myWebsite->bodyTags(
         $myWebsite->h1Tags("Hello Website"),
         $myWebsite->hrTag(),
-        $myWebsite->scriptSrcTags("js/main.js"),
+        $myWebsite->scriptSrcTags("src/scripts/main.js"),
         ... $allBlocks,
     )
 );
 
 echo $output . PHP_EOL . PHP_EOL;
 
-include_once "indexOld.php";
+//include_once "indexOld.php";

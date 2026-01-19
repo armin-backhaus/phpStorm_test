@@ -1,12 +1,10 @@
 
-//alert('hello world! from js');
+document.write('hello world! from js');
 
-document.write('hello world! from js')
-
-//let objString = new String("hello world! from js");
-
-//let greeting = "hello world! from js";
-
-//innerHTML
-
-//window.print()
+function clickHandler(){
+    const element = document.getElementById("my_text");
+    element.hello = "world";
+    const json = JSON.stringify(element);
+    console.log("inside handler" + element + json + element.hello);
+    console.log("inside handler" + element + json + element.value);
+}
