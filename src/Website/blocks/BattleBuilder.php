@@ -2,7 +2,7 @@
 
 namespace Website\blocks;
 
-use Website\Website;
+use Website\WebsiteBuilder;
 use wow\Battle\Battle;
 
 class BattleBuilder extends AbstractBuilder
@@ -13,7 +13,7 @@ class BattleBuilder extends AbstractBuilder
     }
     public function battleTwoGroups(): array
     {
-        $this->myWebsite = new Website();
+        $this->myWebsite = new WebsiteBuilder();
 
         return [
             $this->myWebsite->h3Tags("Battle"),

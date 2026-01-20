@@ -4,15 +4,15 @@ namespace Website\blocks;
 
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
-use Website\Website;
+use Website\WebsiteBuilder;
 
 class FizzBuzzOneToThreeBuilder
 {
-    private Website $website1;
+    private WebsiteBuilder $website1;
 
     public function __construct()
     {
-        $this->website1 = new Website();
+        $this->website1 = new WebsiteBuilder();
     }
     public function fizzBuzzOneToThree(): array
     {

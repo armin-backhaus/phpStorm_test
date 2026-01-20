@@ -2,7 +2,7 @@
 
 namespace Website\blocks;
 
-use Website\Website;
+use Website\WebsiteBuilder;
 use wow\Battle\Battle;
 use wow\Breed\BreedInterface;
 use wow\Breed\DarkIronDwarf;
@@ -17,7 +17,7 @@ use wow\Weapon\WeaponInterface;
 
 class AbstractBuilder
 {
-    protected Website $myWebsite;
+    protected WebsiteBuilder $myWebsite;
     protected WeaponInterface $sword;
     protected BreedInterface $dub;
     protected BreedInterface $tyrande;
@@ -30,7 +30,7 @@ class AbstractBuilder
 
     public function __construct()
     {
-        $this->myWebsite = new Website();
+        $this->myWebsite = new WebsiteBuilder();
         $this->sword = new Sword();
         $this->dub = new DungeonMaster("Dub", 0, 0, $this->sword);
         $this->tyrande = new Elf("Tyrande", 0, 0, $this->sword,);

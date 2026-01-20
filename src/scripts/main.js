@@ -2,9 +2,9 @@
 document.write('hello world! from js');
 
 function clickHandler(){
-    const element = document.getElementById("my_text");
-    element.hello = "world";
-    const json = JSON.stringify(element);
-    console.log("inside handler" + element + json + element.hello);
-    console.log("inside handler" + element + json + element.value);
+    const inputField = document.getElementById("my_text");
+    const inputLength = inputField.value.length;
+    if (inputLength < 3){
+        alert("muss länger sein als 3, ist " + inputLength);
+    }
 }

@@ -7,7 +7,7 @@ namespace Website;
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
 
-class Website
+class WebsiteBuilder
 {
     public function hrTag(): string
     {

@@ -6,13 +6,17 @@ require_once './src/wow/const.php';
 
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
+use Website\blocks\A;
+use Website\blocks\B;
+use Website\blocks\C;
+use Website\blocks\CharacterForm;
 use Website\blocks\FizzBuzzOneToThreeBuilder;
 use Website\blocks\BattleBuilder;
 use Website\blocks\Database;
 use Website\blocks\Form;
 use Website\blocks\GreetingBuilder;
 use Website\blocks\WowBuilder;
-use Website\Website;
+use Website\WebsiteBuilder;
 use wow\Battle\Battle;
 use wow\Breed\DarkIronDwarf;
 use wow\Breed\DungeonMaster;
@@ -22,15 +26,17 @@ use wow\Breed\Human;
 use wow\Breed\Ork;
 use wow\Weapon\Sword;
 
-
-$myWebsite = new Website();
+$myWebsite = new WebsiteBuilder();
 $database = new Database();
 $battleBuilder = new BattleBuilder();
 $fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
 $form = new Form($database); // this is Dependency Injection....strong!
 $greetingBuilder = new GreetingBuilder();
 $wowBuilder = new WowBuilder();
-
+$c = new C();
+$b = new B($c);
+$a = new A($b);
+$characterForm = new CharacterForm($myWebsite, $a);
 
 //$formBlock = include './src/Website/blocks/Form.php';
 $formBlock = $form->createInputForm();
@@ -42,6 +48,7 @@ $wowBlock = $wowBuilder->headline();
 $battleBlock = $battleBuilder->battleTwoGroups();
 //$greetingBlock = include './src/Website/blocks/GreetingBuilder.php';
 $greetingBlock = $greetingBuilder->speak();
+$characterBlock = $characterForm->createCharacterForm();
 
 //$dbBlock = include './src/Website/blocks/Database.php';
 $dbBlock = $database->testDb();
@@ -49,12 +56,12 @@ $dbBlock = $database->testDb();
 $allBlocks = [
     ... $fizzBuzzBlock,
     ... $formBlock,
+    ... $characterBlock,
     ... $wowBlock,
     ... $battleBlock,
     ... $greetingBlock,
     ... $dbBlock,
 ];
-
 
 echo $myWebsite->docType();
 

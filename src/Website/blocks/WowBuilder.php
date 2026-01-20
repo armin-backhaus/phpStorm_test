@@ -1,15 +1,15 @@
 <?php
 
 namespace Website\blocks;
-use Website\Website;
+use Website\WebsiteBuilder;
 
 class WowBuilder
 {
-    private Website $website2;
+    private WebsiteBuilder $website2;
 
     public function __construct()
     {
-        $this->website2 = new Website();
+        $this->website2 = new WebsiteBuilder();
     }
 
     public function headline(): array
