@@ -4,13 +4,13 @@ namespace Website\blocks;
 
 class C
 {
-    public $c;
-    public function __construct($c)
+    public D $d;
+    public function __construct(D $d)
     {
-        $this->c = $c;
+        $this->d = $d;
     }
     public function cc()
     {
-        return "Olc";
+        return "Olc" . $this->d->dd();
     }
 }
