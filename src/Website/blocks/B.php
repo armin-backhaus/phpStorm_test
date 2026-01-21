@@ -4,7 +4,7 @@ namespace Website\blocks;
 
 class B
 {
-    public $c;
+    public C $c;
     public function __construct(C $c)
     {
         $this->c = $c;
