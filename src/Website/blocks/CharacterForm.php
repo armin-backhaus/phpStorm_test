@@ -2,13 +2,15 @@
 
 namespace Website\blocks;
 
+use Website\blocks\alph1\A as A1;
+use Website\blocks\alph2\A as A2;
 use Website\WebsiteBuilder;
 
 
 class CharacterForm
 {
     private WebsiteBuilder $websiteBuilder;
-    private A $a;
+    private A1 | A2 $a;
     public function __construct(WebsiteBuilder $websiteBuilder, $a)
     {
         $this->websiteBuilder = $websiteBuilder;
@@ -21,7 +23,7 @@ class CharacterForm
         echo $this->websiteBuilder->h3Tags("Character Form");
 
         echo "hallo " . $this->a->aa() . "<br />";
-        echo("extra " . $this->a->b->c->cc());
+        //echo("extra " . $this->a->b->c->cc());
 
         echo '
         <form action="" method="POST">
