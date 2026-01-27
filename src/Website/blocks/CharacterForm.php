@@ -4,13 +4,15 @@ namespace Website\blocks;
 
 use Website\blocks\alph1\A as A1;
 use Website\blocks\alph2\A as A2;
+use Website\blocks\alph3\A as A3;
+use Website\blocks\alph3\Alph3Builder;
 use Website\WebsiteBuilder;
 
 
 class CharacterForm
 {
     private WebsiteBuilder $websiteBuilder;
-    private A1 | A2 $a;
+    private A1 | A2 | A3 $a;
     public function __construct(WebsiteBuilder $websiteBuilder, $a)
     {
         $this->websiteBuilder = $websiteBuilder;
