@@ -4,6 +4,11 @@ namespace Website\blocks\kitchen;
 
 class Stove
 {
+
+    public function __destruct()
+    {
+        echo $this->off();
+    }
     public function on()
     {
         return "Stove is on";
@@ -17,5 +22,10 @@ class Stove
     public function putSomethingOnHeat($pot)
     {
         return "Something is on Heat";
+    }
+
+    public function putSomethingIntoHeat($casseroleDish)
+    {
+        return "Something is In Heat";
     }
 }
