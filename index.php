@@ -39,6 +39,10 @@ use Website\blocks\Database;
 use Website\blocks\FizzBuzzOneToThreeBuilder;
 use Website\blocks\Form;
 use Website\blocks\GreetingBuilder;
+use Website\blocks\kitchen\Chef;
+use Website\blocks\kitchen\Pot;
+use Website\blocks\kitchen\Spaghetti;
+use Website\blocks\kitchen\Stove;
 use Website\blocks\WowBuilder;
 use Website\WebsiteBuilder;
 
@@ -49,6 +53,12 @@ $fizzBuzzOneToThreeBuilder = new FizzBuzzOneToThreeBuilder();
 $form = new Form($database); // this is Dependency Injection....strong!
 $greetingBuilder = new GreetingBuilder();
 $wowBuilder = new WowBuilder();
+
+$spaghetti = new Spaghetti();
+$pot = new Pot();
+$stove = new Stove();
+$chef = new Chef($stove, $pot, $spaghetti);
+echo $chef->makeSpaghetti();
 
 $builder1 = new Alph1Builder();
 $a1 = $builder1->build();
