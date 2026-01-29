@@ -24,11 +24,6 @@ class Yamaha
     }
 
 
-    public function gearBox()
-    {
-
-    }
-
     public function fullThrottle()
     {
         return "The driver is speeding up";

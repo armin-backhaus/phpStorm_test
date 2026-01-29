@@ -2,16 +2,11 @@
 
 namespace Website\blocks\raceTrack;
 
-class Presenter
+class RaceControl
 {
-    private $driverA;
-    private $driverB;
-    private GrossDoelln $grossDoelln;
-    public function __construct($driverA, $driverB, $grossDoelln)
+    public function __construct()
     {
-        $this->driverA = $driverA;
-        $this->driverB = $driverB;
-        $this->grossDoelln = $grossDoelln;
+
     }
 
     public function theRaceStarts()
@@ -33,4 +28,8 @@ class Presenter
         return "Racer is no longer on the GrossDölln!";
     }
 
+    public function letsRace()
+    {
+        return "lets go";
+    }
 }

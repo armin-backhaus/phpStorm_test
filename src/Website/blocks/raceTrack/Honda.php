@@ -25,15 +25,6 @@ class Honda
         return "Send Honda to sleep";
     }
 
-    public function gearBoxUp()
-    {
-        return "He hit the next gear";
-    }
-    public function gearBoxDpwn()
-    {
-        return "He take the further gear";
-    }
-
     public function fullThrottle()
     {
         return "The driver is speeding up";

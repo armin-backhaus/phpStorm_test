@@ -4,25 +4,26 @@ namespace Website\blocks\raceTrack;
 
 class GrossDoelln
 {
-    private  $presenter;
+    private  $raceControl;
     private  $driverA;
     private  $driverB;
     private Honda  $honda;
     private Yamaha $yamaha;
 
-    public function __construct(Presenter $presenter, $driverA, $driverB, Honda $honda, Yamaha $yamaha)
+    public function __construct(RaceControl $raceControl, $driverA, $driverB, Honda $honda, Yamaha $yamaha)
     {
-        $this->presenter = $presenter;
+        $this->raceControl = $raceControl;
         $this->driverA = $driverA;
         $this->driverB = $driverB;
         $this->honda = $honda;
         $this->yamaha = $yamaha;
     }
 
-    public function letsRace()
+    public function startEvent()
     {
-        return "lets go";
+        return $this->raceControl->letsRace();
     }
+
 
     /*    public function redLight()
         {
