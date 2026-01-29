@@ -45,6 +45,13 @@ use Website\blocks\kitchen\Chef;
 use Website\blocks\kitchen\Pot;
 use Website\blocks\kitchen\Spaghetti;
 use Website\blocks\kitchen\Stove;
+use Website\blocks\raceTrack\GrossDoelln;
+use Website\blocks\raceTrack\Honda;
+use Website\blocks\raceTrack\Presenter;
+use Website\blocks\raceTrack\RacerA;
+use Website\blocks\raceTrack\RacerB;
+use Website\blocks\raceTrack\GrossDölln;
+use Website\blocks\raceTrack\Yamaha;
 use Website\blocks\WowBuilder;
 use Website\WebsiteBuilder;
 
@@ -62,6 +69,18 @@ $spaghetti = new Spaghetti();
 $pot = new Pot();
 $stove = new Stove();
 $chef = new Chef($stove, $pot, $spaghetti, $casserole, $casseroleDish);
+
+$driverA = new RacerA();
+$driverB = new RacerB();
+$honda = new Honda($driverA, $driverB);
+$yamaha = new Yamaha($driverA, $driverB);
+$presenter = new Presenter($driverA, $driverB, $grossDoelln);
+$grossDoelln = new GrossDoelln($presenter, $driverA, $driverB, $honda, $yamaha);
+$track = new GrossDoelln($presenter, $driverA, $driverB, $honda, $yamaha);
+
+//echo $presenter->letRace();
+
+
 echo $chef->makeSpaghetti();
 echo $chef->makeCasserole();
 
