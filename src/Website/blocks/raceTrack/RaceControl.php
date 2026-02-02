@@ -2,8 +2,11 @@
 
 namespace Website\blocks\raceTrack;
 
+use Website\WebsiteBuilder;
+
 class RaceControl
 {
+
     public function __construct()
     {
 

@@ -45,6 +45,7 @@ use Website\blocks\kitchen\Chef;
 use Website\blocks\kitchen\Pot;
 use Website\blocks\kitchen\Spaghetti;
 use Website\blocks\kitchen\Stove;
+use Website\blocks\RaceBuilder;
 use Website\blocks\raceTrack\GrossDoelln;
 use Website\blocks\raceTrack\Honda;
 use Website\blocks\raceTrack\RaceControl;
@@ -69,6 +70,8 @@ $pot = new Pot();
 $stove = new Stove();
 $chef = new Chef($stove, $pot, $spaghetti, $casserole, $casseroleDish);
 
+$racerA = new RacerA();
+$racerB = new RacerB();
 $driverA = new RacerA();
 $driverB = new RacerB();
 $honda = new Honda($driverA, $driverB);
@@ -76,6 +79,8 @@ $yamaha = new Yamaha($driverA, $driverB);
 $presenter = new RaceControl();
 $grossDoelln = new GrossDoelln($presenter, $driverA, $driverB, $honda, $yamaha);
 $track = new GrossDoelln($presenter, $driverA, $driverB, $honda, $yamaha);
+$raceControl = new RaceControl();
+$websiteBuilder = new WebsiteBuilder();
 
 echo $grossDoelln->startEvent();
 
@@ -90,6 +95,7 @@ $a2 = $builder2->build();
 $builder3 = new Alph3Builder();
 $a3 = $builder3->build();
 $characterForm = new CharacterForm($myWebsite, $a3);
+$raceBuilder = new RaceBuilder($websiteBuilder, $raceControl, $grossDoelln, $honda, $yamaha, $racerA, $racerB);
 
 //$formBlock = include './src/Website/blocks/Form.php';
 $formBlock = $form->createInputForm();
@@ -102,6 +108,7 @@ $battleBlock = $battleBuilder->battleTwoGroups();
 //$greetingBlock = include './src/Website/blocks/GreetingBuilder.php';
 $greetingBlock = $greetingBuilder->speak();
 $characterBlock = $characterForm->createCharacterForm();
+$raceBlock = $raceBuilder->createRace();
 
 //$dbBlock = include './src/Website/blocks/Database.php';
 $dbBlock = $database->testDb();
@@ -114,6 +121,7 @@ $allBlocks = [
     ... $battleBlock,
     ... $greetingBlock,
     ... $dbBlock,
+    ... $raceBlock,
 ];
 
 echo $myWebsite->docType();
