@@ -42,6 +42,7 @@ use Website\blocks\GreetingBuilder;
 use Website\blocks\kitchen\Casserole;
 use Website\blocks\kitchen\CasseroleDish;
 use Website\blocks\kitchen\Chef;
+use Website\blocks\kitchen\KitchenBuilder;
 use Website\blocks\kitchen\Pot;
 use Website\blocks\kitchen\Spaghetti;
 use Website\blocks\kitchen\Stove;
@@ -70,6 +71,8 @@ $pot = new Pot();
 $stove = new Stove();
 $chef = new Chef($stove, $pot, $spaghetti, $casserole, $casseroleDish);
 
+//$chef->makeCasserole();
+
 $racerA = new RacerA();
 $racerB = new RacerB();
 $driverA = new RacerA();
@@ -82,11 +85,9 @@ $track = new GrossDoelln($presenter, $driverA, $driverB, $honda, $yamaha);
 $raceControl = new RaceControl();
 $websiteBuilder = new WebsiteBuilder();
 
-echo $grossDoelln->startEvent();
 
-
-echo $chef->makeSpaghetti();
-echo $chef->makeCasserole();
+//echo $chef->makeSpaghetti();
+//echo $chef->makeCasserole();
 
 $builder1 = new Alph1Builder();
 $a1 = $builder1->build();
@@ -96,21 +97,18 @@ $builder3 = new Alph3Builder();
 $a3 = $builder3->build();
 $characterForm = new CharacterForm($myWebsite, $a3);
 $raceBuilder = new RaceBuilder($websiteBuilder, $raceControl, $grossDoelln, $honda, $yamaha, $racerA, $racerB);
+$kitchenBuilder = new KitchenBuilder($websiteBuilder, $chef, $stove, $pot, $spaghetti, $casserole, $casseroleDish);
 
-//$formBlock = include './src/Website/blocks/Form.php';
 $formBlock = $form->createInputForm();
-//$fizzBuzzBlock = include './src/Website/blocks/FizzBuzzOneToThreeBuilder.php';
 $fizzBuzzBlock = $fizzBuzzOneToThreeBuilder->fizzBuzzOneToThree();
-//$wowBlock = include './src/Website/blocks/WowBuilder.php';
 $wowBlock = $wowBuilder->headline();
-//$battleBlock = include './src/Website/blocks/BattleBuilder.php';
 $battleBlock = $battleBuilder->battleTwoGroups();
-//$greetingBlock = include './src/Website/blocks/GreetingBuilder.php';
 $greetingBlock = $greetingBuilder->speak();
 $characterBlock = $characterForm->createCharacterForm();
 $raceBlock = $raceBuilder->createRace();
+$kitchenBlock = $kitchenBuilder->createKitchen();
 
-//$dbBlock = include './src/Website/blocks/Database.php';
+
 $dbBlock = $database->testDb();
 
 $allBlocks = [
@@ -122,6 +120,7 @@ $allBlocks = [
     ... $greetingBlock,
     ... $dbBlock,
     ... $raceBlock,
+    ... $kitchenBlock,
 ];
 
 echo $myWebsite->docType();
@@ -139,5 +138,3 @@ $output = $myWebsite->htmlTags(
 );
 
 echo $output . PHP_EOL . PHP_EOL;
-
-//include_once "indexOld.php";

@@ -12,16 +12,6 @@ class Spaghetti
 
         return "Cooking for $duration minutes";
     }
-
-    /*    public function isReady()
-        {
-            if ($this->duration < 9) {
-
-                return "Spaghetti are raw";
-            }
-
-            return "Spaghetti are Al Dente";
-        }*/
     public function isReady()
     {
         if ($this->duration < 9) {

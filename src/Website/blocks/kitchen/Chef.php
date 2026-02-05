@@ -52,6 +52,8 @@ class Chef
 
         $result = $result . $this->casserole->isReady();
 
+        $result = $result . $this->stove->off();
+
         return $result;
     }
 }

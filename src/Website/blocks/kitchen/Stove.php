@@ -4,18 +4,27 @@ namespace Website\blocks\kitchen;
 
 class Stove
 {
-
+    private bool $isOn = false;
+    private int $temperature = 0;
     public function __destruct()
     {
-        echo $this->off();
+        if ($this->isOn) {
+            echo "Automatic: " . $this->off();
+        }
     }
-    public function on()
+    public function on(int $temperature = 200)
     {
-        return "Stove is on";
+        $this->isOn = true;
+        $this->temperature = $temperature;
+
+        return "Stove is on " . $this->temperature;
     }
 
     public function off()
     {
+        $this->isOn = false;
+        $this->temperature = 0;
+
         return "Stove is off";
     }
 
