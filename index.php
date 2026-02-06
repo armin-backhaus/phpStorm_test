@@ -4,33 +4,8 @@ require_once 'vendor/autoload.php';
 
 require_once './src/wow/const.php';
 
-use Website\blocks\alph1\A;
+use Routing\RouterBuilder;
 use Website\blocks\alph1\Alph1Builder;
-use Website\blocks\alph1\B;
-use Website\blocks\alph1\C;
-use Website\blocks\alph1\D;
-use Website\blocks\alph1\E;
-use Website\blocks\alph1\F;
-use Website\blocks\alph1\G;
-use Website\blocks\alph1\H;
-use Website\blocks\alph1\I;
-use Website\blocks\alph1\J;
-use Website\blocks\alph1\K;
-use Website\blocks\alph1\L;
-use Website\blocks\alph1\M;
-use Website\blocks\alph1\N;
-use Website\blocks\alph1\O;
-use Website\blocks\alph1\P;
-use Website\blocks\alph1\Q;
-use Website\blocks\alph1\R;
-use Website\blocks\alph1\S;
-use Website\blocks\alph1\T;
-use Website\blocks\alph1\U;
-use Website\blocks\alph1\V;
-use Website\blocks\alph1\W;
-use Website\blocks\alph1\X;
-use Website\blocks\alph1\Y;
-use Website\blocks\alph1\Z;
 use Website\blocks\alph2\Alph2Builder;
 use Website\blocks\alph3\Alph3Builder;
 use Website\blocks\BattleBuilder;
@@ -86,9 +61,6 @@ $raceControl = new RaceControl();
 $websiteBuilder = new WebsiteBuilder();
 
 
-//echo $chef->makeSpaghetti();
-//echo $chef->makeCasserole();
-
 $builder1 = new Alph1Builder();
 $a1 = $builder1->build();
 $builder2 = new Alph2Builder();
@@ -108,6 +80,10 @@ $characterBlock = $characterForm->createCharacterForm();
 $raceBlock = $raceBuilder->createRace();
 $kitchenBlock = $kitchenBuilder->createKitchen();
 
+$router = RouterBuilder::create();
+$webPage = $router->getWebPageById("kitchen");
+
+echo "XXX", $webPage->getContent();
 
 $dbBlock = $database->testDb();
 
@@ -122,6 +98,13 @@ $allBlocks = [
     ... $raceBlock,
     ... $kitchenBlock,
 ];
+
+
+$fullUrl = $_SERVER['REQUEST_URI'];
+$contentId = basename($fullUrl);
+
+echo $contentId . "<br>";
+echo $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 echo $myWebsite->docType();
 
