@@ -81,7 +81,8 @@ $raceBlock = $raceBuilder->createRace();
 $kitchenBlock = $kitchenBuilder->createKitchen();
 
 $router = RouterBuilder::create();
-$webPage = $router->getWebPageById("kitchen");
+
+$webPage = $router->getWebPageForURL();
 
 echo "XXX", $webPage->getContent();
 

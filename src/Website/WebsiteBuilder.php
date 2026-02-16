@@ -14,11 +14,11 @@ class WebsiteBuilder
         return "<hr/>";
     }
 
-    public function bodyTags(string ... $contentArray): string
+    public function bodyTags(string ...$contentArray): string
     {
         $output = "";
 
-        foreach($contentArray as $content) {
+        foreach ($contentArray as $content) {
             $output = $output . $content;
         }
 
@@ -55,11 +55,11 @@ class WebsiteBuilder
         return "<h3>$heading</h3>" . PHP_EOL;
     }
 
-    public function pTags(string ... $sentences): string
+    public function pTags(string ...$sentences): string
     {
         $output = "";
 
-        foreach($sentences as $sentence) {
+        foreach ($sentences as $sentence) {
             $output = $output . $sentence;
         }
 
@@ -69,5 +69,57 @@ class WebsiteBuilder
     public function scriptSrcTags(string $url): string
     {
         return "<script src='$url'></script>" . PHP_EOL;
+    }
+
+    public function menuButton()
+    {
+        ob_start();
+        echo '
+        <form action="" method="POST">
+            <button type="" name="" value="" >display</button>
+        </form>
+    ';
+
+        return [ob_get_clean()];
+
+    }
+
+    public function mapTag()
+    {
+        ob_start();
+        echo '
+        <img src="" alt="" usemap="" width="" height="">
+
+        <map name="">
+            <area shape="" coords="" heref ="">
+        </map>
+    ';
+
+        return [ob_get_clean()];
+
+    }
+
+    public function iframeTag()
+    {
+        ob_start();
+        echo '
+        <iframe src="/" width="%" height="" style="border:1px solid black;">
+        </iframe>
+
+        <iframe src="/" width="%" height="" style="border:none;">
+        </iframe>    ';
+
+        return [ob_get_clean()];
+
+    }
+
+    public function buildWebsite()
+    {
+        $this->buildMenu();
+        $this->buildWebpage();
+    }
+    public function buildWebpage()
+    {
+
     }
 }
