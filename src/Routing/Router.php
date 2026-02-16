@@ -19,33 +19,45 @@ class Router
         return $this->routes;
     }
 
+    public function getWebPageForURLold(): AbstractWebPage
+    {
+        $fullUrl = $_SERVER['REQUEST_URI'];
+        $contentId = basename($fullUrl);
+
+        //throw new Error("TODO go on from here: try/catch & if/else");
+
+        $someRoute = $this->routes[$contentId];
+
+        return $someRoute->getWebPage();
+    }
     public function getWebPageForURL(): AbstractWebPage
     {
         $fullUrl = $_SERVER['REQUEST_URI'];
         $contentId = basename($fullUrl);
 
-        throw new Error("TODO go on from here: try/catch & if/else");
+        $someRoute = @$this->routes[$contentId];
 
-        $someRoute = $this->routes[$contentId];
+        try {
+            return $someRoute->getWebPage();
+        } catch (Error $error) {
+            $notFound = $this->routes["404"];
 
-        return $someRoute->getWebPage();
+            return $notFound->getWebPage();
+        }
     }
-    public function getWebPageForURLtryCatch(): AbstractWebPage
+    public function getWebPageForUrlTwo(): AbstractWebPage
     {
         $fullUrl = $_SERVER['REQUEST_URI'];
         $contentId = basename($fullUrl);
 
-        $someRoute = $this->routes[$contentId];
+        $someRoute = @$this->routes[$contentId];
 
-        return $someRoute->getWebPage();
-    }
-    public function getWebPageForURL2(): AbstractWebPage
-    {
-        $fullUrl = $_SERVER['REQUEST_URI'];
-        $contentId = basename($fullUrl);
+        if(isset($someRoute)) {
+            return $someRoute->getWebPage();
+        }
 
-        $someRoute = $this->routes[$contentId];
+        $notFound = $this->routes["404"];
 
-        return $someRoute->getWebPage();
+        return $notFound->getWebPage();
     }
 }
