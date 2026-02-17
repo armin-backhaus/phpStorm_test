@@ -1,6 +1,7 @@
 <?php
 
 namespace Routing;
+use Routing\WebPages\BattleWebPage;
 use Routing\WebPages\KitchenWebPage;
 use Routing\WebPages\NotFoundWebPage;
 use Routing\WebPages\RaceTrackWebPage;
@@ -12,7 +13,7 @@ class RouterBuilder
         $routes = [
             "race_track" => new Route("race_track", new RaceTrackWebPage()),
             "kitchen" => new Route("kitchen", new KitchenWebPage()),
-            "abc" => new Route("abc", new KitchenWebPage()),
+            "battle" => new Route("battle", new BattleWebPage()),
             "404" => new Route("404", new NotFoundWebpage()),
         ];
 

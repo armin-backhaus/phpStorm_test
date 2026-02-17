@@ -112,14 +112,27 @@ class WebsiteBuilder
         return [ob_get_clean()];
 
     }
-
-    public function buildWebsite()
+    public function divTag(string $content)
     {
-        $this->buildMenu();
-        $this->buildWebpage();
+        return '
+        <div class="">
+            ' . $content . ' 
+        </div>    ';
     }
-    public function buildWebpage()
+    public function menuArea()
     {
+        //ob_start();
+        return '
+        <menu>
+            <a href="/phpStorm_test/abc">Hello Menu</a>
+            <a href="/phpStorm_test/kitchen">Kitchen</a>
+            <a href="/phpStorm_test/race_track">Race_Track</a>
+            <a href="/phpStorm_test/battle">Battle</a>
+        </menu>
+            ';
+
+        //return [ob_get_clean()];
 
     }
+
 }
