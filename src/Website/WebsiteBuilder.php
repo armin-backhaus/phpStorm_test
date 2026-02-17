@@ -128,6 +128,7 @@ class WebsiteBuilder
             <a href="/phpStorm_test/kitchen">Kitchen</a>
             <a href="/phpStorm_test/race_track">Race_Track</a>
             <a href="/phpStorm_test/battle">Battle</a>
+            <a href="/phpStorm_test/fizzBuzz">FizzBuzzWebPage</a>
         </menu>
             ';
 

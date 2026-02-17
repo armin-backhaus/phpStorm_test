@@ -2,6 +2,7 @@
 
 namespace Routing;
 use Routing\WebPages\BattleWebPage;
+use Routing\WebPages\FizzBuzzWebPage;
 use Routing\WebPages\KitchenWebPage;
 use Routing\WebPages\NotFoundWebPage;
 use Routing\WebPages\RaceTrackWebPage;
@@ -14,6 +15,7 @@ class RouterBuilder
             "race_track" => new Route("race_track", new RaceTrackWebPage()),
             "kitchen" => new Route("kitchen", new KitchenWebPage()),
             "battle" => new Route("battle", new BattleWebPage()),
+            "fizzBuzz" => new Route("fizzBuzz", new FizzBuzzWebPage()),
             "404" => new Route("404", new NotFoundWebpage()),
         ];
 
