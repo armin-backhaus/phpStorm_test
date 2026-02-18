@@ -6,6 +6,7 @@ namespace Website;
 
 use FizzBuzz\FizzBuzzOld;
 use Output\OutputWithColor;
+use Routing\Route;
 
 class WebsiteBuilder
 {
@@ -119,10 +120,18 @@ class WebsiteBuilder
             ' . $content . ' 
         </div>    ';
     }
-    public function menuArea()
+    public function menuArea(array $routes): string
     {
+        $links = '';
+
+        /** @var Route $route */
+        foreach ($routes as $route) {
+            $links .= '<a href="/phpStorm_test/' . $route->getContentId() . '">' . $route->getLabel() . '</a>&nbsp;&nbsp;';
+        }
+
         //ob_start();
         return '
+        <menu>' . $links . '</menu>
         <menu>
             <a href="/phpStorm_test/abc">Hello Menu</a>
             <a href="/phpStorm_test/kitchen">Kitchen</a>
