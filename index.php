@@ -12,14 +12,12 @@ use Website\blocks\CharacterForm;
 use Website\blocks\Database;
 use Website\blocks\Form;
 use Website\blocks\GreetingBuilder;
-use Website\blocks\WowBuilder;
 use Website\WebsiteBuilder;
 
 $myWebsite = new WebsiteBuilder();
 $database = new Database();
 $form = new Form($database); // this is Dependency Injection....strong!
 $greetingBuilder = new GreetingBuilder();
-$wowBuilder = new WowBuilder();
 
 $websiteBuilder = new WebsiteBuilder();
 
@@ -32,7 +30,6 @@ $a3 = $builder3->build();
 $characterForm = new CharacterForm($myWebsite, $a3);
 
 $formBlock = $form->createInputForm();
-$wowBlock = $wowBuilder->headline();
 $greetingBlock = $greetingBuilder->speak();
 $characterBlock = $characterForm->createCharacterForm();
 
@@ -46,7 +43,6 @@ $dbBlock = $database->testDb();
 $allBlocks = [
     ... $formBlock,
     ... $characterBlock,
-    ... $wowBlock,
     ... $greetingBlock,
     ... $dbBlock,
 ];
