@@ -2,7 +2,10 @@
 
 namespace Routing;
 use Routing\WebPages\BattleWebPage;
+use Routing\WebPages\CharacterWebPage;
+use Routing\WebPages\DbWebPage;
 use Routing\WebPages\FizzBuzzWebPage;
+use Routing\WebPages\GreetingWebPage;
 use Routing\WebPages\KitchenWebPage;
 use Routing\WebPages\NotFoundWebPage;
 use Routing\WebPages\RaceTrackWebPage;
@@ -18,6 +21,9 @@ class RouterBuilder
             "battle" => new Route("battle", 'Battle',  new BattleWebPage()),
             "fizzBuzz" => new Route("fizzBuzz", 'Buzzy Fizzing',  new FizzBuzzWebPage()),
             "wow" => new Route("wow", 'WOW',  new WowWebPage()),
+            "greeting" => new Route("greeting", 'Greeting',  new GreetingWebPage()),
+            "database" => new Route("database", 'Database',  new DbWebPage()),
+            "character" => new Route("character", 'Character',  new CharacterWebPage()),
             "404" => new Route("404", 'Not Found',  new NotFoundWebpage()),
 
             // TODO maybe ?

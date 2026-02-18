@@ -138,7 +138,10 @@ class WebsiteBuilder
             <a href="/phpStorm_test/race_track">Race_Track</a>
             <a href="/phpStorm_test/battle">Battle</a>
             <a href="/phpStorm_test/fizzBuzz">FizzBuzz</a>
-            <a href="/phpStorm_test/wow">Wow</a>
+            <a href="/phpStorm_test/wow">WOW</a>
+            <a href="/phpStorm_test/greeting">Greeting</a>
+            <a href="/phpStorm_test/database">Database</a>
+            <a href="/phpStorm_test/character">Character</a>
             <a href="https://www.develolabs.com" target="_blank">Dlabs😎</a>
         </menu>
             ';
