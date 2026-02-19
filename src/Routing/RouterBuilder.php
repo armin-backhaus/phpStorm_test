@@ -13,7 +13,7 @@ use Routing\WebPages\WowWebPage;
 
 class RouterBuilder
 {
-    public static function create(): Router
+    public static function create(): RouterInterface
     {
         $routes = [
             "race_track" => new Route("race_track", 'Race', new RaceTrackWebPage()),

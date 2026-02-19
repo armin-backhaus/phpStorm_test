@@ -5,7 +5,7 @@ namespace Routing;
 use Error;
 use Website\WebPage\AbstractWebPage;
 
-class Router
+class Router implements RouterInterface
 {
     /** @var Route[] $routes */
     private array $routes;

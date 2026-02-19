@@ -2,8 +2,7 @@
 
 namespace Routing\WebPages;
 
-use Website\blocks\BattleBuilder;
-use Website\blocks\FizzBuzzOneToThreeBuilder;
+use Website\FizzBuzzOneToThreeBuilder;
 use Website\WebPage\AbstractWebPage;
 use Website\WebsiteBuilder;
 

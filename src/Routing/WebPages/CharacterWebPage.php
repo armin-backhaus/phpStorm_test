@@ -2,10 +2,10 @@
 
 namespace Routing\WebPages;
 
-use Website\blocks\alph1\Alph1Builder;
-use Website\blocks\alph2\Alph2Builder;
-use Website\blocks\alph3\Alph3Builder;
-use Website\blocks\CharacterForm;
+use Website\alph1\Alph1Builder;
+use Website\alph2\Alph2Builder;
+use Website\alph3\Alph3Builder;
+use Website\CharacterForm;
 use Website\WebPage\AbstractWebPage;
 use Website\WebsiteBuilder;
 

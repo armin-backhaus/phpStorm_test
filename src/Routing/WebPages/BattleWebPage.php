@@ -2,7 +2,7 @@
 
 namespace Routing\WebPages;
 
-use Website\blocks\BattleBuilder;
+use Website\BattleBuilder;
 use Website\WebPage\AbstractWebPage;
 use Website\WebsiteBuilder;
 

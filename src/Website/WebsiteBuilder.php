@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 namespace Website;
 
-use FizzBuzz\FizzBuzzOld;
-use Output\OutputWithColor;
+use Routing\ThrowingRouter;
 use Routing\Route;
+use Routing\RouterInterface;
 
 class WebsiteBuilder
 {
+    private RouterInterface $router;
+
+    public function __construct(RouterInterface $router = new ThrowingRouter())
+    {
+        $this->router = $router;
+    }
     public function hrTag(): string
     {
         return "<hr/>";
@@ -24,6 +30,14 @@ class WebsiteBuilder
         }
 
         return "<body>$output</body>" . PHP_EOL;
+    }
+
+    public function buildWebsite(string $head, string $body): string
+    {
+        return (
+            $this->docType() .
+            $this->htmlTags($head, $body)
+        );
     }
 
     public function docType(): string
@@ -113,6 +127,14 @@ class WebsiteBuilder
         return [ob_get_clean()];
 
     }
+
+    public function pageContent(): string
+    {
+        $webPage = $this->router->getWebPageForURL();
+
+        return $this->divTag($webPage->getContent());
+    }
+
     public function divTag(string $content)
     {
         return '
@@ -120,8 +142,10 @@ class WebsiteBuilder
             ' . $content . ' 
         </div>    ';
     }
-    public function menuArea(array $routes): string
+
+    public function menuArea(): string
     {
+        $routes = $this->router->getRoutes();
         $links = '';
 
         /** @var Route $route */
@@ -149,5 +173,4 @@ class WebsiteBuilder
         //return [ob_get_clean()];
 
     }
-
 }

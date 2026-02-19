@@ -2,8 +2,8 @@
 
 namespace Routing\WebPages;
 
-use Website\blocks\Database;
-use Website\blocks\Form;
+use Website\Database;
+use Website\Form;
 use Website\WebPage\AbstractWebPage;
 use Website\WebsiteBuilder;
 

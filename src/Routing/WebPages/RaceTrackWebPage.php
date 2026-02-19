@@ -2,13 +2,13 @@
 
 namespace Routing\WebPages;
 
-use Website\blocks\RaceBuilder;
-use Website\blocks\raceTrack\GrossDoelln;
-use Website\blocks\raceTrack\Honda;
-use Website\blocks\raceTrack\RaceControl;
-use Website\blocks\raceTrack\RacerA;
-use Website\blocks\raceTrack\RacerB;
-use Website\blocks\raceTrack\Yamaha;
+use Website\RaceBuilder;
+use Website\raceTrack\GrossDoelln;
+use Website\raceTrack\Honda;
+use Website\raceTrack\RaceControl;
+use Website\raceTrack\RacerA;
+use Website\raceTrack\RacerB;
+use Website\raceTrack\Yamaha;
 use Website\WebPage\AbstractWebPage;
 use Website\WebsiteBuilder;
 

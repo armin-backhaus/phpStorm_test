@@ -2,7 +2,7 @@
 
 namespace Routing\WebPages;
 
-use Website\blocks\GreetingBuilder;
+use Website\GreetingBuilder;
 use Website\WebPage\AbstractWebPage;
 use Website\WebsiteBuilder;
 
